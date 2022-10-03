@@ -1,5 +1,9 @@
 # truongdd03's Personal Website
 
+This website is built with Vue 3 and TypeScript. Check it out at [https://truongdd03.github.io/](https://truongdd03.github.io/).
+
+# For Developers
+
 ## Project Setup
 
 ```sh
