@@ -4,7 +4,7 @@
       <h1 class="green">Work in progress :(</h1>
     </div>
     <div class="right">
-      <img src="shiba-inu-studying.gif" />
+      <img src="/public/shiba-inu-studying.gif" />
     </div>
   </header>
 </template>
