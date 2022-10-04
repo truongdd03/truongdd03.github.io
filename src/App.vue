@@ -10,7 +10,6 @@
 </template>
 
 <style scoped>
-
 .left {
   float: left;
   width: 50%;
