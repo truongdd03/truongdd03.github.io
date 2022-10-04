@@ -1,40 +1,32 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
   <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="left">
+      <h1 class="green">Work in progress :(</h1>
+    </div>
+    <div class="right">
+      <img src="shiba-inu-studying.gif" />
     </div>
   </header>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+
+.left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  margin-top: 25%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.right {
+  float: right;
+  width: 50%;
+  height: 100%;
+  margin-top: 12.5%;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+h1 {
+  font-weight: 500;
+  font-size: 2.6rem;
 }
 </style>
