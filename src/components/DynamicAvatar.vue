@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import human from "../../public/avatar.jpeg";
-import shiba from "../../public/avatar-hover.png";
+import human from "../assets/avatar/avatar.jpeg";
+import shiba from "../assets/avatar/avatar-hover.png";
 
 const onHover = () => {
 	(document.getElementById('avatar') as any).src = shiba;
