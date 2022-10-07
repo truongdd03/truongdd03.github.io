@@ -1,10 +1,8 @@
 <template>
-	<header>
-		<DynamicAvatar />
-		<SocialInformation />
-		<TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
-		<notifications class="notification" position="bottom right" />
-	</header>
+    <DynamicAvatar />
+    <SocialInformation />
+    <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
+    <notifications class="notification" position="bottom right" />
 </template>
 
 <script setup lang="ts">

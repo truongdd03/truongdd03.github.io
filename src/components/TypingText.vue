@@ -18,7 +18,7 @@ const props = defineProps({
     dynamicTexts: Array<String>, 
 });
 
-const typingSpeed = 100;
+const typingSpeed = 70;
 const erasingSpeed = 10; // Larger is slower
 const delayTime = 1500;
 let typeValue = ref('');
