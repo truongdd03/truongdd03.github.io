@@ -27,9 +27,9 @@ const roles = [
 
 onMounted(() => {
     notify({
-        title: 'Work in progress!',
+        title: 'Contruction zone!',
         type: 'warn',
-        text: 'Some features may not work properly'
+        text: 'This website is a work in progress. Some features may not work properly.'
     })
 })
 

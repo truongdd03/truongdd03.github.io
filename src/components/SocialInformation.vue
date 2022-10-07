@@ -19,7 +19,7 @@
 const copyMailAddress = async () => {
     const mailAddress = 'dong23102003@gmail.com';
     await navigator.clipboard.writeText(mailAddress);
-    notify({ title: 'Copy email address!' });
+    notify({ title: 'Copied email address!' });
 }
 </script>
 
