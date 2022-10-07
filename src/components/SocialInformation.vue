@@ -10,10 +10,19 @@
             <a href="https://discordapp.com/users/763404045150060605" target="_blank">
                 <font-awesome-icon class="icon" icon="fa-brands fa-discord" inverse />
             </a>
-            <font-awesome-icon class="icon" icon="fa-solid fa-envelope" inverse />
+            <font-awesome-icon class="icon" icon="fa-solid fa-envelope" inverse @click="copyMailAddress()" />
 		</div>
+        <notifications position="bottom right" />
 	</header>
 </template>
+
+<script setup lang="ts">import { notify } from '@kyvg/vue3-notification';
+    const copyMailAddress = async () => {
+        const mailAddress = "dong23102003@gmail.com";
+        await navigator.clipboard.writeText(mailAddress);
+        notify({ title: "Copy email address!" });
+    }
+</script>
 
 <style lang="scss" scoped>
 .social {
@@ -24,5 +33,6 @@
     display: inline-block;
     margin: 30px 15px 10px 15px;
     font-size: 2rem;
+    cursor: pointer;
 }
 </style>
