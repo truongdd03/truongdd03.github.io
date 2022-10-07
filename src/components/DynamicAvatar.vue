@@ -12,15 +12,15 @@
 </template>
 
 <script setup lang="ts">
-import human from "../assets/avatar/don-cool.jpeg";
-import shiba from "../assets/avatar/shiba-cool.png";
+import human from '../assets/avatar/don-cool.jpeg';
+import shiba from '../assets/avatar/shiba-cool.png';
 
 const onHover = () => {
-	(document.getElementById('avatar') as any).src = shiba;
+    (document.getElementById('avatar') as any).src = shiba;
 }
 
 const onLeave = () => {
-	(document.getElementById('avatar') as any).src = human;
+    (document.getElementById('avatar') as any).src = human;
 }
 </script>
 

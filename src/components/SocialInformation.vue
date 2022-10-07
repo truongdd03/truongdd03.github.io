@@ -1,6 +1,6 @@
 <template>
-	<header>
-		<div class="social">
+    <header>
+        <div class="social">
             <a href="https://github.com/truongdd03" target="_blank">
                 <font-awesome-icon class="icon" icon="fa-brands fa-github" inverse />
             </a>
@@ -11,17 +11,16 @@
                 <font-awesome-icon class="icon" icon="fa-brands fa-discord" inverse />
             </a>
             <font-awesome-icon class="icon" icon="fa-solid fa-envelope" inverse @click="copyMailAddress()" />
-		</div>
-        <notifications position="bottom right" />
-	</header>
+        </div>
+    </header>
 </template>
 
 <script setup lang="ts">import { notify } from '@kyvg/vue3-notification';
-    const copyMailAddress = async () => {
-        const mailAddress = "dong23102003@gmail.com";
-        await navigator.clipboard.writeText(mailAddress);
-        notify({ title: "Copy email address!" });
-    }
+const copyMailAddress = async () => {
+    const mailAddress = 'dong23102003@gmail.com';
+    await navigator.clipboard.writeText(mailAddress);
+    notify({ title: 'Copy email address!' });
+}
 </script>
 
 <style lang="scss" scoped>
