@@ -15,11 +15,11 @@ const roles = [
 	"Don Truong",
 	"Đông Trương",
 	"from Vietnam",
-	"a dog person",
+	"a dog person :)",
 	"a sophomore at MSU",
-	"an ex-SWE Intern at Holistics",
-	"an ex-SWE Intern at OED",
-	"an ex-SWE Intern at Chang's Kitchen"
+	"a former SWE Intern at Holistics",
+	"a former SWE Intern at OED",
+	"a former SWE Intern at Chang's Kitchen"
 ];
 
 </script>
