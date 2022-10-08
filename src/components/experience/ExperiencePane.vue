@@ -5,11 +5,12 @@
             <img class="title-icon"
                 src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
         </div>
-        <img src="../../assets/avatar/shiba-inu-studying.gif"/>
-        <h1 class="green">Work in progress :(</h1>
-        <!-- <Timeline :value="events" align="alternate">
+        <!-- <Timeline :value="events">
             <template #content="slotProps">
                 {{slotProps.item.status}}
+            </template>
+            <template #connector>
+                <div class="p-timeline-event-connector" style="width:4px; color: white"></div>
             </template>
         </Timeline> -->
     </div>
@@ -19,10 +20,10 @@
 import Timeline from 'primevue/timeline';
 
 const events = [
-    { status: 'Ordered', date: '15/10/2020 10:30', color: '#9C27B0' },
-    { status: 'Processing', date: '15/10/2020 14:00', color: '#673AB7' },
-    { status: 'Shipped', date: '15/10/2020 16:15', color: '#FF9800' },
-    { status: 'Delivered', date: '16/10/2020 10:00', color: '#607D8B' }
+    { status: 'Ordered', date: '15/10/2020 10:30', color: 'white' },
+    { status: 'Processing', date: '15/10/2020 14:00', color: 'white' },
+    { status: 'Shipped', date: '15/10/2020 16:15', color: 'white' },
+    { status: 'Delivered', date: '16/10/2020 10:00', color: 'white' }
 ];
 
 </script>
