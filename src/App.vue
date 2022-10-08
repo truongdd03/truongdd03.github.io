@@ -1,7 +1,7 @@
 <template>
-    <IntroductionPane />
-    <ExperiencePane />
-    <SkillsPane />
+    <IntroductionPane id="introduction" />
+    <ExperiencePane id="experience" />
+    <SkillsPane id="skills" />
     <notifications class="notification" position="bottom right" />
 </template>
 

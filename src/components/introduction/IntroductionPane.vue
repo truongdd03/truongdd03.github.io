@@ -13,6 +13,7 @@
 import DynamicAvatar from './DynamicAvatar.vue';
 import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
+import { scrollIntoView } from '@/utils';
 
 const roles = [
     'Don Truong',
@@ -26,7 +27,7 @@ const roles = [
 ];
 
 const scroll = () => {
-
+    scrollIntoView('experience');
 }
 </script>
 
