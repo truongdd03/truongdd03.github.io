@@ -1,6 +1,9 @@
 import App from './App.vue';
 import { createApp } from 'vue';
+
+// External components
 import Notifications from '@kyvg/vue3-notification'
+import PrimeVue from 'primevue/config';
 
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -18,11 +21,16 @@ const icons = [
     faCircleArrowDown,
 ];
 
-icons.forEach((icon) => {
-    library.add(icon);
-});
+icons.forEach((icon) => library.add(icon));
 
 const app = createApp(App);
-app.use(Notifications);
+
+const libraries = [
+    Notifications,
+    PrimeVue,
+];
+
+libraries.forEach((lib) => app.use(lib));
+
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

@@ -16,10 +16,24 @@
   text-align: center;
 }
 
+.title-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   text-align: center;
   font-size: 2rem;
   color: white;
+}
+
+.title-icon {
+  height: 5rem;
+  width: auto;
+  margin: 0px 10px 0px 10px;
+  border-radius: 50%;
 }
 
 .wrapper {
