@@ -1,7 +1,6 @@
 @import "./base.css";
 
 #app {
-  margin: 0 auto;
   font-weight: normal;
 }
 
@@ -17,6 +16,22 @@
   text-align: center;
 }
 
-.gray {
-  color: rgba(235, 235, 235, 0.64);
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.wrapper {
+  padding-top: 30px;
+  width: 100%;
+  min-height: 300px;
+}
+
+.black-background {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

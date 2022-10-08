@@ -1,8 +1,11 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper black-background full">
         <DynamicAvatar />
         <SocialInformation />
         <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
+        <div class="icon-wrapper">
+            <font-awesome-icon class="scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
+        </div>
     </div>
 </template>
 
@@ -21,12 +24,26 @@ const roles = [
     "a former SWE Intern at Chang's Kitchen",
     'a dog person :)',
 ];
+
+const scroll = () => {
+
+}
 </script>
 
-<style lang="scss">
-.wrapper {
+<style lang="scss" scoped>
+.full {
+    height: 100vh;
     width: 100%;
-    margin: 0px 0px 50px 0px;
-    padding: 30px;
+}
+.icon-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+
+    .scroll-icon {
+        font-size: 3rem;
+        cursor: pointer;
+    }
 }
 </style>

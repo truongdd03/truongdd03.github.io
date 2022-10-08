@@ -1,5 +1,7 @@
 <template>
     <IntroductionPane />
+    <ExperiencePane />
+    <SkillsPane />
     <notifications class="notification" position="bottom right" />
 </template>
 
@@ -7,6 +9,8 @@
 import { onMounted } from 'vue';
 import { notify } from '@kyvg/vue3-notification';
 import IntroductionPane from './components/introduction/IntroductionPane.vue';
+import ExperiencePane from './components/experience/ExperiencePane.vue';
+import SkillsPane from './components/skills/SkillsPane.vue';
 
 onMounted(() => {
     notify({
