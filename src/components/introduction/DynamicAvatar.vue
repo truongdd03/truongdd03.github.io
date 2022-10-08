@@ -29,5 +29,6 @@ const onLeave = () => {
     width: auto;
     height: 200px;
     border-radius: 50%;
+    border: 5px solid white;
 }
 </style>

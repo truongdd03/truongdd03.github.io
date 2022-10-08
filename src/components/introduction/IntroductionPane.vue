@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <DynamicAvatar />
         <SocialInformation />
         <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
@@ -24,13 +24,9 @@ const roles = [
 </script>
 
 <style lang="scss">
-.notification {
-	.notification-title {
-		font-size: 15px;
-		font-weight: bolder;
-	}
-	.notification-content {
-		font-size: 15px;
-	}
+.wrapper {
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    padding: 30px;
 }
 </style>

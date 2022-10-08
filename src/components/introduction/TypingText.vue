@@ -1,11 +1,12 @@
 <template>
     <div class="container">
-      <h1>
-        {{ constantText }}
-        <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
-        <span class="blinking-cursor">|</span>
-        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-      </h1>
+        <img class="icon" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-17-9.gif" />
+        <h1>
+            {{ constantText }}
+            <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
+            <span class="blinking-cursor">|</span>
+            <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+        </h1>
     </div>
 </template>
 
@@ -80,6 +81,10 @@ onMounted(() => {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.icon {
+    height: 5rem;
+    width: auto;
 }
 h1 {
     font-size: 3rem;
