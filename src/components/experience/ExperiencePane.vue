@@ -1,10 +1,12 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper full">
         <div class="title-wrapper">
             <h1 class="title">Experience</h1>
             <img class="title-icon"
                 src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
         </div>
+        <img src="../../assets/avatar/shiba-inu-studying.gif"/>
+        <h1 class="green">Work in progress :(</h1>
         <!-- <Timeline :value="events" align="alternate">
             <template #content="slotProps">
                 {{slotProps.item.status}}
@@ -26,7 +28,5 @@ const events = [
 </script>
 
 <style lang="scss" scoped>
-.tmp {
-    background-color: purple;
-}
+
 </style>

@@ -32,10 +32,6 @@ const scroll = () => {
 </script>
 
 <style lang="scss" scoped>
-.full {
-    height: 100vh;
-    width: 100%;
-}
 .icon-wrapper {
     width: 100%;
     position: absolute;
