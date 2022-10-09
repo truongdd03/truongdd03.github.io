@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper black-background full">
+    <div class="wrapper black-background">
         <DynamicAvatar />
         <SocialInformation />
         <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
@@ -33,7 +33,7 @@ const scroll = () => {
 
 <style lang="scss" scoped>
 .icon-wrapper {
-    width: 100%;
+    width: 90%;
     position: absolute;
     bottom: 5%;
     text-align: center;

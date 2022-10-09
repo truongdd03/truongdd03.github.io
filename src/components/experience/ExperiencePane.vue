@@ -73,8 +73,6 @@ const events1 = [
 
 <style lang="scss" scoped>
 .timeline {
-    margin: 0px 30px 0px 30px;
-
     .duration-wrapper {
         padding: 25px;
         min-height: 50px;
