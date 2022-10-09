@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper full">
         <div class="title-wrapper">
-            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-10-49.gif" />
+            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
             <h1 class="title">Experience</h1>
-            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
+            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/06/funnygifsbox.com-2021-06-10-09-00-31-19.gif" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
@@ -72,13 +72,14 @@ const events1 = [
             width: 100%;
             height: 20px;
             font-size: 20px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
             margin-bottom: 30px;
 
-            .position, .duration {
-                width: calc(50% - 20px);
+            .position {
+                float: left;
+            }
+
+            .duration {
+                float: right;
             }
         }
 
