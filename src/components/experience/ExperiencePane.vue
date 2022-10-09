@@ -19,6 +19,7 @@
                     </template>
                     <template #content>
                         <p class="description">{{slotProps.item.description}}</p>
+                        <p style="color: yellow">{{`Related Skills: ${slotProps.item.skills}`}}</p>
                     </template>
                 </Card>
             </template>
@@ -92,6 +93,7 @@ const events1 = [
         .description {
             text-align: left;
             color: white;
+            margin-bottom: 20px;
         }
     }
 
