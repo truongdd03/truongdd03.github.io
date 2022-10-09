@@ -2,7 +2,7 @@
     <header>
       <img
 		id="avatar"
-		class="center"
+		class="wxxl center"
         draggable="false"
 		@mouseover="onHover()"
 		@mouseleave="onLeave()"
@@ -26,7 +26,6 @@ const onLeave = () => {
 
 <style scoped>
 #avatar {
-    width: 15vw;
     border-radius: 50%;
     border: 5px solid white;
 }

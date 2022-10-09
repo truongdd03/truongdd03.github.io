@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <img class="icon" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-17-9.gif" />
-        <h1>
+        <img class="wxl" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-17-9.gif" />
+        <h1 class="xxl">
             {{ constantText }}
             <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
             <span class="blinking-cursor">|</span>
@@ -82,11 +82,7 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
 }
-.icon {
-    width: 5vw;
-}
 h1 {
-    font-size: 3vw;
     font-weight: normal;
     span.typed-text {
         // color: #d2b94b;
@@ -94,7 +90,6 @@ h1 {
     }
 }
 .blinking-cursor {
-    font-size: 3vw;
     color: #2c3e50;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;

@@ -4,7 +4,7 @@
         <SocialInformation />
         <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
         <div class="icon-wrapper">
-            <font-awesome-icon class="scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
+            <font-awesome-icon class="xl scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
         </div>
     </div>
 </template>
@@ -39,7 +39,6 @@ const scroll = () => {
     text-align: center;
 
     .scroll-icon {
-        font-size: 3.5vw;
         cursor: pointer;
     }
 }
