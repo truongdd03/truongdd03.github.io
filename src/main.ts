@@ -10,7 +10,7 @@ import Timeline from 'primevue/timeline'
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faEnvelope, faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleArrowDown, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 import './assets/main.css';
@@ -22,6 +22,7 @@ const icons = [
     faDiscord,
     faEnvelope,
     faCircleArrowDown,
+    faBriefcase
 ];
 
 icons.forEach((icon) => library.add(icon));

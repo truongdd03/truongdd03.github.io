@@ -22,6 +22,10 @@
                     </template>
                 </Card>
             </template>
+            <template #marker="slotProps">
+                <img v-if="slotProps.item.icon" class="marker-icon" :src="slotProps.item.icon" />
+                <font-awesome-icon v-else class="marker-icon-default" icon="fa-solid fa-briefcase" />
+            </template>
         </Timeline>
     </div>
 </template>
@@ -32,6 +36,7 @@ import Card from 'primevue/card';
 const events1 = [
     {
         company: "Holistics Data",
+        icon: "src/assets/experienceIcons/holistics.png",
         skills: "Vue.js, TypeScript",
         title: "Software Engineer Intern",
         duration: "May 2022 - September 2022",
@@ -41,6 +46,7 @@ const events1 = [
     },
     {
         company: "Open Energy Dashboard",
+        icon: "src/assets/experienceIcons/oed.png",
         skills: "React, Redux, TypeScript, JavaScript, Postgres",
         title: "Software Engineer Intern",
         duration: "October 2021 - May 2022",
@@ -85,6 +91,16 @@ const events1 = [
             text-align: left;
             color: white;
         }
+    }
+
+    .marker-icon {
+        height: 50px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .marker-icon-default {
+        font-size: 30px;
+        margin: 10px 0px 10px 0px;
     }
 }
 </style>
