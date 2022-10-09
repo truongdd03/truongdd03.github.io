@@ -66,13 +66,11 @@ const events1 = [
 
     .experience-wrapper {
         background-color: black;
-        text-align: center;
 
         .subtitle-wrapper {
             width: 100%;
             height: 20px;
             font-size: 20px;
-            margin-bottom: 30px;
 
             .position {
                 float: left;
