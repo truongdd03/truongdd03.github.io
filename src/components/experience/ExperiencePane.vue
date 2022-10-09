@@ -1,18 +1,21 @@
 <template>
     <div class="wrapper full">
         <div class="title-wrapper">
+            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-10-49.gif" />
             <h1 class="title">Experience</h1>
-            <!-- <img class="title-icon" -->
-            <!-- src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" /> -->
+            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
-                        {{slotProps.item.company}}
+                        <h3 class="company green">{{slotProps.item.company}}</h3>
                     </template>
                     <template #subtitle>
-                        {{slotProps.item.duration}}
+                        <div class="subtitle-wrapper">
+                            <p class="position">{{slotProps.item.title}}</p>
+                            <p class="duration">{{slotProps.item.duration}}</p>
+                        </div>
                     </template>
                     <template #content>
                         <p class="description">{{slotProps.item.description}}</p>
@@ -60,9 +63,28 @@ const events1 = [
 <style lang="scss" scoped>
 .timeline {
     margin: 0px 30px 0px 30px;
+
     .experience-wrapper {
+        background-color: black;
+        text-align: center;
+
+        .subtitle-wrapper {
+            width: 100%;
+            height: 20px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+
+            .position, .duration {
+                width: calc(50% - 20px);
+            }
+        }
+
         .description {
             text-align: left;
+            color: white;
         }
     }
 }
