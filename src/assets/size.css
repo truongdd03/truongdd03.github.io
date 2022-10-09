@@ -2,10 +2,6 @@
     font-size: calc(2.8vw + 17px);
 }
 
-.wxxl {
-    width: calc(13vw + 80px);
-}
-
 .xl {
     font-size: calc(2.5vw + 15px);
 }
@@ -15,23 +11,27 @@
 }
 
 .l {
-    font-size: calc(2.0vw + 10px);
-}
-
-.wl {
-    width: calc(5vw + 10px);
+    font-size: calc(1.6vw + 12px);
 }
 
 .m {
-    font-size: calc(1.5vw + 8px);
+    font-size: calc(1.3vw + 10px);
+}
+
+.s {
+    font-size: calc(0.8vw + 8px);
+}
+
+.wxxl {
+    width: calc(13vw + 80px);
+}
+
+.wl {
+    width: calc(3vw + 15px);
 }
 
 .wm {
     width: calc(1.5vw + 8px);
-}
-
-.s {
-    font-size: calc(1vw + 5px);
 }
 
 .ws {

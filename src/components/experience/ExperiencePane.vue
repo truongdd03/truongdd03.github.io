@@ -26,8 +26,8 @@
                 </div>
             </template>
             <template #marker="slotProps">
-                <img v-if="slotProps.item.icon" class="marker-icon" :src="slotProps.item.icon" />
-                <font-awesome-icon v-else class="marker-icon-default" icon="fa-solid fa-briefcase" />
+                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon" />
+                <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
             </template>
         </Timeline>
     </div>
@@ -95,12 +95,10 @@ const events1 = [
     }
 
     .marker-icon {
-        height: 5vw;
         margin: 10px 0px 10px 0px;
     }
 
     .marker-icon-default {
-        font-size: 3vw;
         margin: 10px 0px 10px 0px;
     }
 }

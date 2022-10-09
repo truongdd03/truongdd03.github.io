@@ -1,31 +1,31 @@
 <template>
     <div class="wrapper black-background">
         <div class="title-wrapper">
-            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-9.gif" />
-            <h1 class="title">Education</h1>
-            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
+            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-9.gif" />
+            <h1 class="xl title">Education</h1>
+            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
         </div>
         <Timeline :value="events" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
-                        <h3 class="company green">{{slotProps.item.school}}</h3>
+                        <h3 class="l green">{{slotProps.item.school}}</h3>
                     </template>
                     <template #subtitle>
-                        <p class="position">{{slotProps.item.degree}}</p>
+                        <p class="m">{{slotProps.item.degree}}</p>
                     </template>
                     <template #content>
-                        <p v-if="slotProps.item.description" class="description">{{slotProps.item.description}}</p>
+                        <p v-if="slotProps.item.description" class="s description">{{slotProps.item.description}}</p>
                     </template>
                 </Card>
             </template>
             <template #opposite="slotProps">
                 <div class="duration-wrapper">
-                    <p class="duration">{{slotProps.item.duration}}</p>
+                    <p class="m duration">{{slotProps.item.duration}}</p>
                 </div>
             </template>
             <template #marker="slotProps">
-                <img class="marker-icon" :src="slotProps.item.icon" />
+                <img class="wl marker-icon" :src="slotProps.item.icon" />
             </template>
         </Timeline>
     </div>
@@ -62,27 +62,18 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
 .timeline {
     width: 100%;
 
-    .company {
-        font-size: 2vw;
-    }
-
     .duration-wrapper {
         padding: 25px;
         min-height: 50px;
 
         .duration {
             color: white;
-            font-size: 20px;
         }
     }
 
     .experience-wrapper {
         background-color: black;
         border: 5px solid white;
-
-        .position {
-            font-size: 20px;
-        }
 
         .description {
             text-align: left;
@@ -93,12 +84,10 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
     }
 
     .marker-icon {
-        height: 5vw;
         margin: 10px 0px 10px 0px;
     }
 
     .marker-icon-default {
-        font-size: 5vw;
         margin: 10px 0px 10px 0px;
     }
 }
