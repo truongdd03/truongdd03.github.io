@@ -83,11 +83,10 @@ onMounted(() => {
     align-items: center;
 }
 .icon {
-    height: 5rem;
-    width: auto;
+    width: 5vw;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 3vw;
     font-weight: normal;
     span.typed-text {
         // color: #d2b94b;
@@ -95,7 +94,7 @@ h1 {
     }
 }
 .blinking-cursor {
-    font-size: 3rem;
+    font-size: 3vw;
     color: #2c3e50;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;

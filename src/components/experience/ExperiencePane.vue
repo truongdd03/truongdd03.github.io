@@ -2,27 +2,27 @@
     <div class="wrapper">
         <div class="title-wrapper">
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
-            <h1 class="title">Experience</h1>
+            <h1 class="title xl">Experience</h1>
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-41-72.gif" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
-                        <h3 class="company green">{{slotProps.item.company}}</h3>
+                        <h3 class="l green">{{slotProps.item.company}}</h3>
                     </template>
                     <template #subtitle>
-                        <p class="subtitle">{{slotProps.item.title}}</p>
+                        <p class="m">{{slotProps.item.title}}</p>
                     </template>
                     <template #content>
-                        <p class="description">{{slotProps.item.description}}</p>
-                        <p style="color: yellow">{{`Related Skills: ${slotProps.item.skills}`}}</p>
+                        <p class="s description">{{slotProps.item.description}}</p>
+                        <p class="s" style="color: yellow">{{`Related Skills: ${slotProps.item.skills}`}}</p>
                     </template>
                 </Card>
             </template>
             <template #opposite="slotProps">
                 <div class="duration-wrapper">
-                    <p class="duration">{{slotProps.item.duration}}</p>
+                    <p class="m duration">{{slotProps.item.duration}}</p>
                 </div>
             </template>
             <template #marker="slotProps">
@@ -74,22 +74,18 @@ const events1 = [
 <style lang="scss" scoped>
 .timeline {
     width: 100%;
+
     .duration-wrapper {
         padding: 25px;
-        min-height: 50px;
+        min-height: 5vw;
 
         .duration {
             color: white;
-            font-size: 20px;
         }
     }
 
     .experience-wrapper {
         background-color: black;
-
-        .subtitle {
-            font-size: 20px;
-        }
 
         .description {
             text-align: left;
@@ -99,12 +95,12 @@ const events1 = [
     }
 
     .marker-icon {
-        height: 50px;
+        height: 5vw;
         margin: 10px 0px 10px 0px;
     }
 
     .marker-icon-default {
-        font-size: 30px;
+        font-size: 3vw;
         margin: 10px 0px 10px 0px;
     }
 }

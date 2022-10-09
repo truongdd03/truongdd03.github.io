@@ -31,7 +31,7 @@ const copyMailAddress = async () => {
 .icon {
     display: inline-block;
     margin: 30px 15px 10px 15px;
-    font-size: 2rem;
+    font-size: 2.5vw;
     cursor: pointer;
 }
 </style>

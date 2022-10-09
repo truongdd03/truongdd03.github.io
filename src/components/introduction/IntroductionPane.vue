@@ -39,7 +39,7 @@ const scroll = () => {
     text-align: center;
 
     .scroll-icon {
-        font-size: 3rem;
+        font-size: 3.5vw;
         cursor: pointer;
     }
 }

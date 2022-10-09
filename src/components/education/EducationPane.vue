@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper black-background">
         <div class="title-wrapper">
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-9.gif" />
             <h1 class="title">Education</h1>
@@ -61,7 +61,11 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
 <style lang="scss" scoped>
 .timeline {
     width: 100%;
-    background-color: white;
+
+    .company {
+        font-size: 2vw;
+    }
+
     .duration-wrapper {
         padding: 25px;
         min-height: 50px;
@@ -89,12 +93,12 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
     }
 
     .marker-icon {
-        height: 50px;
+        height: 5vw;
         margin: 10px 0px 10px 0px;
     }
 
     .marker-icon-default {
-        font-size: 30px;
+        font-size: 5vw;
         margin: 10px 0px 10px 0px;
     }
 }

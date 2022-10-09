@@ -1,0 +1,19 @@
+.xxl{
+
+}
+
+.xl {
+    font-size: calc(2.5vw + 15px);
+}
+
+.l {
+    font-size: calc(2.0vw + 10px);
+}
+
+.m {
+    font-size: calc(1.5vw + 8px);
+}
+
+.s {
+    font-size: calc(1vw + 5px);
+}

@@ -1,4 +1,5 @@
 @import "./base.css";
+@import "./size.css";
 
 #app {
   font-weight: normal;
@@ -26,14 +27,12 @@
 
 .title {
   text-align: center;
-  font-size: 2rem;
   color: white;
   margin-bottom: 50px;
 }
 
 .title-icon {
-  height: 5rem;
-  width: auto;
+  width: 5vw;
   margin: 0px 10px 0px 10px;
   border-radius: 50%;
   margin-bottom: 50px;
@@ -52,9 +51,4 @@
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-.full {
-  height: 100vh;
-  width: 100%;
 }

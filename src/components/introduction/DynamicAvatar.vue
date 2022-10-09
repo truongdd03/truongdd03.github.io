@@ -26,8 +26,7 @@ const onLeave = () => {
 
 <style scoped>
 #avatar {
-    width: auto;
-    height: 200px;
+    width: 15vw;
     border-radius: 50%;
     border: 5px solid white;
 }
