@@ -3,9 +3,9 @@
         <DynamicAvatar />
         <SocialInformation />
         <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
-        <!-- <div class="icon-wrapper">
+        <div class="icon-wrapper">
             <font-awesome-icon class="scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
-        </div> -->
+        </div>
     </div>
 </template>
 

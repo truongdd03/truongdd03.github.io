@@ -60,6 +60,7 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
 
 <style lang="scss" scoped>
 .timeline {
+    width: 100%;
     .duration-wrapper {
         padding: 25px;
         min-height: 50px;
