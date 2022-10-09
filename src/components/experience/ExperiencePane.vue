@@ -31,7 +31,7 @@
                 </div>
             </template>
             <template #marker="slotProps">
-                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon" />
+                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon" :alt="slotProps.item.company"/>
                 <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
             </template>
         </Timeline>

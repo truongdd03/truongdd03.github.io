@@ -25,7 +25,7 @@
                 </div>
             </template>
             <template #marker="slotProps">
-                <img class="wl marker-icon" :src="slotProps.item.icon" />
+                <img class="wl marker-icon" :src="slotProps.item.icon" :alt="slotProps.item.school" />
             </template>
         </Timeline>
     </div>

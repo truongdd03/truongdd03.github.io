@@ -3,6 +3,7 @@
       <img
 		id="avatar"
 		class="wxxl center"
+        alt="Don Truong"
         draggable="false"
 		@mouseover="onHover()"
 		@mouseleave="onLeave()"
