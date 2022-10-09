@@ -12,15 +12,17 @@
                         <h3 class="company green">{{slotProps.item.school}}</h3>
                     </template>
                     <template #subtitle>
-                        <div class="subtitle-wrapper">
-                            <p class="position">{{slotProps.item.degree}}</p>
-                            <p class="duration">{{slotProps.item.duration}}</p>
-                        </div>
+                        <p class="position">{{slotProps.item.degree}}</p>
                     </template>
                     <template #content>
                         <p v-if="slotProps.item.description" class="description">{{slotProps.item.description}}</p>
                     </template>
                 </Card>
+            </template>
+            <template #opposite="slotProps">
+                <div class="duration-wrapper">
+                    <p class="duration">{{slotProps.item.duration}}</p>
+                </div>
             </template>
             <template #marker="slotProps">
                 <img class="marker-icon" :src="slotProps.item.icon" />
@@ -60,22 +62,22 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
 .timeline {
     margin: 0px 30px 0px 30px;
 
+    .duration-wrapper {
+        padding: 25px;
+        min-height: 50px;
+
+        .duration {
+            color: white;
+            font-size: 20px;
+        }
+    }
+
     .experience-wrapper {
         background-color: black;
         border: 5px solid white;
 
-        .subtitle-wrapper {
-            width: 100%;
-            height: 20px;
+        .position {
             font-size: 20px;
-
-            .position {
-                float: left;
-            }
-
-            .duration {
-                float: right;
-            }
         }
 
         .description {

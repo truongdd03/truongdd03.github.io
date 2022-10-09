@@ -12,16 +12,18 @@
                         <h3 class="company green">{{slotProps.item.company}}</h3>
                     </template>
                     <template #subtitle>
-                        <div class="subtitle-wrapper">
-                            <p class="position">{{slotProps.item.title}}</p>
-                            <p class="duration">{{slotProps.item.duration}}</p>
-                        </div>
+                        <p class="subtitle">{{slotProps.item.title}}</p>
                     </template>
                     <template #content>
                         <p class="description">{{slotProps.item.description}}</p>
                         <p style="color: yellow">{{`Related Skills: ${slotProps.item.skills}`}}</p>
                     </template>
                 </Card>
+            </template>
+            <template #opposite="slotProps">
+                <div class="duration-wrapper">
+                    <p class="duration">{{slotProps.item.duration}}</p>
+                </div>
             </template>
             <template #marker="slotProps">
                 <img v-if="slotProps.item.icon" class="marker-icon" :src="slotProps.item.icon" />
@@ -73,21 +75,21 @@ const events1 = [
 .timeline {
     margin: 0px 30px 0px 30px;
 
+    .duration-wrapper {
+        padding: 25px;
+        min-height: 50px;
+
+        .duration {
+            color: white;
+            font-size: 20px;
+        }
+    }
+
     .experience-wrapper {
         background-color: black;
 
-        .subtitle-wrapper {
-            width: 100%;
-            height: 20px;
+        .subtitle {
             font-size: 20px;
-
-            .position {
-                float: left;
-            }
-
-            .duration {
-                float: right;
-            }
         }
 
         .description {
