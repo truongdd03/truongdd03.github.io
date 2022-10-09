@@ -14,7 +14,7 @@ import { faEnvelope, faCircleArrowDown, faBriefcase } from '@fortawesome/free-so
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 import './assets/main.css';
-import "primevue/resources/themes/lara-light-blue/theme.css";
+import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 const icons = [
     faGithub,

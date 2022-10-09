@@ -32,24 +32,26 @@
 
 <script setup lang="ts">
 import Card from 'primevue/card';
+import Holistics from '../../assets/experienceIcons/holistics.png';
+import OED from '../../assets/experienceIcons/oed.png';
 
 const events1 = [
     {
-        company: "Holistics Data",
-        icon: "/src/assets/experienceIcons/holistics.png",
-        skills: "Vue.js, TypeScript",
-        title: "Software Engineer Intern",
-        duration: "May 2022 - September 2022",
+        company: 'Holistics Data',
+        icon: Holistics,
+        skills: 'Vue.js, TypeScript',
+        title: 'Software Engineer Intern',
+        duration: 'May 2022 - September 2022',
         description: 'Worked on a new programming language called AML explicitly used for data analytics. \
                     Developed an online playground for testing and demonstrating AML. \
                     Collaborated on a team of 4 to create an internal vscode extension that improves the documentation searching process',
     },
     {
-        company: "Open Energy Dashboard",
-        icon: "/src/assets/experienceIcons/oed.png",
-        skills: "React, Redux, TypeScript, JavaScript, Postgres",
-        title: "Software Engineer Intern",
-        duration: "October 2021 - May 2022",
+        company: 'Open Energy Dashboard',
+        icon: OED,
+        skills: 'React, Redux, TypeScript, JavaScript, Postgres',
+        title: 'Software Engineer Intern',
+        duration: 'October 2021 - May 2022',
         description: 'Performed security testing and applied a rate limit for access to prevent DDoS attacks.\
                     Removed redundant code and enhanced the data exporting process. \
                     Managed database and created new APIs to support different resource types. \
@@ -57,11 +59,11 @@ const events1 = [
     },
     {
         company: "Chang's Kitchen",
-        skills: "Swift, JavaScript",
-        title: "Software Engineer Intern",
-        duration: "May 2021 - August 2021",
-        description: "Developed an iOS mobile app for customers to order food directly from the restaurant with daily rotating menus.\
-                    Designed and implemented a web application to manage orders from the mobile app, calculate cost and profit, and analyze customers’ data.",
+        skills: 'Swift, JavaScript',
+        title: 'Software Engineer Intern',
+        duration: 'May 2021 - August 2021',
+        description: 'Developed an iOS mobile app for customers to order food directly from the restaurant with daily rotating menus.\
+                    Designed and implemented a web application to manage orders from the mobile app, calculate cost and profit, and analyze customers’ data.',
     },
 ];
 </script>
