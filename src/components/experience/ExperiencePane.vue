@@ -36,7 +36,7 @@ import Card from 'primevue/card';
 const events1 = [
     {
         company: "Holistics Data",
-        icon: "src/assets/experienceIcons/holistics.png",
+        icon: "/src/assets/experienceIcons/holistics.png",
         skills: "Vue.js, TypeScript",
         title: "Software Engineer Intern",
         duration: "May 2022 - September 2022",
@@ -46,7 +46,7 @@ const events1 = [
     },
     {
         company: "Open Energy Dashboard",
-        icon: "src/assets/experienceIcons/oed.png",
+        icon: "/src/assets/experienceIcons/oed.png",
         skills: "React, Redux, TypeScript, JavaScript, Postgres",
         title: "Software Engineer Intern",
         duration: "October 2021 - May 2022",
