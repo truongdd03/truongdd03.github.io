@@ -13,11 +13,11 @@ import ExperiencePane from './components/experience/ExperiencePane.vue';
 import SkillsPane from './components/skills/SkillsPane.vue';
 
 onMounted(() => {
-    notify({
-        title: 'Contruction zone!',
-        type: 'warn',
-        text: 'This website is a work in progress. Some features may not work properly.'
-    })
+    // notify({
+    //     title: 'Contruction zone!',
+    //     type: 'warn',
+    //     text: 'This website is a work in progress. Some features may not work properly.'
+    // })
 })
 
 </script>

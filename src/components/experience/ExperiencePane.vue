@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper full">
+    <div class="wrapper">
         <div class="title-wrapper">
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
             <h1 class="title">Experience</h1>
@@ -70,7 +70,7 @@ const events1 = [
 
 <style lang="scss" scoped>
 .timeline {
-    margin: 0px 30px 0px 30px;
+    margin: 0px 30px 100px 30px;
 
     .experience-wrapper {
         background-color: black;

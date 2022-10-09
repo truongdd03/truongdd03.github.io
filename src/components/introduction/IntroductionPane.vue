@@ -18,8 +18,8 @@ import { scrollIntoView } from '@/utils';
 const roles = [
     'Don Truong',
     'Đông Trương',
+    'studying at Michigan State University',
     'from Vietnam',
-    'a sophomore at MSU',
     'a former SWE Intern at Holistics',
     'a former SWE Intern at OED',
     "a former SWE Intern at Chang's Kitchen",
