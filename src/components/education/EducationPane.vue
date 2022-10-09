@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper black-background">
+    <div class="wrapper">
         <div class="title-wrapper">
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-9.gif" />
             <h1 class="title">Education</h1>
@@ -75,7 +75,6 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
     .experience-wrapper {
         background-color: black;
         border: 5px solid white;
-        width: 100%;
 
         .position {
             font-size: 20px;
