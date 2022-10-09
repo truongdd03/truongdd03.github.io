@@ -2,7 +2,7 @@
     <IntroductionPane id="introduction" />
     <ExperiencePane id="experience" />
     <EducationPane id="education" />
-    <ProjectPane id="project" />
+    <!-- <ProjectPane id="project" /> -->
     <notifications class="notification" position="bottom right" />
 </template>
 
