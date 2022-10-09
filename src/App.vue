@@ -2,17 +2,16 @@
     <IntroductionPane id="introduction" />
     <ExperiencePane id="experience" />
     <EducationPane id="education" />
-    <!-- <SkillsPane id="skills" /> -->
+    <ProjectPane id="project" />
     <notifications class="notification" position="bottom right" />
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { notify } from '@kyvg/vue3-notification';
 import IntroductionPane from './components/introduction/IntroductionPane.vue';
 import ExperiencePane from './components/experience/ExperiencePane.vue';
-import SkillsPane from './components/skills/SkillsPane.vue';
 import EducationPane from './components/education/EducationPane.vue';
+import ProjectPane from './components/projects/ProjectPane.vue';
 
 onMounted(() => {
     // notify({

@@ -1,7 +1,7 @@
 <template>
-    <div class="wrapper black-background">
+    <div class="wrapper">
         <div class="title-wrapper">
-            <h1 class="title">Skills</h1>
+            <h1 class="title">Projects</h1>
         </div>
     </div>
 </template>
