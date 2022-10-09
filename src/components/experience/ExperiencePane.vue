@@ -1,15 +1,20 @@
 <template>
     <div class="wrapper">
         <div class="title-wrapper">
-            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
+            <img class="wxl title-icon"
+                src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
             <h1 class="title xl">Experience</h1>
-            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-41-72.gif" />
+            <img class="wxl title-icon"
+                src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-41-72.gif" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
-                        <h3 class="l green">{{slotProps.item.company}}</h3>
+                        <a class="company-link" :href="slotProps.item.url" target="_blank">
+                            <h3 class="l green company-name">{{slotProps.item.company}}</h3>
+                            <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon" icon="fa-solid fa-up-right-from-square" />
+                        </a>
                     </template>
                     <template #subtitle>
                         <p class="m">{{slotProps.item.title}}</p>
@@ -41,6 +46,7 @@ import OED from '../../assets/experienceIcons/oed.png';
 const events1 = [
     {
         company: 'Holistics Data',
+        url: 'https://www.holistics.io/',
         icon: Holistics,
         skills: 'Vue.js, TypeScript',
         title: 'Software Engineer Intern',
@@ -51,6 +57,7 @@ const events1 = [
     },
     {
         company: 'Open Energy Dashboard',
+        url: 'https://openenergydashboard.github.io/',
         icon: OED,
         skills: 'React, Redux, TypeScript, JavaScript, Postgres',
         title: 'Software Engineer Intern',
@@ -74,6 +81,19 @@ const events1 = [
 <style lang="scss" scoped>
 .timeline {
     width: 100%;
+
+    .company-link {
+        text-decoration: none;
+        
+        .redirect-icon, .company-name {
+            display: inline;
+        }
+
+        .redirect-icon {
+            margin-left: 5px;
+            color: hsla(160, 100%, 37%, 1);
+        }
+    }
 
     .duration-wrapper {
         padding: 25px;
