@@ -3,7 +3,7 @@
         <div class="title-wrapper">
             <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
             <h1 class="title">Experience</h1>
-            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/06/funnygifsbox.com-2021-06-10-09-00-31-19.gif" />
+            <img class="title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-41-72.gif" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
@@ -71,7 +71,7 @@ const events1 = [
 
 <style lang="scss" scoped>
 .timeline {
-    margin: 0px 30px 100px 30px;
+    margin: 0px 30px 0px 30px;
 
     .experience-wrapper {
         background-color: black;

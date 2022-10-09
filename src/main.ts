@@ -6,7 +6,6 @@ import Notifications from '@kyvg/vue3-notification'
 import PrimeVue from 'primevue/config';
 import Timeline from 'primevue/timeline'
 
-
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
