@@ -74,7 +74,7 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
 
     .experience-wrapper {
         background-color: black;
-        border: 5px solid white;
+        // border: 5px solid white;
 
         .position {
             font-size: 20px;
@@ -84,7 +84,7 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
             text-align: left;
             color: white;
             margin-bottom: 20px;
-            // white-space: pre-wrap;
+            white-space: pre-wrap;
         }
     }
 
