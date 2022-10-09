@@ -84,7 +84,7 @@ MSU #YOU-ARE-WELCOME-HERE Scholarship`,
             text-align: left;
             color: white;
             margin-bottom: 20px;
-            white-space: pre-wrap;
+            // white-space: pre-wrap;
         }
     }
 
