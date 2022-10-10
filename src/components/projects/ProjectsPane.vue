@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import ProjectPane from './ProjectPane.vue';
 
+import PersonalWebsite from '../../assets/projects/personal-website.jpeg';
 import Barter from '../../assets/projects/barter.jpeg';
 import Nuntium from '../../assets/projects/nuntium.jpeg';
 
@@ -22,7 +23,7 @@ const projects = [
         name: 'Personal Website',
         subtitle: 'My personal website',
         skills: ['TypeScript', 'Vue3'],
-        image: '',
+        image: PersonalWebsite,
         description: '',
         url: 'https://github.com/truongdd03/truongdd03.github.io'
     },
