@@ -1,7 +1,11 @@
 <template>
     <div class="wrapper tmp">
         <div class="title-wrapper">
+            <img class="wxl title-icon"
+                src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-10-49.gif" />
             <h1 class="xl title">Projects</h1>
+            <img class="wxl title-icon"
+                src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-11-64.gif" />
         </div>
         <ProjectPane v-for="project in projects" :project="project"></ProjectPane>
     </div>
