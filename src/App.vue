@@ -2,7 +2,7 @@
     <IntroductionPane id="introduction" />
     <ExperiencePane id="experience" />
     <EducationPane id="education" />
-    <!-- <ProjectPane id="project" /> -->
+    <ProjectsPane id="project" />
     <notifications class="notification" position="bottom right" />
 </template>
 
@@ -11,7 +11,7 @@ import { onMounted } from 'vue';
 import IntroductionPane from './components/introduction/IntroductionPane.vue';
 import ExperiencePane from './components/experience/ExperiencePane.vue';
 import EducationPane from './components/education/EducationPane.vue';
-import ProjectPane from './components/projects/ProjectPane.vue';
+import ProjectsPane from './components/projects/ProjectsPane.vue';
 
 onMounted(() => {
     // notify({
