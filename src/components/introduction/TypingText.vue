@@ -81,6 +81,7 @@ onMounted(() => {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 h1 {
     font-weight: normal;

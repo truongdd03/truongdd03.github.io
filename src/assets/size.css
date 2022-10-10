@@ -1,33 +1,33 @@
 .xxl{
-    font-size: calc(2.5vw + 17px);
+    font-size: calc(2.0vw + 17px);
 }
 
 .xl {
-    font-size: calc(2vw + 15px);
+    font-size: calc(1.5vw + 15px);
 }
 
 .l {
-    font-size: calc(1.5vw + 12px);
+    font-size: calc(1.0vw + 12px);
 }
 
 .m {
-    font-size: calc(1.3vw + 10px);
+    font-size: calc(0.8vw + 10px);
 }
 
 .s {
-    font-size: calc(0.8vw + 8px);
+    font-size: calc(0.6vw + 8px);
 }
 
 .wxxl {
-    width: calc(13vw + 80px);
+    width: calc(10vw + 80px);
 }
 
 .wxl {
-    width: calc(5vw + 20px);
+    width: calc(4vw + 20px);
 }
 
 .wl {
-    width: calc(3vw + 15px);
+    width: calc(2.5vw + 15px);
 }
 
 .wm {
