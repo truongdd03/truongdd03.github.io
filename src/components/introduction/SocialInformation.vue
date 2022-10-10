@@ -11,15 +11,22 @@
                 <font-awesome-icon class="l icon" icon="fa-brands fa-discord" inverse />
             </a>
             <font-awesome-icon class="l icon" icon="fa-solid fa-envelope" inverse @click="copyMailAddress()" />
+            <font-awesome-icon class="l icon" icon="fa-solid fa-file-pdf" inverse @click="downloadResume()" />
         </div>
     </header>
 </template>
 
 <script setup lang="ts">import { notify } from '@kyvg/vue3-notification';
+import Resume from '../../assets/Don_Truong_Resume.pdf';
+
 const copyMailAddress = async () => {
     const mailAddress = 'dong23102003@gmail.com';
     await navigator.clipboard.writeText(mailAddress);
     notify({ title: 'Copied email address!' });
+}
+
+const downloadResume = () => {
+    window.open(Resume);
 }
 </script>
 
