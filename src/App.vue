@@ -12,22 +12,7 @@ import IntroductionPane from './components/introduction/IntroductionPane.vue';
 import ExperiencePane from './components/experience/ExperiencePane.vue';
 import EducationPane from './components/education/EducationPane.vue';
 import ProjectsPane from './components/projects/ProjectsPane.vue';
-import { getDatabase, ref, set } from '@firebase/database';
-
-const updateRemote = (ip: string) => {
-    const database = getDatabase();
-    set(ref(database, 'users'), {
-        ip: ip
-    });
-}
-
-const writeUserIP = () => {
-    fetch('https://api.ipify.org/?format=json')
-        .then(x => x.json())
-        .then(({ ip }) => {
-            updateRemote(ip);
-        });
-}
+import { writeUserIP } from './utils';
 
 onMounted(async () => {
     writeUserIP();
