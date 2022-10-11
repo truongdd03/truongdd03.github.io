@@ -15,6 +15,8 @@ import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-ic
 import './assets/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
+import './firebase.config';
+
 const icons = [
     faGithub,
     faLinkedin,

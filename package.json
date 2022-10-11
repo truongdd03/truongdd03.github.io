@@ -16,7 +16,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@kyvg/vue3-notification": "^2.4.1",
-    "primeicons": "^6.0.1",
+    "dotenv": "^16.0.3",
+    "firebase": "^9.11.0",
     "primevue": "^3.17.0",
     "sass": "^1.55.0",
     "vue": "^3.2.38"
