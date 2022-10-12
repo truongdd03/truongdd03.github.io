@@ -13,7 +13,8 @@
                     <template #title>
                         <a class="company-link" :href="slotProps.item.url" target="_blank">
                             <h3 class="l green company-name">{{slotProps.item.company}}</h3>
-                            <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon" icon="fa-solid fa-up-right-from-square" />
+                            <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon"
+                                icon="fa-solid fa-up-right-from-square" />
                         </a>
                     </template>
                     <template #subtitle>
@@ -31,7 +32,8 @@
                 </div>
             </template>
             <template #marker="slotProps">
-                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon" :alt="slotProps.item.company"/>
+                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon"
+                    :alt="slotProps.item.company" />
                 <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
             </template>
         </Timeline>
@@ -42,13 +44,31 @@
 import Card from 'primevue/card';
 import Holistics from '../../assets/experienceIcons/holistics.png';
 import OED from '../../assets/experienceIcons/oed.png';
+import MSU from '../../assets/educationIcons/msu.png';
 
 const events1 = [
+    {
+        company: 'Open Energy Dashboard',
+        url: 'https://openenergydashboard.github.io/',
+        icon: OED,
+        skills: 'React, Redux, TypeScript, JavaScript, Postgres',
+        title: 'Software Engineer Intern',
+        duration: 'October 2022 - Present',
+        description: '',
+    },
+    {
+        company: 'Michigan State University',
+        icon: MSU,
+        skills: 'JavaScript, HTML/CSS',
+        title: 'Research Assistant | Programmer',
+        duration: 'October 2022 - present',
+        description: '',
+    },
     {
         company: 'Holistics Data',
         url: 'https://www.holistics.io/',
         icon: Holistics,
-        skills: 'Vue.js, TypeScript',
+        skills: 'Vue.js, TypeScript, HTML/CSS',
         title: 'Software Engineer Intern',
         duration: 'May 2022 - September 2022',
         description: 'Worked on a new programming language called AML explicitly used for data analytics. \
@@ -84,8 +104,9 @@ const events1 = [
 
     .company-link {
         text-decoration: none;
-        
-        .redirect-icon, .company-name {
+
+        .redirect-icon,
+        .company-name {
             display: inline;
         }
 
