@@ -62,7 +62,7 @@ const events1 = [
         skills: 'JavaScript, HTML/CSS',
         title: 'Research Assistant | Programmer',
         duration: 'October 2022 - present',
-        description: '',
+        description: 'Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.',
     },
     {
         company: 'Holistics Data',
