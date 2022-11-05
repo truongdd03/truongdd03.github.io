@@ -3,8 +3,9 @@
         <div class="nav-menu">
             <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
-                <font-awesome-icon class="logo l" icon="fa-solid fa-paw" inverse
-                    @click="onNavButtonClick('introduction')" />
+                <div class="logo" @click="onNavButtonClick('introduction')">
+                    <font-awesome-icon class="l" icon="fa-solid fa-paw" inverse />
+                </div>
 
                 <ul class="nav-items">
                     <li :class="displayingSection === 'introduction' ? 'nav-button-selected' : 'nav-button'"
@@ -15,8 +16,8 @@
                         class="nav-button" @click="onNavButtonClick('education')">Education</li>
                     <li :class="displayingSection === 'project' ? 'nav-button-selected' : 'nav-button'"
                         class="nav-button" @click="onNavButtonClick('project')">Projects</li>
-                    <li :class="curRoute.startsWith('/blogs') ? 'nav-button-selected' : 'nav-button'"
-                        class="nav-button" @click="redirectToBlogs()">Blogs</li>
+                    <li :class="curRoute.startsWith('/blogs') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
+                        @click="redirectToBlogs()">Blogs</li>
                 </ul>
             </div>
         </div>

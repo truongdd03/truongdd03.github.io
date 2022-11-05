@@ -26,7 +26,7 @@ const roles = [
 ];
 
 const scroll = async () => {
-    await scrollIntoView('experience', '/portfolio');
+    await scrollIntoView('experience', '/');
 }
 </script>
 

@@ -4,7 +4,7 @@ import BlogsPageVue from "@/components/blogs/BlogsPage.vue";
 
 const routes = [
 	{
-		path: "/portfolio",
+		path: "/",
 		name: "Portfolio",
 		component: PortfolioPageVue,
 	},
@@ -15,7 +15,7 @@ const routes = [
 	},
 	{
 		path: "/:catchAll(.*)",
-		redirect: '/portfolio'
+		redirect: '/'
 	}
 ];
 

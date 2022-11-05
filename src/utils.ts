@@ -1,10 +1,9 @@
 import { child, get, getDatabase, ref, set } from '@firebase/database';
-import { useRoute } from 'vue-router';
 import router from './router';
 
 export const scrollIntoView = async (id: string, route: string) => {
     try {
-        if (route !== '/portfolio') {
+        if (route !== '/') {
             await router.push('/');
         }
         document.getElementById(id)!.scrollIntoView({
