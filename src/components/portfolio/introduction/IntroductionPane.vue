@@ -25,8 +25,8 @@ const roles = [
     'a dog person :)',
 ];
 
-const scroll = () => {
-    scrollIntoView('experience');
+const scroll = async () => {
+    await scrollIntoView('experience', '/portfolio');
 }
 </script>
 

@@ -15,6 +15,8 @@
                         class="nav-button" @click="onNavButtonClick('education')">Education</li>
                     <li :class="displayingSection === 'project' ? 'nav-button-selected' : 'nav-button'"
                         class="nav-button" @click="onNavButtonClick('project')">Projects</li>
+                    <li :class="curRoute.startsWith('/blogs') ? 'nav-button-selected' : 'nav-button'"
+                        class="nav-button" @click="redirectToBlogs()">Blogs</li>
                 </ul>
             </div>
         </div>
@@ -22,10 +24,17 @@
 </template>
 
 <script setup lang="ts">
+import router from '@/router';
 import { scrollIntoView } from '@/utils';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useRoute } from 'vue-router';
 
 let showMobileMenu = ref(false);
+
+const route = useRoute();
+const curRoute = computed(() => {
+    return route.path;
+});
 
 const props = defineProps({
     displayingSection: String,
@@ -35,10 +44,13 @@ const showMenu = () => {
     showMobileMenu.value = !showMobileMenu.value;
 };
 
-const onNavButtonClick = (id: string) => {
-    scrollIntoView(id);
+const onNavButtonClick = async (id: string) => {
+    await scrollIntoView(id, curRoute.value);
 }
 
+const redirectToBlogs = () => {
+    router.push('/blogs');
+}
 
 </script>
 
