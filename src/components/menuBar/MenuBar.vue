@@ -71,7 +71,6 @@ const onNavButtonClick = (id: string) => {
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    height: 40px;
 
     .nav-button,
     .nav-button-selected {
@@ -102,7 +101,7 @@ const onNavButtonClick = (id: string) => {
 
     .open-menu {
         opacity: 1;
-        height: 150px;
+        height: 200px;
     }
 
     .closed-menu {
@@ -126,6 +125,10 @@ const onNavButtonClick = (id: string) => {
         display: block;
         text-align: right;
         margin-left: 10px;
+    }
+
+    .logo {
+        display: none;
     }
 }
 </style>
