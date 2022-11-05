@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import PortfolioPageVue from "@/components/portfolio/PortfolioPage.vue";
-// import About from "@/views/About.vue";
+import BlogsPageVue from "@/components/blogs/BlogsPage.vue";
+import NotFoundPageVue from "@/components/notFound/NotFoundPage.vue";
 
 const routes = [
   {
@@ -8,11 +9,15 @@ const routes = [
     name: "Portfolio",
     component: PortfolioPageVue,
   },
-//   {
-//     path: "/about",
-//     name: "About",
-//     component: About,
-//   },
+  {
+    path: "/blogs",
+    name: "Blogs",
+    component: BlogsPageVue,
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: NotFoundPageVue,
+  }
 ];
 
 const router = createRouter({
