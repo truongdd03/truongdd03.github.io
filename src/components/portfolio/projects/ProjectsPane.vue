@@ -14,9 +14,9 @@
 <script setup lang="ts">
 import ProjectPane from './ProjectPane.vue';
 
-import PersonalWebsite from '../../assets/projects/personal-website.jpeg';
-import Barter from '../../assets/projects/barter.jpeg';
-import Nuntium from '../../assets/projects/nuntium.jpeg';
+import PersonalWebsite from '../../../assets/projects/personal-website.jpeg';
+import Barter from '../../../assets/projects/barter.jpeg';
+import Nuntium from '../../../assets/projects/nuntium.jpeg';
 
 const projects = [
     {

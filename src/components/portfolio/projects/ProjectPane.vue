@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Github from '../../assets/projects/github.png';
+import Github from '../../../assets/projects/github.png';
 
 const props = defineProps({
     project: {

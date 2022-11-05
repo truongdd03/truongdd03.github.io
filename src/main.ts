@@ -16,6 +16,7 @@ import './assets/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 import './firebase.config';
+import router from './router';
 
 const icons = [
     faGithub,
@@ -32,7 +33,7 @@ const icons = [
 
 icons.forEach((icon) => library.add(icon));
 
-const app = createApp(App);
+const app = createApp(App).use(router);
 
 const libraries = [
     Notifications,
