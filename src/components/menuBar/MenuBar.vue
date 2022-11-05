@@ -3,11 +3,18 @@
         <div class="nav-menu">
             <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
+                <font-awesome-icon class="logo l" icon="fa-solid fa-paw" inverse
+                    @click="onNavButtonClick('introduction')" />
+
                 <ul class="nav-items">
-                    <li class="nav-button" @click="onNavButtonClick('introduction')">Home</li>
-                    <li class="nav-button" @click="onNavButtonClick('experience')">Experience</li>
-                    <li class="nav-button" @click="onNavButtonClick('education')">Education</li>
-                    <li class="nav-button" @click="onNavButtonClick('project')">Projects</li>
+                    <li :class="displayingSection === 'introduction' ? 'nav-button-selected' : 'nav-button'"
+                        @click="onNavButtonClick('introduction')">Home</li>
+                    <li :class="displayingSection === 'experience' ? 'nav-button-selected' : 'nav-button'"
+                        class="nav-button" @click="onNavButtonClick('experience')">Experience</li>
+                    <li :class="displayingSection === 'education' ? 'nav-button-selected' : 'nav-button'"
+                        class="nav-button" @click="onNavButtonClick('education')">Education</li>
+                    <li :class="displayingSection === 'project' ? 'nav-button-selected' : 'nav-button'"
+                        class="nav-button" @click="onNavButtonClick('project')">Projects</li>
                 </ul>
             </div>
         </div>
@@ -20,6 +27,10 @@ import { ref } from 'vue';
 
 let showMobileMenu = ref(false);
 
+const props = defineProps({
+    displayingSection: String,
+});
+
 const showMenu = () => {
     showMobileMenu.value = !showMobileMenu.value;
 };
@@ -27,6 +38,8 @@ const showMenu = () => {
 const onNavButtonClick = (id: string) => {
     scrollIntoView(id);
 }
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -36,6 +49,11 @@ const onNavButtonClick = (id: string) => {
     width: 100%;
     background-color: rgb(23, 27, 33);
     z-index: 1;
+}
+
+.logo {
+    cursor: pointer;
+    color: white;
 }
 
 .nav-content {
@@ -55,11 +73,17 @@ const onNavButtonClick = (id: string) => {
     padding: 0;
     height: 40px;
 
-    .nav-button {
-        padding: 0 20px;
+    .nav-button,
+    .nav-button-selected {
+        padding: 10px 20px 10px;
         cursor: pointer;
         color: white;
         font-size: calc(0.6vw + 8px);
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-button-selected {
+        border-bottom: 2px solid hsla(160, 100%, 37%, 1);
     }
 }
 
