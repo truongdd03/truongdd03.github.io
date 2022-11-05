@@ -34,7 +34,7 @@ const scroll = () => {
 .icon-wrapper {
     width: 90%;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     text-align: center;
 
     .scroll-icon {

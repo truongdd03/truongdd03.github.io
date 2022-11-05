@@ -2,7 +2,7 @@
     <header>
       <img
 		id="avatar"
-		class="wxxl center"
+		class="hxxl center"
         alt="Don Truong"
         draggable="false"
 		@mouseover="onHover()"

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="nav-menu">
-            <i class="fas fa-bars" @click="showMenu()"></i>
+            <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
                 <ul class="nav-items">
                     <li class="nav-button" @click="onNavButtonClick('introduction')">Home</li>
@@ -63,15 +63,17 @@ const onNavButtonClick = (id: string) => {
     }
 }
 
-i {
+.icon {
     display: none;
 }
 
 @media screen and (max-width: 768px) {
     .nav-menu {
         padding-top: 10px;
-        position: absolute;
         width: 100%;
+        cursor: pointer;
+        align-items: center;
+        text-align: center;
     }
 
     .open-menu {
@@ -81,8 +83,8 @@ i {
 
     .closed-menu {
         opacity: 0;
-        height: 0;
         padding: 0;
+        height: 15px;
     }
 
     .nav-content {
@@ -96,10 +98,10 @@ i {
         flex-direction: column;
     }
 
-    i {
+    .icon {
         display: block;
         text-align: right;
-        padding: 0 10px 10px 0;
+        margin-left: 10px;
     }
 }
 </style>
