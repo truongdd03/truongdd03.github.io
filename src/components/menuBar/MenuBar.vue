@@ -3,12 +3,11 @@
         <div class="nav-menu">
             <i class="fas fa-bars" @click="showMenu()"></i>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
-                <!-- <div class="logo">Logo</div> -->
                 <ul class="nav-items">
-                    <li class="nav-button">Home</li>
-                    <li class="nav-button">Experience</li>
-                    <li class="nav-button">Education</li>
-                    <li class="nav-button">Projects</li>
+                    <li class="nav-button" @click="onNavButtonClick('introduction')">Home</li>
+                    <li class="nav-button" @click="onNavButtonClick('experience')">Experience</li>
+                    <li class="nav-button" @click="onNavButtonClick('education')">Education</li>
+                    <li class="nav-button" @click="onNavButtonClick('project')">Projects</li>
                 </ul>
             </div>
         </div>
@@ -16,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+import { scrollIntoView } from '@/utils';
 import { ref } from 'vue';
 
 let showMobileMenu = ref(false);
@@ -23,6 +23,10 @@ let showMobileMenu = ref(false);
 const showMenu = () => {
     showMobileMenu.value = !showMobileMenu.value;
 };
+
+const onNavButtonClick = (id: string) => {
+    scrollIntoView(id);
+}
 </script>
 
 <style lang="scss" scoped>
