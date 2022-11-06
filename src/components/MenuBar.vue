@@ -4,7 +4,8 @@
             <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
                 <div class="logo" @click="onNavButtonClick('introduction')">
-                    <font-awesome-icon class="l" icon="fa-solid fa-paw" inverse />
+                    <font-awesome-icon class="l left-logo" icon="fa-solid fa-paw" inverse />
+                    <h1 class="l left-logo">Don Truong</h1>
                 </div>
 
                 <ul class="nav-items">
@@ -67,6 +68,12 @@ const redirectToBlogs = () => {
 .logo {
     cursor: pointer;
     color: white;
+    vertical-align: middle;
+
+    .left-logo {
+        margin-left: 10px;
+        display: inline-block;
+    }
 }
 
 .nav-content {
