@@ -17,8 +17,8 @@
                         class="nav-button" @click="onNavButtonClick('education')">Education</li>
                     <li :class="displayingSection === 'project' ? 'nav-button-selected' : 'nav-button'"
                         class="nav-button" @click="onNavButtonClick('project')">Projects</li>
-                    <li :class="curRoute.startsWith('/blogs') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
-                        @click="redirectToBlogs()">Blogs</li>
+                    <li :class="curRoute.startsWith('/blog') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
+                        @click="redirectToBlog()">Blog</li>
                 </ul>
             </div>
         </div>
@@ -50,8 +50,8 @@ const onNavButtonClick = async (id: string) => {
     await scrollIntoView(id, curRoute.value);
 }
 
-const redirectToBlogs = () => {
-    router.push('/blogs');
+const redirectToBlog = () => {
+    router.push('/blog');
 }
 
 </script>

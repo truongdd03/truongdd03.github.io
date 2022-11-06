@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import PortfolioPageVue from "@/components/portfolio/PortfolioPage.vue";
-import BlogsPageVue from "@/components/blogs/BlogsPage.vue";
+import BlogPageVue from "@/components/blog/BlogPage.vue";
 
 const routes = [
 	{
@@ -9,9 +9,9 @@ const routes = [
 		component: PortfolioPageVue,
 	},
 	{
-		path: "/blogs",
-		name: "Blogs",
-		component: BlogsPageVue,
+		path: "/blog",
+		name: "Blog",
+		component: BlogPageVue,
 	},
 	{
 		path: "/:catchAll(.*)",
