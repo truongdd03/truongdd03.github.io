@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <img class="wxl" src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-17-9.gif" />
+        <img class="wxl" :src="icon" />
         <h1 class="xxl">
             {{ constantText }}
             <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
@@ -16,7 +16,8 @@ import { onMounted, ref } from 'vue';
 
 const props = defineProps({
     constantText: String,
-    dynamicTexts: Array<String>, 
+    dynamicTexts: Array<String>,
+    icon: String,
 });
 
 const typingSpeed = 70;

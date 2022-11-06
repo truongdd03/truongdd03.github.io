@@ -18,7 +18,7 @@
                     <li :class="displayingSection === 'project' ? 'nav-button-selected' : 'nav-button'"
                         class="nav-button" @click="onNavButtonClick('project')">Projects</li>
                     <li :class="curRoute.startsWith('/blog') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
-                        @click="redirectToBlog()">Blog</li>
+                        @click="redirectToBlog()">Doghouse</li>
                 </ul>
             </div>
         </div>

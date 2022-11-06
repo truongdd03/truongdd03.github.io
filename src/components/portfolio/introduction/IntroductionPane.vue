@@ -2,7 +2,11 @@
     <div class="wrapper black-background">
         <DynamicAvatar />
         <SocialInformation />
-        <TypingText constantText="Hi, I'm " :dynamicTexts="roles" />
+        <TypingText
+            constantText="Hi, I'm "
+            :dynamicTexts="roles"
+            icon="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-17-9.gif"
+        />
         <div class="icon-wrapper">
             <font-awesome-icon class="xl scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
         </div>
