@@ -3,6 +3,7 @@
 set -e
 # build
 npm run build
+cp site-map.xml ./dist/site-map.xml
 # navigate into the build output directory
 cd dist
 cp index.html 404.html
