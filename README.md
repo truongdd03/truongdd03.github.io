@@ -1,6 +1,8 @@
-# truongdd03's Personal Website
+# truongdd03's Personal Website - [https://truongdd03.github.io/](https://truongdd03.github.io/)
 
-This website is built with Vue 3 and TypeScript. Check it out at [https://truongdd03.github.io/](https://truongdd03.github.io/).
+![](https://github.com/truongdd03/truongdd03.github.io/workflows/Build/badge.svg)
+
+This website is built from scratch using Vue 3, TypeScript, and HTML/SCSS. Users' ips are collected and stored on Firebase to track the number of visits and where users are from.
 
 # For Developers
 
