@@ -1,0 +1,11 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  steps:
+    -name: deploy
+      run:
+        npm run deploy
