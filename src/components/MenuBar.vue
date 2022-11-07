@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="nav-menu">
+        <div :class="`nav-menu ${showMobileMenu ? '' : 'limit-height'}`">
             <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
             <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
                 <div class="logo" @click="onNavButtonClick('introduction')">
@@ -119,15 +119,18 @@ const redirectToBlog = () => {
         text-align: center;
     }
 
+    .limit-height {
+        height: 35px;
+    }
+
     .open-menu {
         opacity: 1;
-        height: 200px;
+        height: 250px;
     }
 
     .closed-menu {
-        opacity: 0;
+        display: none;
         padding: 0;
-        height: 15px;
     }
 
     .nav-content {
