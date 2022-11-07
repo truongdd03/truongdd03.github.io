@@ -5,7 +5,17 @@ on:
       - master
 
 jobs:
-  steps:
-    - name: deploy
-      run:
-        npm run deploy
+  deploy:
+    runs-on: ubuntu-latest
+    container: node:14
+
+    steps:
+      # Checkout actions just downloads code, does not git init
+      # Find more info on the bug here - https://github.com/actions/checkout/issues/126
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy
+        run: node run deploy
