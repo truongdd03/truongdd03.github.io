@@ -14,12 +14,7 @@ import IntroductionPane from './introduction/IntroductionPane.vue';
 import ExperiencePane from './ExperiencePane.vue';
 import EducationPane from './EducationPane.vue';
 import ProjectsPane from './projects/ProjectsPane.vue';
-import { writeUserIP } from '../../utils';
 import { useElementVisibility } from '@vueuse/core'
-
-onMounted(async () => {
-    writeUserIP();
-});
 
 // Get the target section to highlight the correct navBar button
 const introduction = ref(null);

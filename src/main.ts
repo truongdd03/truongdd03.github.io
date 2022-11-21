@@ -17,6 +17,7 @@ import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 import './firebase.config';
 import router from './router';
+import { writeUserIP } from './utils';
 
 const icons = [
     faGithub,
@@ -41,6 +42,8 @@ const libraries = [
 ];
 
 libraries.forEach((lib) => app.use(lib));
+
+writeUserIP();
 
 app.component('Timeline', Timeline);
 app.component('font-awesome-icon', FontAwesomeIcon);
