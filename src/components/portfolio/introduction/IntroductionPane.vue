@@ -21,11 +21,10 @@ import { scrollIntoView } from '@/utils';
 
 const roles = [
     'Don Truong',
+    'an incoming SWE Intern @ Salesforce',
     'from Vietnam',
-    'studying at Michigan State University',
-    'a former SWE Intern at Holistics',
-    'a former SWE Intern at OED',
-    "a former SWE Intern at Chang's Kitchen",
+    'studying @ Michigan State University',
+    'a former SWE Intern @ Holistics',
     'a dog person :)',
 ];
 

@@ -20,7 +20,7 @@ const props = defineProps({
     icon: String,
 });
 
-const typingSpeed = 70;
+const typingSpeed = 60;
 const erasingSpeed = 10; // Larger is slower
 const delayTime = 1500;
 let typeValue = ref('');

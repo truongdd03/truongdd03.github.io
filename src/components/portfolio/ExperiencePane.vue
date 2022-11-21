@@ -45,15 +45,15 @@ import Card from 'primevue/card';
 import Holistics from '../../assets/experienceIcons/holistics.png';
 import OED from '../../assets/experienceIcons/oed.png';
 import MSU from '../../assets/educationIcons/msu.png';
+import Salesforce from '../../assets/experienceIcons/salesforce.png';
 
 const events1 = [
     {
-        company: 'Open Energy Dashboard',
-        url: 'https://openenergydashboard.github.io/',
-        icon: OED,
-        skills: 'React, Redux, TypeScript, JavaScript, Postgres',
-        title: 'Software Engineer Intern',
-        duration: 'October 2022 - Present',
+        company: 'Salesforce',
+        icon: Salesforce,
+        skills: '',
+        title: 'Incoming Software Engineer Intern',
+        duration: '',
         description: '',
     },
     {
@@ -62,7 +62,8 @@ const events1 = [
         skills: 'JavaScript, HTML/CSS',
         title: 'Research Assistant | Programmer',
         duration: 'October 2022 - present',
-        description: 'Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.',
+        description: 'Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market. \
+                    Implemented an activity tracker from scratch using PHP, SQL, and JavaScript.',
     },
     {
         company: 'Holistics Data',
@@ -81,7 +82,7 @@ const events1 = [
         icon: OED,
         skills: 'React, Redux, TypeScript, JavaScript, Postgres',
         title: 'Software Engineer Intern',
-        duration: 'October 2021 - May 2022',
+        duration: 'October 2021 - May 2022 & October 2022 - Present',
         description: 'Performed security testing and applied a rate limit for access to prevent DDoS attacks.\
                     Removed redundant code and enhanced the data exporting process. \
                     Managed database and created new APIs to support different resource types. \
