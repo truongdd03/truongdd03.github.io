@@ -10,7 +10,7 @@
             </div>
             <div class="information-wrapper">
                 <h1 class="m green">{{project.name}}</h1>
-                <p class="s subtitle">{{project.subtitle}}</p>
+                <Markdown :html="true" class="s subtitle" :source="project.subtitle" />
             </div>
         </div>
     </a>
@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import Markdown from 'vue3-markdown-it';
 import Github from '../../../assets/projects/github.png';
 
 const props = defineProps({
@@ -80,6 +81,7 @@ let isHovering = ref(false);
 
             .subtitle {
                 color: white;
+                padding: 5px;
             }
         }
     }
