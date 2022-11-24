@@ -50,3 +50,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+.yellow {
+  color: yellow;
+}

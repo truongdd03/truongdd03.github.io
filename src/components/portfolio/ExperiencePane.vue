@@ -12,23 +12,22 @@
                 <Card class="experience-wrapper">
                     <template #title>
                         <a class="company-link" :href="slotProps.item.url" target="_blank">
-                            <h3 class="l green company-name">{{slotProps.item.company}}</h3>
+                            <h3 class="l green company-name">{{                                                                                                                                               slotProps.item.company                                                                                                                                               }}</h3>
                             <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon"
                                 icon="fa-solid fa-up-right-from-square" />
                         </a>
                     </template>
                     <template #subtitle>
-                        <p class="m">{{slotProps.item.title}}</p>
+                        <p class="m">{{                                                                                                                                               slotProps.item.title                                                                                                                                               }}</p>
                     </template>
                     <template #content>
-                        <p class="s description">{{slotProps.item.description}}</p>
-                        <p class="s" style="color: yellow">{{`Related Skills: ${slotProps.item.skills}`}}</p>
+                        <Markdown :html="true" class="s description" :source="slotProps.item.description" />
                     </template>
                 </Card>
             </template>
             <template #opposite="slotProps">
                 <div class="duration-wrapper">
-                    <p class="m duration">{{slotProps.item.duration}}</p>
+                    <p class="m duration">{{                                                                                                                                               slotProps.item.duration                                                                                                                                               }}</p>
                 </div>
             </template>
             <template #marker="slotProps">
@@ -41,6 +40,8 @@
 </template>
 
 <script setup lang="ts">
+import Markdown from 'vue3-markdown-it';
+
 import Card from 'primevue/card';
 import Holistics from '../../assets/experienceIcons/holistics.png';
 import OED from '../../assets/experienceIcons/oed.png';
@@ -51,7 +52,6 @@ const events1 = [
     {
         company: 'Salesforce',
         icon: Salesforce,
-        skills: '',
         title: 'Incoming Software Engineer Intern',
         duration: '',
         description: '',
@@ -59,11 +59,12 @@ const events1 = [
     {
         company: 'Michigan State University',
         icon: MSU,
-        skills: 'JavaScript, HTML/CSS',
         title: 'Research Assistant | Programmer',
         duration: 'October 2022 - present',
-        description: 'Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market. \
-                    Implemented an activity tracker from scratch using PHP, SQL, and JavaScript.',
+        description: `
+* Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.
+
+* Implemented an activity tracker from scratch using <span class="yellow">PHP</span>, <span class="yellow">SQL</span>, and <span class="yellow">JavaScript</span>.`,
     },
     {
         company: 'Holistics Data',
@@ -72,9 +73,12 @@ const events1 = [
         skills: 'Vue.js, TypeScript, HTML/CSS',
         title: 'Software Engineer Intern',
         duration: 'May 2022 - September 2022',
-        description: 'Worked on a new programming language called AML explicitly used for data analytics. \
-                    Developed an online playground for testing and demonstrating AML. \
-                    Collaborated on a team of 4 to create an internal vscode extension that improves the documentation searching process',
+        description: `
+* Implemented new features (conditional expression, string interpolation, etc.) in <span class="yellow">TypeScript</span> for a new programming language explicitly used for data analytics.
+
+* Developed an online editor for testing and demonstrating the programming language using <span class="yellow">TypeScript</span> and <span class="yellow">Vue 3</span>.
+
+* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase.`,
     },
     {
         company: 'Open Energy Dashboard',
@@ -83,18 +87,19 @@ const events1 = [
         skills: 'React, Redux, TypeScript, JavaScript, Postgres',
         title: 'Software Engineer Intern',
         duration: 'October 2021 - May 2022 & October 2022 - Present',
-        description: 'Performed security testing and applied a rate limit for access to prevent DDoS attacks.\
-                    Removed redundant code and enhanced the data exporting process. \
-                    Managed database and created new APIs to support different resource types. \
-                    Reviewed code and created database migrations for the new product version (0.8.0 to 1.0.0).',
+        description: `
+* Performed security testing by writing <span class="yellow">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improving the exporting view using <span class="yellow">React</span>, <span class="yellow">Redux</span>, and <span class="yellow">TypeScript</span>.
+
+* Expanded the database and created new API routes to support over 30 different resource types using <span class="yellow">PostgresQL</span> and <span class="yellow">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0).`,
     },
     {
         company: "Chang's Kitchen",
-        skills: 'Swift, JavaScript',
         title: 'Software Engineer Intern',
         duration: 'May 2021 - August 2021',
-        description: 'Developed an iOS mobile app for customers to order food directly from the restaurant with daily rotating menus.\
-                    Designed and implemented a web application to manage orders from the mobile app, calculate cost and profit, and analyze customers’ data.',
+        description: `
+* Developed an iOS mobile app with <span class="yellow">Swift</span> for customers to order food from the restaurant with daily rotating menus. Using Firebase database, the app allowed users to manage and re-order from order history.
+
+* Designed a web app using <span class="yellow">HTML/CSS</span> and <span class="yellow">JavaScript</span> to manage orders from the mobile app, calculate profit, and analyze customers’ data.`,
     },
 ];
 </script>

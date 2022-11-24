@@ -5,6 +5,7 @@ import { createApp } from 'vue';
 import Notifications from '@kyvg/vue3-notification'
 import PrimeVue from 'primevue/config';
 import Timeline from 'primevue/timeline'
+import Markdown from 'vue3-markdown-it';
 
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -39,6 +40,7 @@ const app = createApp(App).use(router);
 const libraries = [
     Notifications,
     PrimeVue,
+    Markdown,
 ];
 
 libraries.forEach((lib) => app.use(lib));
