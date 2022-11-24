@@ -64,7 +64,10 @@ const events1 = [
         description: `
 * Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.
 
-* Implemented an activity tracker from scratch using <span class="yellow">PHP</span>, <span class="yellow">SQL</span>, and <span class="yellow">JavaScript</span>.`,
+* Implemented an activity tracker from scratch using <span class="yellow">PHP</span>, <span class="yellow">SQL</span>, and <span class="yellow">JavaScript</span>.
+
+* Wrote a <span class="yellow">Python</span> crawler to retrieve page content.
+`,
     },
     {
         company: 'Holistics Data',
