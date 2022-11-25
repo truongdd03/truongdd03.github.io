@@ -12,22 +12,22 @@
                 <Card class="experience-wrapper">
                     <template #title>
                         <a class="company-link" :href="slotProps.item.url" target="_blank">
-                            <h3 class="l green company-name">{{                                                                                                                                               slotProps.item.company                                                                                                                                               }}</h3>
+                            <h3 class="l green company-name">{{ slotProps.item.company }}</h3>
                             <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon"
                                 icon="fa-solid fa-up-right-from-square" />
                         </a>
                     </template>
                     <template #subtitle>
-                        <p class="m">{{                                                                                                                                               slotProps.item.title                                                                                                                                               }}</p>
+                        <p class="m">{{ slotProps.item.title }}</p>
                     </template>
-                    <template #content>
+                    <template #content v-if="slotProps.item.description !== ''">
                         <Markdown :html="true" class="s description" :source="slotProps.item.description" />
                     </template>
                 </Card>
             </template>
             <template #opposite="slotProps">
                 <div class="duration-wrapper">
-                    <p class="m duration">{{                                                                                                                                               slotProps.item.duration                                                                                                                                               }}</p>
+                    <p class="m duration">{{ slotProps.item.duration }}</p>
                 </div>
             </template>
             <template #marker="slotProps">
@@ -126,7 +126,7 @@ const events1 = [
     }
 
     .duration-wrapper {
-        padding: 25px;
+        padding: 20px;
         min-height: 5vw;
 
         .duration {
@@ -138,9 +138,9 @@ const events1 = [
         background-color: black;
 
         .description {
+            margin-left: -20px;
             text-align: left;
             color: white;
-            margin-bottom: 20px;
         }
     }
 
