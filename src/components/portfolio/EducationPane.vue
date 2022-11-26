@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper black-background">
         <div class="title-wrapper">
-            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-9.gif" />
+            <img class="wxl title-icon" :src="AlaskaBike" />
             <h1 class="xl title">Education</h1>
-            <img class="wxl title-icon" src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-38-72.gif" />
+            <img class="wxl title-icon" :src="AlaskaEat" />
         </div>
         <Timeline :value="events" align="alternate" class="timeline">
             <template #content="slotProps">
@@ -33,6 +33,9 @@
 
 <script setup lang="ts">
 import Card from 'primevue/card';
+
+import AlaskaBike from '../../assets/gifs/alaska-bike.gif';
+import AlaskaEat from '../../assets/gifs/alaska-eat.gif';
 import MSU from '../../assets/educationIcons/msu.png';
 import PTNK from '../../assets/educationIcons/ptnk.png';
 

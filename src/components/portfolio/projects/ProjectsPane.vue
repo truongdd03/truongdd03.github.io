@@ -1,11 +1,9 @@
 <template>
     <div class="wrapper tmp">
         <div class="title-wrapper">
-            <img class="wxl title-icon"
-                src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-10-49.gif" />
+            <img class="wxl title-icon" :src="ShibaDepressed" />
             <h1 class="xl title">Projects</h1>
-            <img class="wxl title-icon"
-                src="https://pic.funnygifsbox.com/uploads/2019/11/funnygifsbox.com-2019-11-04-07-40-11-64.gif" />
+            <img class="wxl title-icon" :src="AlaskaDepressed" />
         </div>
         <ProjectPane v-for="project in projects" :project="project"></ProjectPane>
     </div>
@@ -14,6 +12,8 @@
 <script setup lang="ts">
 import ProjectPane from './ProjectPane.vue';
 
+import ShibaDepressed from '../../../assets/gifs/shiba-depressed.gif';
+import AlaskaDepressed from '../../../assets/gifs/alaska-depressed.gif';
 import PersonalWebsite from '../../../assets/projects/personal-website.jpeg';
 import Barter from '../../../assets/projects/barter.jpeg';
 import Nuntium from '../../../assets/projects/nuntium.jpeg';

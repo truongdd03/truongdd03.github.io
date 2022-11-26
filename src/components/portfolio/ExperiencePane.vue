@@ -1,11 +1,9 @@
 <template>
     <div class="wrapper">
         <div class="title-wrapper">
-            <img class="wxl title-icon"
-                src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-39-88.gif" />
+            <img class="wxl title-icon" :src="AlaskaClap" />
             <h1 class="title xl">Experience</h1>
-            <img class="wxl title-icon"
-                src="https://pic.funnygifsbox.com/uploads/2021/02/funnygifsbox.com-2021-02-25-14-34-41-72.gif" />
+            <img class="wxl title-icon" :src="ShibaClap" />
         </div>
         <Timeline :value="events1" align="alternate" class="timeline">
             <template #content="slotProps">
@@ -41,8 +39,10 @@
 
 <script setup lang="ts">
 import Markdown from 'vue3-markdown-it';
-
 import Card from 'primevue/card';
+
+import AlaskaClap from '../../assets/gifs/alaska-clap.gif';
+import ShibaClap from '../../assets/gifs/shiba-clap.gif';
 import Holistics from '../../assets/experienceIcons/holistics.png';
 import OED from '../../assets/experienceIcons/oed.png';
 import MSU from '../../assets/educationIcons/msu.png';
