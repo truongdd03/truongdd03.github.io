@@ -19,7 +19,7 @@ import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
 import { scrollIntoView } from '@/utils';
 
-import ShibaHi from '/public/assets/images/gifs/shiba-hi.gif';
+import ShibaHi from '/assets/images/gifs/shiba-hi.gif';
 
 const roles = [
     'Don Truong',
@@ -27,7 +27,6 @@ const roles = [
     'from Vietnam',
     'studying @ Michigan State University',
     'a former SWE Intern @ Holistics',
-    'a dog person :)',
 ];
 
 const scroll = async () => {
