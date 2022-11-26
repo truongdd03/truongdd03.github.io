@@ -20,6 +20,8 @@ import './firebase.config';
 import router from './router';
 import { writeUserIP } from './utils';
 
+import Holistics from './assets/images/experienceIcons/Holistics.png';
+
 const icons = [
     faGithub,
     faLinkedin,
