@@ -1,14 +1,14 @@
 [
     {
         "company": "Salesforce",
-        "icon": "assets/images/experienceIcons/salesforce.png",
+        "icon": "/assets/images/experienceIcons/salesforce.png",
         "title": "Incoming Software Engineer Intern",
         "duration": "",
         "description": ""
     },
     {
         "company": "Michigan State University",
-        "icon": "assets/images/educationIcons/msu.png",
+        "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
         "duration": "October 2022 - present",
         "description": "\n* Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.\n\n* Implemented an activity tracker from scratch using <span class=\"yellow\">PHP</span>, <span class=\"yellow\">SQL</span>, and <span class=\"yellow\">JavaScript</span>.\n\n* Wrote a <span class=\"yellow\">Python</span> crawler to retrieve page content.\n"
@@ -16,7 +16,7 @@
     {
         "company": "Holistics Data",
         "url": "https://www.holistics.io/",
-        "icon": "assets/images/experienceIcons/holistics.png",
+        "icon": "/assets/images/experienceIcons/holistics.png",
         "skills": "Vue.js, TypeScript, HTML/CSS",
         "title": "Software Engineer Intern",
         "duration": "May 2022 - September 2022",
@@ -25,7 +25,7 @@
     {
         "company": "Open Energy Dashboard",
         "url": "https://openenergydashboard.github.io/",
-        "icon": "assets/images/experienceIcons/oed.png",
+        "icon": "/assets/images/experienceIcons/oed.png",
         "skills": "React, Redux, TypeScript, JavaScript, Postgres",
         "title": "Software Engineer Intern",
         "duration": "October 2021 - May 2022 & October 2022 - Present",

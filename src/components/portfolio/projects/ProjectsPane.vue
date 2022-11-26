@@ -12,11 +12,11 @@
 <script setup lang="ts">
 import ProjectPane from './ProjectPane.vue';
 
-import ShibaDepressed from '../../../../assets/images/gifs/shiba-depressed.gif';
-import AlaskaDepressed from '../../../../assets/images/gifs/alaska-depressed.gif';
-import PersonalWebsite from '../../../../assets/images/projects/personal-website.jpeg';
-import Barter from '../../../../assets/images/projects/barter.jpeg';
-import Nuntium from '../../../../assets/images/projects/nuntium.jpeg';
+import ShibaDepressed from '/assets/images/gifs/shiba-depressed.gif';
+import AlaskaDepressed from '/assets/images/gifs/alaska-depressed.gif';
+import PersonalWebsite from '/assets/images/projects/personal-website.jpeg';
+import Barter from '/assets/images/projects/barter.jpeg';
+import Nuntium from '/assets/images/projects/nuntium.jpeg';
 
 const projects = [
     {

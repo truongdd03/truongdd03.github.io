@@ -13,8 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import human from '../../../../assets/images/avatar/don-cool.jpeg';
-import shiba from '../../../../assets/images/avatar/shiba-cool.png';
+import human from '/public/assets/images/avatar/don-cool.jpeg';
+import shiba from '/public/assets/images/avatar/shiba-cool.png';
 
 const onHover = () => {
     (document.getElementById('avatar') as any).src = shiba;

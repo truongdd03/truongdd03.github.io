@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">import { notify } from '@kyvg/vue3-notification';
-import Resume from '../../../../assets/Don_Truong_Resume.pdf';
+import Resume from '/public/assets/Don_Truong_Resume.pdf';
 
 const copyMailAddress = async () => {
     const mailAddress = 'dong23102003@gmail.com';

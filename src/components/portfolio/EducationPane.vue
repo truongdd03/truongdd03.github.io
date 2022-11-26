@@ -34,10 +34,10 @@
 <script setup lang="ts">
 import Card from 'primevue/card';
 
-import AlaskaBike from '../../../assets/images/gifs/alaska-bike.gif';
-import AlaskaEat from '../../../assets/images/gifs/alaska-eat.gif';
-import MSU from '../../../assets/images/educationIcons/msu.png';
-import PTNK from '../../../assets/images/educationIcons/ptnk.png';
+import AlaskaBike from '/assets/images/gifs/alaska-bike.gif';
+import AlaskaEat from '/assets/images/gifs/alaska-eat.gif';
+import MSU from '/assets/images/educationIcons/msu.png';
+import PTNK from '/assets/images/educationIcons/ptnk.png';
 
 const events = [
     {

@@ -19,7 +19,7 @@ import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
 import { scrollIntoView } from '@/utils';
 
-import ShibaHi from '../../../../assets/images/gifs/shiba-hi.gif';
+import ShibaHi from '/public/assets/images/gifs/shiba-hi.gif';
 
 const roles = [
     'Don Truong',
