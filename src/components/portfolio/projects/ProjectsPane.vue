@@ -15,7 +15,7 @@ import ProjectPane from './ProjectPane.vue';
 import ShibaDepressed from '/assets/images/gifs/shiba-depressed.gif';
 import AlaskaDepressed from '/assets/images/gifs/alaska-depressed.gif';
 
-import projects from '/public/assets/content/projects.json';
+import projects from './projects.json';
 
 </script>
 

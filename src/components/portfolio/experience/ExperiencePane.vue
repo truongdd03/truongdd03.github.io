@@ -44,7 +44,7 @@ import Card from 'primevue/card';
 import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
 import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
-import experience from '/public/assets/content/experience.json';
+import experience from './experience.json';
 
 </script>
 

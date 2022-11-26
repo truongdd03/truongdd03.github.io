@@ -11,8 +11,8 @@
 import { computed, onMounted, ref } from 'vue';
 import MenuBar from '../MenuBar.vue';
 import IntroductionPane from './introduction/IntroductionPane.vue';
-import ExperiencePane from './ExperiencePane.vue';
-import EducationPane from './EducationPane.vue';
+import ExperiencePane from './experience/ExperiencePane.vue';
+import EducationPane from './education/EducationPane.vue';
 import ProjectsPane from './projects/ProjectsPane.vue';
 import { useElementVisibility } from '@vueuse/core'
 

@@ -37,7 +37,7 @@ import Card from 'primevue/card';
 import AlaskaBike from '/assets/images/gifs/alaska-bike.gif';
 import AlaskaEat from '/assets/images/gifs/alaska-eat.gif';
 
-import education from '/public/assets/content/education.json';
+import education from './education.json';
 </script>
 
 <style lang="scss" scoped>
