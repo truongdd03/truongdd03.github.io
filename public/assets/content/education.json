@@ -1,0 +1,15 @@
+[
+    {
+        "icon": "/assets/images/educationIcons/msu.png",
+        "school": "Michigan State University",
+        "duration": "September 2021 - May 2025",
+        "degree": "BS in Computer Science",
+        "description": "GPA: 4.0/4.0\nDean's List\nMSU International Tution Grant\nMSU Presidential Study Abroad Scholarship\nMSU #YOU-ARE-WELCOME-HERE Scholarship"
+    },
+    {
+        "icon": "/assets/images/educationIcons/ptnk.png",
+        "school": "VNU-HCM High School for the Gifted",
+        "duration": "September 2018 - June 2021",
+        "degree": "High School Diploma"
+    }
+]

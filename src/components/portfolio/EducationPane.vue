@@ -5,7 +5,7 @@
             <h1 class="xl title">Education</h1>
             <img class="wxl title-icon" :src="AlaskaEat" />
         </div>
-        <Timeline :value="events" align="alternate" class="timeline">
+        <Timeline :value="education" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
@@ -36,29 +36,8 @@ import Card from 'primevue/card';
 
 import AlaskaBike from '/assets/images/gifs/alaska-bike.gif';
 import AlaskaEat from '/assets/images/gifs/alaska-eat.gif';
-import MSU from '/assets/images/educationIcons/msu.png';
-import PTNK from '/assets/images/educationIcons/ptnk.png';
 
-const events = [
-    {
-        icon: MSU,
-        school: 'Michigan State University',
-        duration: 'September 2021 - May 2025',
-        degree: 'BS in Computer Science',
-        description: 
-`GPA: 4.0/4.0
-Dean's List
-MSU International Tution Grant
-MSU Presidential Study Abroad Scholarship
-MSU #YOU-ARE-WELCOME-HERE Scholarship`,
-    },
-    {
-        icon: PTNK,
-        school: 'VNU-HCM High School for the Gifted',
-        duration: 'September 2018 - June 2021',
-        degree: 'High School Diploma',
-    }
-];
+import education from '/public/assets/content/education.json';
 </script>
 
 <style lang="scss" scoped>
