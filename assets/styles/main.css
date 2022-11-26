@@ -1,0 +1,56 @@
+@import "./base.css";
+@import "./size.css";
+
+#app {
+  font-weight: normal;
+  width: 100%;
+}
+
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.title-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.title-icon {
+  margin: 0px 10px 0px 10px;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  padding: 100px 5% 100px 5%;
+  width: 100%;
+  min-height: 101vh;
+  text-align: center;
+}
+
+.black-background {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.yellow {
+  color: yellow;
+}
