@@ -2,13 +2,13 @@
     <div>
         <div :class="`nav-menu ${showMobileMenu ? '' : 'limit-height'}`">
             <font-awesome-icon class="icon" icon="fa-solid fa-bars" inverse @click="showMenu()"></font-awesome-icon>
-            <div class="nav-content" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
-                <div class="logo" @click="onNavButtonClick('introduction')">
+            <div class="nav-content">
+                <div class="logo" id="logo" @click="onNavButtonClick('introduction')">
                     <font-awesome-icon class="l left-logo" icon="fa-solid fa-paw" inverse />
                     <h1 class="l left-logo">Don Truong</h1>
                 </div>
 
-                <ul class="nav-items">
+                <ul class="nav-items" :class="showMobileMenu ? 'open-menu' : 'closed-menu'">
                     <li :class="displayingSection === 'introduction' ? 'nav-button-selected' : 'nav-button'"
                         @click="onNavButtonClick('introduction')">Home</li>
                     <li :class="displayingSection === 'experience' ? 'nav-button-selected' : 'nav-button'"
@@ -112,15 +112,15 @@ const redirectToBlog = () => {
 
 @media screen and (max-width: 768px) {
     .nav-menu {
-        padding-top: 10px;
         width: 100%;
         cursor: pointer;
         align-items: center;
         text-align: center;
+        // background-color: yellow;
     }
 
     .limit-height {
-        height: 35px;
+        height: 50px;
     }
 
     .open-menu {
@@ -134,6 +134,7 @@ const redirectToBlog = () => {
     }
 
     .nav-content {
+        padding: 0px;
         flex-direction: column;
         z-index: 100;
         position: relative;
@@ -146,12 +147,13 @@ const redirectToBlog = () => {
 
     .icon {
         display: block;
-        text-align: right;
         margin-left: 10px;
+        margin-top: 15px;
     }
 
     .logo {
-        display: none;
+        position: fixed;
+        margin-top: -16px;
     }
 }
 </style>
