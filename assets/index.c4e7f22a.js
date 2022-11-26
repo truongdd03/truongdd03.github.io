@@ -2943,18 +2943,18 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const t of t
 .p-card-header img {
     width: 100%;
 }
-`;wk(Dk);u_.render=Ak;const xk="/assets/alaska-clap.dd4716c8.gif",kk="/assets/shiba-clap.4633cf52.gif",Mk=[{company:"Salesforce",icon:"/assets/images/experienceIcons/salesforce.png",title:"Incoming Software Engineer Intern",duration:"",description:""},{company:"Michigan State University",icon:"/assets/images/educationIcons/msu.png",title:"Research Assistant | Programmer",duration:"October 2022 - present",description:`
+`;wk(Dk);u_.render=Ak;const xk="/assets/alaska-clap.dd4716c8.gif",kk="/assets/shiba-clap.4633cf52.gif",Mk=[{company:"Salesforce",icon:"../../../assets/images/experienceIcons/salesforce.png",title:"Incoming Software Engineer Intern",duration:"",description:""},{company:"Michigan State University",icon:"../../../assets/images/educationIcons/msu.png",title:"Research Assistant | Programmer",duration:"October 2022 - present",description:`
 * Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.
 
 * Implemented an activity tracker from scratch using <span class="yellow">PHP</span>, <span class="yellow">SQL</span>, and <span class="yellow">JavaScript</span>.
 
 * Wrote a <span class="yellow">Python</span> crawler to retrieve page content.
-`},{company:"Holistics Data",url:"https://www.holistics.io/",icon:"/assets/images/experienceIcons/holistics.png",skills:"Vue.js, TypeScript, HTML/CSS",title:"Software Engineer Intern",duration:"May 2022 - September 2022",description:`
+`},{company:"Holistics Data",url:"https://www.holistics.io/",icon:"../../../assets/images/experienceIcons/holistics.png",skills:"Vue.js, TypeScript, HTML/CSS",title:"Software Engineer Intern",duration:"May 2022 - September 2022",description:`
 * Implemented new features (conditional expression, string interpolation, etc.) in <span class="yellow">TypeScript</span> for a new programming language explicitly used for data analytics.
 
 * Developed an online editor for testing and demonstrating the programming language using <span class="yellow">TypeScript</span> and <span class="yellow">Vue 3</span>.
 
-* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase.`},{company:"Open Energy Dashboard",url:"https://openenergydashboard.github.io/",icon:"/assets/images/experienceIcons/oed.png",skills:"React, Redux, TypeScript, JavaScript, Postgres",title:"Software Engineer Intern",duration:"October 2021 - May 2022 & October 2022 - Present",description:`
+* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase.`},{company:"Open Energy Dashboard",url:"https://openenergydashboard.github.io/",icon:"../../../assets/images/experienceIcons/oed.png",skills:"React, Redux, TypeScript, JavaScript, Postgres",title:"Software Engineer Intern",duration:"October 2021 - May 2022 & October 2022 - Present",description:`
 * Performed security testing by writing <span class="yellow">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improving the exporting view using <span class="yellow">React</span>, <span class="yellow">Redux</span>, and <span class="yellow">TypeScript</span>.
 
 * Expanded the database and created new API routes to support over 30 different resource types using <span class="yellow">PostgresQL</span> and <span class="yellow">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0).`},{company:"Chang's Kitchen",title:"Software Engineer Intern",duration:"May 2021 - August 2021",description:`
