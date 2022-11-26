@@ -41,8 +41,8 @@
 import Markdown from 'vue3-markdown-it';
 import Card from 'primevue/card';
 
-import AlaskaClap from '/public/assets/images/gifs/alaska-clap.gif';
-import ShibaClap from '/public/assets/images/gifs/shiba-clap.gif';
+import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
+import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
 import experience from '/public/assets/content/experience.json';
 
