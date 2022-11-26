@@ -41,10 +41,10 @@
 import Markdown from 'vue3-markdown-it';
 import Card from 'primevue/card';
 
-import AlaskaClap from '../../assets/images/gifs/alaska-clap.gif';
-import ShibaClap from '../../assets/images/gifs/shiba-clap.gif';
+import AlaskaClap from '../../../assets/images/gifs/alaska-clap.gif';
+import ShibaClap from '../../../assets/images/gifs/shiba-clap.gif';
 
-import experience from '../../assets/content/experience/experience.json';
+import experience from '../../../assets/content/experience/experience.json';
 
 </script>
 

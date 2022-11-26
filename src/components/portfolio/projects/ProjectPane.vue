@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Markdown from 'vue3-markdown-it';
-import Github from '../../../assets/images/projects/github.png';
+import Github from '../../../../assets/images/projects/github.png';
 
 const props = defineProps({
     project: {

@@ -13,14 +13,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
-import './assets/styles/main.css';
+import '../assets/styles/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 import './firebase.config';
 import router from './router';
 import { writeUserIP } from './utils';
-
-import Holistics from './assets/images/experienceIcons/Holistics.png';
 
 const icons = [
     faGithub,
