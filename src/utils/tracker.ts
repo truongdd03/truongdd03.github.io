@@ -1,5 +1,5 @@
 import { child, get, getDatabase, ref, set } from '@firebase/database';
-import DeviceDetector from "device-detector-js";
+import DeviceDetector from 'device-detector-js';
 
 const formatIp = (ip: string): string => {
     return ip.replace(/\./g, '-');
