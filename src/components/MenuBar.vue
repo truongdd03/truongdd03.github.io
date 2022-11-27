@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import router from '@/router';
-import { scrollIntoView } from '@/utils';
+import { scrollIntoView } from '@/utils/utils';
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 

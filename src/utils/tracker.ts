@@ -1,18 +1,5 @@
 import { child, get, getDatabase, ref, set } from '@firebase/database';
-import router from './router';
-
-export const scrollIntoView = async (id: string, route: string) => {
-    try {
-        if (route !== '/') {
-            await router.push('/');
-        }
-        document.getElementById(id)!.scrollIntoView({
-            behavior: 'smooth'
-        });
-    } catch (e: any) {
-        throw new Error(e);
-    }
-}
+import DeviceDetector from "device-detector-js";
 
 const formatIp = (ip: string): string => {
     return ip.replace(/\./g, '-');
@@ -29,19 +16,28 @@ const getRemote = async (ip: string): Promise<number> => {
     });
 }
 
-const updateRemote = async (ip: string) => {
+const getDevice = () => {
+    const deviceDetector = new DeviceDetector();
+    const userAgent = navigator.userAgent;
+    return deviceDetector.parse(userAgent);
+}
+
+const updateRemote = async (ip: string, rawIp: string) => {
     const database = getDatabase();
     const count = (await getRemote(ip));
+    const device = getDevice();
     set(ref(database, `users/${ip}`), {
-        count: count + 1
+        count: count + 1,
+        ip: rawIp,
+        device: device,
     });
 }
 
-export const writeUserIP = () => {
+export const initTracker = () => {
     fetch('https://api.ipify.org/?format=json')
         .then(x => x.json())
         .then(async ({ ip }) => {
             const formattedIp = formatIp(ip);
-            updateRemote(formattedIp);
+            updateRemote(formattedIp, ip);
         });
 }

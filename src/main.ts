@@ -16,9 +16,9 @@ import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-ic
 import './styles/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
-import './firebase.config';
+import './utils/firebase.config';
 import router from './router';
-import { writeUserIP } from './utils';
+import { initTracker } from './utils/tracker';
 
 const icons = [
     faGithub,
@@ -45,7 +45,7 @@ const libraries = [
 
 libraries.forEach((lib) => app.use(lib));
 
-writeUserIP();
+initTracker();
 
 app.component('Timeline', Timeline);
 app.component('font-awesome-icon', FontAwesomeIcon);

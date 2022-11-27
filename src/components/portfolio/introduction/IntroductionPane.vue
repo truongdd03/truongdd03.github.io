@@ -17,7 +17,7 @@
 import DynamicAvatar from './DynamicAvatar.vue';
 import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
-import { scrollIntoView } from '@/utils';
+import { scrollIntoView } from '@/utils/utils';
 
 import ShibaHi from '/assets/images/gifs/shiba-hi.gif';
 
