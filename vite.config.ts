@@ -17,7 +17,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),
-            web3: path.resolve(__dirname, "./node_modules/web3/dist/web3.min.js"),
+            web3: path.resolve(__dirname, './node_modules/web3/dist/web3.min.js'),
         },
     }
 });
