@@ -57,6 +57,23 @@ const getNowPlayingItem = async () => {
     }
 }
 
-(async () => {
-    console.log((await getNowPlayingItem()));
-})();
+const updateSpotifyStatus = async () => {
+    const status = await getNowPlayingItem();
+    console.log(status);
+    if (!status) {
+        console.log('lll');
+        document.getElementById('spotify-status')!.style.display = 'none';
+        return;
+    }
+    document.getElementById('spotify-status')!.style.display = 'block';
+    document.getElementById('spotify-artist')!.innerText = status.artist;
+    document.getElementById('spotify-song')!.innerText = status.title;
+    (document.getElementById('spotify-image')! as HTMLImageElement).src = status.albumImageUrl;
+    (document.getElementById('spotify-song-url') as HTMLLinkElement).href = status.songUrl;
+}
+
+export const initSpotifyListener = () => {
+    setInterval(() => {
+        updateSpotifyStatus();
+      }, 5000);
+}

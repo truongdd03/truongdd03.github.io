@@ -17,10 +17,10 @@ import './styles/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 import './utils/firebase.config';
-import './utils/spotify';
 
 import router from './router';
 import { initTracker } from './utils/tracker';
+import { initSpotifyListener } from './utils/spotify';
 
 const icons = [
     faGithub,
@@ -49,6 +49,7 @@ const libraries = [
 libraries.forEach((lib) => app.use(lib));
 
 initTracker();
+initSpotifyListener();
 
 app.component('Timeline', Timeline);
 app.component('font-awesome-icon', FontAwesomeIcon);

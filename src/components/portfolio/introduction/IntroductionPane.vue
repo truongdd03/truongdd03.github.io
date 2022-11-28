@@ -6,22 +6,25 @@
                 <DynamicAvatar />
             </div>
             <div class="right">
-                <div class="spotify-status-wrapper">
+                <div class="spotify-status-wrapper" id="spotify-status">
                     <div class="title-wrapper">
                         <img class="wm" style="margin-right:10px;" src="/assets/images/gifs/shiba-listen-music.gif" />
                         <p class="s green">Listening to Spotify</p>
                         <img class="wm" style="margin-left:10px;" src="/assets/images/gifs/shiba-listen-music.gif" />
                     </div>
-                    <div class="song-wrapper">
-                        <img class="wxl" src="https://i.scdn.co/image/ab67616d0000b2733846fa121fe826af4364df6e" />
-                        <div class="song-description">
-                            <p class="s song-info white bold">Siêu phẩm tình ew</p>
-                            <p class="s song-info">MAI</p>
+                    <a id="spotify-song-url" href="">
+                        <div class="song-wrapper">
+                            <img id="spotify-image" class="wxl"
+                                src="https://i.scdn.co/image/ab67616d0000b2733846fa121fe826af4364df6e" />
+                            <div class="song-description">
+                                <p id="spotify-song" class="s song-info white bold">Siêu phẩm tình ew</p>
+                                <p id="spotify-artist" class="s song-info grey">MAI</p>
+                            </div>
+                            <div class="spotify-logo">
+                                <font-awesome-icon class="l icon" icon="fa-brands fa-spotify" inverse />
+                            </div>
                         </div>
-                        <div class="spotify-logo">
-                            <font-awesome-icon class="l icon" icon="fa-brands fa-spotify" inverse />
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -75,6 +78,7 @@ const scroll = async () => {
         width: 35%;
 
         .spotify-status-wrapper {
+            display: none;
             width: 100%;
             padding: 10px 10px 20px 10px;
             background-color: rgba(60, 60, 60, 0.29);
@@ -86,8 +90,9 @@ const scroll = async () => {
                 margin-top: 20px;
                 justify-content: center;
                 border: 1px solid white;
-                padding-right: 10px;
+                padding: 1px 10px 1px 1px;
                 border-radius: 5px;
+                cursor: pointer;
 
                 .song-description {
                     width: 100%;
