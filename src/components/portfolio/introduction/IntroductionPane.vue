@@ -76,15 +76,18 @@ const scroll = async () => {
 
         .spotify-status-wrapper {
             width: 100%;
-            padding: 10px 30px 20px 30px;
-            border: 5px;
+            padding: 10px 10px 20px 10px;
             background-color: rgba(60, 60, 60, 0.29);
+            border-radius: 5px;
 
             .song-wrapper {
                 width: 100%;
                 display: flex;
                 margin-top: 20px;
                 justify-content: center;
+                border: 1px solid white;
+                padding-right: 10px;
+                border-radius: 5px;
 
                 .song-description {
                     width: 100%;
@@ -93,6 +96,7 @@ const scroll = async () => {
                     align-items: center;
                     flex-direction: column;
                     margin: 0 30px 0 10px;
+                    padding: 5px 0 5px 0;
 
                     .song-info {
                         text-align: left;
