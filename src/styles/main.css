@@ -54,3 +54,20 @@
 .yellow {
   color: yellow;
 }
+
+.white {
+  color: white;
+}
+
+.grey {
+  color: rgba(235, 235, 235, 0.64);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}

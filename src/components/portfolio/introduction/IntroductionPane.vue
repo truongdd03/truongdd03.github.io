@@ -1,12 +1,35 @@
 <template>
     <div class="wrapper black-background">
-        <DynamicAvatar />
+        <div class="avatar-activity-wrapper">
+            <div class="left"></div>
+            <div class="center">
+                <DynamicAvatar />
+            </div>
+            <div class="right">
+                <div class="spotify-status-wrapper" id="spotify-status">
+                    <div class="title-wrapper">
+                        <img class="wm" style="margin-right:10px;" src="/assets/images/gifs/shiba-listen-music.gif" />
+                        <p class="s green">Listening to Spotify</p>
+                        <img class="wm" style="margin-left:10px;" src="/assets/images/gifs/shiba-listen-music.gif" />
+                    </div>
+                    <a id="spotify-song-url" href="">
+                        <div class="song-wrapper">
+                            <img id="spotify-image" class="wxl"
+                                src="https://i.scdn.co/image/ab67616d0000b2733846fa121fe826af4364df6e" />
+                            <div class="song-description">
+                                <p id="spotify-song" class="s song-info white bold">Siêu phẩm tình ew</p>
+                                <p id="spotify-artist" class="s song-info grey">MAI</p>
+                            </div>
+                            <div class="spotify-logo">
+                                <font-awesome-icon class="l icon" icon="fa-brands fa-spotify" inverse />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
         <SocialInformation />
-        <TypingText
-            constantText="Hi, I'm "
-            :dynamicTexts="roles"
-            :icon="ShibaHi"
-        />
+        <TypingText constantText="Hi, I'm " :dynamicTexts="roles" :icon="ShibaHi" />
         <div class="icon-wrapper">
             <font-awesome-icon class="xl scroll-icon" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
         </div>
@@ -35,6 +58,66 @@ const scroll = async () => {
 </script>
 
 <style lang="scss" scoped>
+.avatar-activity-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+        width: 35%;
+    }
+
+    .center {
+        width: 30%;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+
+        .spotify-status-wrapper {
+            display: none;
+            width: 100%;
+            padding: 10px 10px 20px 10px;
+            background-color: rgba(60, 60, 60, 0.29);
+            border-radius: 5px;
+
+            .song-wrapper {
+                width: 100%;
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+                border: 1px solid white;
+                padding: 1px 10px 1px 1px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                .song-description {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0 30px 0 10px;
+                    padding: 5px 0 5px 0;
+
+                    .song-info {
+                        text-align: left;
+                        width: 100%;
+                    }
+                }
+
+                .spotify-logo {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
 .icon-wrapper {
     width: 90%;
     position: absolute;
@@ -43,6 +126,22 @@ const scroll = async () => {
 
     .scroll-icon {
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .avatar-activity-wrapper {
+        flex-direction: column;
+
+        .left {
+            display: none;
+        }
+
+        .right {
+            margin-top: 20px;
+            max-width: none;
+            width: auto;
+        }
     }
 }
 </style>

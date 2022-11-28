@@ -11,14 +11,16 @@ import Markdown from 'vue3-markdown-it';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faDiscord, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 import './styles/main.css';
 import 'primevue/resources/themes/lara-light-blue/theme.css';
 
 import './utils/firebase.config';
+
 import router from './router';
 import { initTracker } from './utils/tracker';
+import { initSpotifyListener } from './utils/spotify';
 
 const icons = [
     faGithub,
@@ -31,6 +33,7 @@ const icons = [
     faFilePdf,
     faBars,
     faPaw,
+    faSpotify,
 ];
 
 icons.forEach((icon) => library.add(icon));
@@ -46,6 +49,7 @@ const libraries = [
 libraries.forEach((lib) => app.use(lib));
 
 initTracker();
+initSpotifyListener();
 
 app.component('Timeline', Timeline);
 app.component('font-awesome-icon', FontAwesomeIcon);
