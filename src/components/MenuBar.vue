@@ -19,6 +19,8 @@
                         class="nav-button" @click="onNavButtonClick('project')">Projects</li>
                     <li :class="curRoute.startsWith('/blog') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
                         @click="redirectToBlog()">Doghouse</li>
+                    <li :class="curRoute.startsWith('/newsfeed') ? 'nav-button-selected' : 'nav-button'" class="nav-button"
+                        @click="redirectToNewsfeed()">Newsfeed</li>
                 </ul>
             </div>
         </div>
@@ -52,6 +54,10 @@ const onNavButtonClick = async (id: string) => {
 
 const redirectToBlog = () => {
     router.push('/blog');
+}
+
+const redirectToNewsfeed = () => {
+    router.push('/newsfeed');
 }
 
 </script>
