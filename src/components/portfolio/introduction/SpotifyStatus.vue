@@ -25,7 +25,7 @@
 
 <style lang="scss" scoped>
 .spotify-status-wrapper {
-    // display: none;
+    display: none;
     width: 100%;
     padding: 10px 10px 20px 10px;
     background-color: rgba(84, 84, 84, 0.48);
