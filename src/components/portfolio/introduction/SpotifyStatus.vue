@@ -7,14 +7,16 @@
         </div>
         <a id="spotify-song-url" href="">
             <div class="song-wrapper">
-                <img id="spotify-image" class="wxl" style="border-radius: 5px;"
+                <img id="spotify-image" class="wxl" style="border-radius: 5px; object-fit: cover;"
                     src="https://i.scdn.co/image/ab67616d0000b2733846fa121fe826af4364df6e" />
                 <div class="song-description">
                     <p id="spotify-song" class="s song-info white bold">Siêu phẩm tình ew</p>
-                    <p id="spotify-artist" class="s song-info grey">MAI</p>
+                    <p id="spotify-artist" class="ss song-info grey">MAI</p>
                 </div>
-                <div class="spotify-logo">
-                    <font-awesome-icon class="l icon" icon="fa-brands fa-spotify" inverse />
+                <div class="playing-icon">
+                    <span />
+                    <span />
+                    <span />
                 </div>
             </div>
         </a>
@@ -23,7 +25,7 @@
 
 <style lang="scss" scoped>
 .spotify-status-wrapper {
-    display: none;
+    // display: none;
     width: 100%;
     padding: 10px 10px 20px 10px;
     background-color: rgba(84, 84, 84, 0.48);
@@ -55,9 +57,28 @@
             }
         }
 
-        .spotify-logo {
+        .playing-icon {
             display: flex;
             align-items: center;
+            margin-right: 10px;
+
+            span {
+                width: 3px;
+                height: 13px;
+                background-color: hsla(160, 100%, 37%, 1);
+                border-radius: 3px;
+                transform-origin: bottom;
+                animation: bounce 2.2s ease infinite alternate;
+                content: '';
+
+                &:nth-of-type(2) {
+                    animation-delay: -1.2s;
+                }
+
+                &:nth-of-type(3) {
+                    animation-delay: -1.7s;
+                }
+            }
         }
     }
 }
@@ -70,6 +91,28 @@
 
     .scroll-icon {
         cursor: pointer;
+    }
+}
+
+@keyframes bounce {
+    10% {
+        transform: scaleY(0.3);
+    }
+
+    30% {
+        transform: scaleY(0.7);
+    }
+
+    60% {
+        transform: scaleY(0.5);
+    }
+
+    80% {
+        transform: scaleY(0.75);
+    }
+
+    100% {
+        transform: scaleY(0.6);
     }
 }
 </style>

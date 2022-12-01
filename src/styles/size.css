@@ -18,6 +18,10 @@
     font-size: calc(0.6vw + 8px);
 }
 
+.ss {
+    font-size: calc(0.4vw + 6px);
+}
+
 .hxxl {
     height: calc(10vw + 80px);;
 }
