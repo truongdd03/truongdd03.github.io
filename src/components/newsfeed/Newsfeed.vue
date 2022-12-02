@@ -25,13 +25,15 @@ const formatDate = (timestamp: number): string => {
     return `${month}/${date}/${year} - ${hour}:${minute}`;
 }
 
-const posts = postsJSON.map((post: any) => {
+const posts = postsJSON.sort((a, b) => a.date > b.date ? -1 : 1).map((post: any) => {
     return new Post(
         formatDate(post.date),
         post.content,
         post.imageUrls,
     )
 });
+
+// console.log((new Date()).getTime());
 </script>
 
 <style lang="scss" scoped>
