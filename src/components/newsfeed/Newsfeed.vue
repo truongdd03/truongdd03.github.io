@@ -1,7 +1,7 @@
 <template>
     <MenuBar></MenuBar>
     <div class="wrapper">
-        <div v-for="post in posts" class="posts-wrapper">
+        <div v-for="post in posts" v-bind:key="post.date" class="posts-wrapper">
             <PostView :post="(post as Post)"></PostView>
         </div>
         <p class="footer s">There are no more posts to show right now.</p>
