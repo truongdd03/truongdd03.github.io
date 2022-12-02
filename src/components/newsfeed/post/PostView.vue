@@ -103,9 +103,9 @@ const getImageUrl = () => {
                 width: 90%;
 
                 .image-content {
-                    object-fit: fill;
-                    max-height: 70vh;
-                    max-width: 100%;
+                    object-fit: contain;
+                    height: 70vh;
+                    width: 100%;
                 }
             }
 
