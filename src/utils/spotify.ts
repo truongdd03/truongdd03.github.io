@@ -58,6 +58,8 @@ const getNowPlayingItem = async () => {
 }
 
 const updateSpotifyStatus = async () => {
+    if (!document.getElementById('spotify-status')) return;
+
     const status = await getNowPlayingItem();
     if (!status || status.isPlaying === false) {
         document.getElementById('spotify-status')!.style.display = 'none';

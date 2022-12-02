@@ -4,23 +4,25 @@
             <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
             <div class="header-text-wrapper">
                 <p class="s green clickable" @click="redirectToHome()">Don Truong</p>
-                <p class="ss">12/01/2022 - 19:00</p>
+                <p class="ss">{{                                             post?.date                                             }}</p>
             </div>
         </div>
-        <div class="content">
-            <Markdown :html="true" class="s description" :source="post?.content" />
-        </div>
-        <div class="images-wrapper grey-background" v-if="(post && post.imageUrls.length !== 0)">
-            <span class="image-wrapper">
-                <img class="image-content" :src="getImageUrl()" />
-            </span>
-            <span v-if="(imageIndex !== 0)" class="prev-btn clickable" @click="updateImageIndex(-1)">
-                <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-left" inverse />
-            </span>
-            <span v-if="(post && imageIndex !== post.imageUrls.length - 1)" class="next-btn clickable"
-                @click="updateImageIndex(1)">
-                <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-right" inverse />
-            </span>
+        <div class="content-wrapper">
+            <div class="description-wrapper">
+                <Markdown :html="true" :typographer="true" class="s description white" :source="post?.content" />
+            </div>
+            <div class="images-wrapper grey-background" v-if="(post && post.imageUrls.length !== 0)">
+                <span class="image-wrapper">
+                    <img class="image-content" :src="getImageUrl()" />
+                </span>
+                <span v-if="(imageIndex !== 0)" class="prev-btn clickable" @click="updateImageIndex(-1)">
+                    <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-left" inverse />
+                </span>
+                <span v-if="(post && imageIndex !== post.imageUrls.length - 1)" class="next-btn clickable"
+                    @click="updateImageIndex(1)">
+                    <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-right" inverse />
+                </span>
+            </div>
         </div>
     </div>
 </template>
@@ -62,7 +64,6 @@ const getImageUrl = () => {
     .heading {
         width: auto;
         display: flex;
-        margin-bottom: 20px;
 
         .avatar {
             height: auto;
@@ -78,35 +79,42 @@ const getImageUrl = () => {
         }
     }
 
-    .images-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 10px 0 10px;
+    .content-wrapper {
+        margin: 20px 10px 0 10px;
+        .description {
+            text-align: left;
+        }
 
-        .image-wrapper {
+        .images-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 90%;
+            margin-top: 20px;
 
-            .image-content {
-                object-fit: fill;
-                max-height: 70vh;
-                max-width: 100%;
+            .image-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+
+                .image-content {
+                    object-fit: fill;
+                    max-height: 70vh;
+                    max-width: 100%;
+                }
             }
-        }
 
-        .prev-btn {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-        }
+            .prev-btn {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+            }
 
-        .next-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
+            .next-btn {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+            }
         }
     }
 }
