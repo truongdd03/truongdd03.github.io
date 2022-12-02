@@ -4,7 +4,7 @@
             <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
             <div class="header-text-wrapper">
                 <p class="s green clickable" @click="redirectToHome()">Don Truong</p>
-                <p class="ss">{{                                             post?.date                                             }}</p>
+                <p class="ss">{{ post?.date }}</p>
             </div>
         </div>
         <div class="content-wrapper">
@@ -22,6 +22,10 @@
                     @click="updateImageIndex(1)">
                     <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-right" inverse />
                 </span>
+                <div class="dots-wrapper">
+                    <span v-for="image in post.imageUrls" v-bind:key="image"
+                        :class="`dot ${image === post.imageUrls[imageIndex] ? 'white-background' : 'grey-background'}`" />
+                </div>
             </div>
         </div>
     </div>
@@ -81,6 +85,7 @@ const getImageUrl = () => {
 
     .content-wrapper {
         margin: 20px 10px 0 10px;
+
         .description {
             text-align: left;
         }
@@ -114,6 +119,22 @@ const getImageUrl = () => {
                 position: absolute;
                 right: 10px;
                 top: 50%;
+            }
+
+            .dots-wrapper {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: auto;
+                bottom: 10px;
+
+                .dot {
+                    width: 5px;
+                    height: 5px;
+                    margin: 2px;
+                    border-radius: 50%;
+                    content: '';
+                }
             }
         }
     }
