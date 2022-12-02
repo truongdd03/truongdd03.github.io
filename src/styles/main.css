@@ -47,6 +47,10 @@
   background-color: black;
 }
 
+.grey-background {
+  background-color: rgba(60, 60, 60, 0.66);
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -60,7 +64,7 @@
 }
 
 .grey {
-  color: rgba(235, 235, 235, 0.64);
+  color: rgba(101, 101, 101, 0.64);
 }
 
 .bold {

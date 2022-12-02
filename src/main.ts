@@ -10,7 +10,7 @@ import Markdown from 'vue3-markdown-it';
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 import './styles/main.css';
@@ -34,6 +34,8 @@ const icons = [
     faBars,
     faPaw,
     faSpotify,
+    faArrowAltCircleLeft,
+    faArrowAltCircleRight
 ];
 
 icons.forEach((icon) => library.add(icon));
