@@ -47,6 +47,10 @@
   background-color: black;
 }
 
+.grey-background {
+  background-color: rgba(60, 60, 60, 0.66);
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -60,14 +64,27 @@
 }
 
 .grey {
-  color: rgba(235, 235, 235, 0.64);
+  color: rgba(101, 101, 101, 0.64);
 }
 
 .bold {
   font-weight: bold;
 }
 
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

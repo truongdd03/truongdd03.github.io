@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper tmp">
+    <div class="wrapper">
         <div class="title-wrapper">
             <img class="wxl title-icon" :src="ShibaDepressed" />
             <h1 class="xl title">Projects</h1>
