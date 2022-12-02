@@ -11,8 +11,27 @@
 <script setup lang="ts">
 import MenuBar from '../MenuBar.vue';
 import PostView from './post/PostView.vue';
-import posts from './newsfeed.json';
-import type Post from './post/Post';
+import Post from './post/Post';
+import postsJSON from './newsfeed.json';
+
+const formatDate = (timestamp: number): string => {
+    const dateObj = new Date(timestamp);
+    const date = dateObj.getDate();
+    const month = dateObj.getMonth();
+    const year = dateObj.getFullYear();
+    const hour = dateObj.getHours();
+    let minute =`${dateObj.getMinutes()}`;
+    if (minute.length === 1) minute = '0' + minute;
+    return `${month}/${date}/${year} - ${hour}:${minute}`;
+}
+
+const posts = postsJSON.map((post: any) => {
+    return new Post(
+        formatDate(post.date),
+        post.content,
+        post.imageUrls,
+    )
+});
 </script>
 
 <style lang="scss" scoped>
