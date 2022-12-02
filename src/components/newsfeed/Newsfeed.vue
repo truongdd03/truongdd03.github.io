@@ -33,7 +33,7 @@ const posts = postsJSON.sort((a, b) => a.date > b.date ? -1 : 1).map((post: any)
     )
 });
 
-// console.log((new Date()).getTime());
+console.log((new Date()).getTime());
 </script>
 
 <style lang="scss" scoped>

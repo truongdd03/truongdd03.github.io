@@ -104,8 +104,8 @@ const getImageUrl = () => {
 
                 .image-content {
                     object-fit: contain;
-                    height: 70vh;
-                    width: 100%;
+                    max-height: 70vh;
+                    max-width: 100%;
                 }
             }
 

@@ -1,9 +1,15 @@
 [
     {
         "date": 1669956609844,
-        "content": "89,217 mins ≈ 62 days ≈ 2 months :) Btw, it's now possible to see my Spotify activity on this website (2nd pic)!",
+        "content": "89,217 mins ≈ 62 days ≈ 2 months :)",
         "imageUrls": [
-            "/assets/images/newsfeed/spotify-report-2022.jpg",
+            "/assets/images/newsfeed/spotify-report-2022.jpg"
+        ]
+    },
+    {
+        "date": 1670009159192,
+        "content": "New feature!! This website now shows my spotify activity!",
+        "imageUrls": [
             "/assets/images/newsfeed/new-spotify-status.png"
         ]
     }
