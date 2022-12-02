@@ -26,6 +26,10 @@
     height: calc(10vw + 80px);;
 }
 
+.wxxxl {
+    width: calc(50vw + 200px);
+}
+
 .wxxl {
     width: calc(10vw + 80px);
 }
@@ -36,6 +40,10 @@
 
 .wl {
     width: calc(2.5vw + 15px);
+}
+
+.wxm {
+    width: calc(1.8vw + 25px);
 }
 
 .wm {
