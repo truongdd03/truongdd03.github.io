@@ -27,7 +27,7 @@
                     @click="updateImageIndex(1)">
                     <font-awesome-icon class="m" icon="fa-solid fa-arrow-alt-circle-right" inverse />
                 </span>
-                <div class="dots-wrapper">
+                <div class="dots-wrapper" v-if="(post.imageUrls.length > 1)">
                     <span v-for="image in post.imageUrls" v-bind:key="image"
                         :class="`dot ${image === post.imageUrls[imageIndex] ? 'bgwhite' : 'bggrey'}`" />
                 </div>

@@ -1,11 +1,11 @@
 export const enum Tag {
-    DailyLife = 'daily-life',
+    Random = 'random',
     Programming = 'programming',
     Pets = 'pets',
 }
 
 export const tagColor: Record<string, string> = {
-    'daily-life': 'orange',
+    'random': 'orange',
     'programming': 'blue',
     'pets': 'brown',
 }
