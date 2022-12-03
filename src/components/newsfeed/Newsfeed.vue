@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import MenuBar from '../MenuBar.vue';
 import PostView from './post/PostView.vue';
-import Post from './post/Post';
+import { Post } from './post/Post';
 import postsJSON from './newsfeed.json';
 
 const formatDate = (timestamp: number): string => {
@@ -30,6 +30,7 @@ const posts = postsJSON.sort((a, b) => a.date > b.date ? -1 : 1).map((post: any)
         formatDate(post.date),
         post.content,
         post.imageUrls,
+        post.tags
     )
 });
 

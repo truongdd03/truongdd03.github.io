@@ -1,5 +1,6 @@
 @import "./base.css";
 @import "./size.css";
+@import "./color.css";
 
 #app {
   font-weight: normal;
@@ -43,36 +44,8 @@
   text-align: center;
 }
 
-.black-background {
-  background-color: black;
-}
-
-.grey-background {
-  background-color: rgba(60, 60, 60, 0.66);
-}
-
-.white-background {
-  background-color: white;
-}
-
 ::-webkit-scrollbar {
   display: none;
-}
-
-.yellow {
-  color: yellow;
-}
-
-.white {
-  color: white;
-}
-
-.grey {
-  color: rgba(101, 101, 101, 0.64);
-}
-
-.bold {
-  font-weight: bold;
 }
 
 a:hover,
@@ -91,4 +64,8 @@ a:active {
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.bold {
+  font-weight: bold;
 }

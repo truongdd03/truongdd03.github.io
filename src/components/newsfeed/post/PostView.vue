@@ -1,17 +1,22 @@
 <template>
-    <div class="post-wrapper black-background wxxxl">
+    <div class="post-wrapper bgblack wxxxl">
         <div class="heading">
-            <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
-            <div class="header-text-wrapper">
-                <p class="s green clickable" @click="redirectToHome()">Don Truong</p>
-                <p class="ss">{{ post?.date }}</p>
+            <div class="info-wrapper">
+                <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
+                <div class="header-text-wrapper">
+                    <p class="s green clickable" @click="redirectToHome()">Don Truong</p>
+                    <p class="ss">{{ post?.date }}</p>
+                </div>
+            </div>
+            <div class="tags-wrapper">
+                <TagView v-for="tag in post?.tags" v-bind:key="tag" :tag="tag"></TagView>
             </div>
         </div>
         <div class="content-wrapper">
             <div class="description-wrapper">
                 <Markdown :html="true" :typographer="true" class="s description white" :source="post?.content" />
             </div>
-            <div class="images-wrapper grey-background" v-if="(post && post.imageUrls.length !== 0)">
+            <div class="images-wrapper bggrey" v-if="(post && post.imageUrls.length !== 0)">
                 <span class="image-wrapper">
                     <img class="image-content" :src="getImageUrl()" />
                 </span>
@@ -24,7 +29,7 @@
                 </span>
                 <div class="dots-wrapper">
                     <span v-for="image in post.imageUrls" v-bind:key="image"
-                        :class="`dot ${image === post.imageUrls[imageIndex] ? 'white-background' : 'grey-background'}`" />
+                        :class="`dot ${image === post.imageUrls[imageIndex] ? 'bgwhite' : 'bggrey'}`" />
                 </div>
             </div>
         </div>
@@ -35,7 +40,8 @@
 import router from '@/router';
 import { ref } from 'vue';
 import Markdown from 'vue3-markdown-it';
-import Post from './Post';
+import { Post } from './Post';
+import TagView from './TagView.vue';
 
 const props = defineProps({
     post: Post,
@@ -66,20 +72,32 @@ const getImageUrl = () => {
     padding: 10px;
 
     .heading {
-        width: auto;
+        width: 100%;
         display: flex;
 
-        .avatar {
+        .info-wrapper {
             height: auto;
-            border-radius: 50%;
-            margin-right: 10px;
-            object-fit: cover;
+            display: flex;
+
+            .avatar {
+                border-radius: 50%;
+                margin-right: 10px;
+                object-fit: cover;
+            }
+
+            .header-text-wrapper {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+            }
         }
 
-        .header-text-wrapper {
-            text-align: left;
+        .tags-wrapper {
+            height: 100%;
+            margin-left: auto;
             display: flex;
-            flex-direction: column;
+            justify-content: right;
+            margin-top: 10px;
         }
     }
 

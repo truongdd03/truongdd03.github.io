@@ -4,13 +4,15 @@
         "content": "89,217 mins ≈ 62 days ≈ 2 months :)",
         "imageUrls": [
             "/assets/images/newsfeed/spotify-report-2022.jpg"
-        ]
+        ],
+        "tags": ["daily-life"]
     },
     {
         "date": 1670009159192,
         "content": "New feature!! This website now shows my spotify activity!",
         "imageUrls": [
             "/assets/images/newsfeed/new-spotify-status.png"
-        ]
+        ],
+        "tags": ["programming"]
     }
 ]

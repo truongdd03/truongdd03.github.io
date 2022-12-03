@@ -1,0 +1,43 @@
+.yellow {
+    color: yellow;
+}
+
+.white {
+    color: white;
+}
+
+.blue {
+    color: hwb(240 28% 16%);
+}
+
+.grey {
+    color: rgba(101, 101, 101, 0.64);
+}
+
+.brown {
+    color: brown;
+}
+
+.bgorange {
+    background-color: orange;
+}
+
+.bgbrown {
+    background-color: brown;
+}
+
+.bgblue {
+    background-color: hwb(240 28% 16%);
+}
+
+.bgblack {
+    background-color: black;
+}
+
+.bggrey {
+    background-color: rgba(60, 60, 60, 0.66);
+}
+
+.bgwhite {
+    background-color: white;
+}

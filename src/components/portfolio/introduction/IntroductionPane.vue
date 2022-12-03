@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper black-background">
+    <div class="wrapper bgblack">
         <div class="avatar-activity-wrapper">
             <div class="left"></div>
             <div class="center">
