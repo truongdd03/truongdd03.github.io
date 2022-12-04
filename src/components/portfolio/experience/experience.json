@@ -7,10 +7,18 @@
         "description": ""
     },
     {
+        "company": "Open Energy Dashboard",
+        "url": "https://openenergydashboard.github.io/",
+        "icon": "/assets/images/experienceIcons/oed.png",
+        "title": "Software Engineer Intern",
+        "duration": "October 2022 - Present",
+        "description": ""
+    },
+    {
         "company": "Michigan State University",
         "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
-        "duration": "October 2022 - present",
+        "duration": "October 2022 - Present",
         "description": "\n* Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.\n\n* Implemented an activity tracker from scratch using <span class=\"yellow\">PHP</span>, <span class=\"yellow\">SQL</span>, and <span class=\"yellow\">JavaScript</span>.\n\n* Wrote a <span class=\"yellow\">Python</span> crawler to retrieve page content.\n"
     },
     {
@@ -20,7 +28,7 @@
         "skills": "Vue.js, TypeScript, HTML/CSS",
         "title": "Software Engineer Intern",
         "duration": "May 2022 - September 2022",
-        "description": "\n* Implemented new features (conditional expression, string interpolation, etc.) in <span class=\"yellow\">TypeScript</span> for a new programming language explicitly used for data analytics.\n\n* Developed an online editor for testing and demonstrating the programming language using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase."
+        "description": "\n* Implemented new features (conditional expression, string interpolation, etc.) in <span class=\"yellow\">TypeScript</span> for a new programming language explicitly used for data analytics.\n\n* Developed an online editor ([https://aml-playground.surge.sh/](https://aml-playground.surge.sh/)) using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase."
     },
     {
         "company": "Open Energy Dashboard",
@@ -28,8 +36,8 @@
         "icon": "/assets/images/experienceIcons/oed.png",
         "skills": "React, Redux, TypeScript, JavaScript, Postgres",
         "title": "Software Engineer Intern",
-        "duration": "October 2021 - May 2022 & October 2022 - Present",
-        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improving the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support over 30 different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0)."
+        "duration": "October 2021 - May 2022",
+        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support over 30 different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0)."
     },
     {
         "company": "Chang's Kitchen",
