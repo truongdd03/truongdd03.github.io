@@ -1,5 +1,5 @@
 <template>
-    <div class="post-wrapper bgblack wxxxl">
+    <div class="post-wrapper bgblack">
         <div class="heading">
             <div class="info-wrapper">
                 <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="tags-wrapper">
-                <TagView v-for="tag in post?.tags" v-bind:key="tag" :tag="tag"></TagView>
+                <TagView v-for="tag in post?.tags" v-bind:key="tag" :tag="tag" :selected="true"></TagView>
             </div>
         </div>
         <div class="content-wrapper">
@@ -68,8 +68,9 @@ const getImageUrl = () => {
     display: inline-block;
     vertical-align: top;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px;
+    width: 100%;
 
     .heading {
         width: 100%;
@@ -102,7 +103,7 @@ const getImageUrl = () => {
     }
 
     .content-wrapper {
-        margin: 20px 10px 0 10px;
+        margin: 10px;
 
         .description {
             text-align: left;
@@ -118,12 +119,12 @@ const getImageUrl = () => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 90%;
+                border: 1px solid rgba(60, 60, 60, 0.66);
 
                 .image-content {
                     object-fit: contain;
                     max-height: 70vh;
-                    max-width: 100%;
+                    width: 100%;
                 }
             }
 

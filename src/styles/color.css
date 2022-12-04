@@ -18,6 +18,10 @@
     color: brown;
 }
 
+.orange {
+    color: orange;
+}
+
 .bgorange {
     background-color: orange;
 }
@@ -40,4 +44,16 @@
 
 .bgwhite {
     background-color: white;
+}
+
+.bdbrown {
+    border: 1px solid brown;
+}
+
+.bdblue {
+    border: 1px solid hwb(240 28% 16%);
+}
+
+.bdorange {
+    border: 1px solid orange;
 }
