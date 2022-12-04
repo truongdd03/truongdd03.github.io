@@ -2892,7 +2892,7 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const t of t
 .p-card-header img {
     width: 100%;
 }
-`;qw(jw);ng.render=Qw;const Zw="/assets/images/gifs/alaska-clap.gif",Jw="/assets/images/gifs/shiba-clap.gif",eL=[{company:"Salesforce",icon:"/assets/images/experienceIcons/salesforce.png",title:"Incoming Software Engineer Intern",duration:"",description:""},{company:"Michigan State University",icon:"/assets/images/educationIcons/msu.png",title:"Research Assistant | Programmer",duration:"October 2022 - present",description:`
+`;qw(jw);ng.render=Qw;const Zw="/assets/images/gifs/alaska-clap.gif",Jw="/assets/images/gifs/shiba-clap.gif",eL=[{company:"Salesforce",icon:"/assets/images/experienceIcons/salesforce.png",title:"Incoming Software Engineer Intern",duration:"",description:""},{company:"Open Energy Dashboard",url:"https://openenergydashboard.github.io/",icon:"/assets/images/experienceIcons/oed.png",title:"Software Engineer Intern",duration:"October 2022 - Present",description:""},{company:"Michigan State University",icon:"/assets/images/educationIcons/msu.png",title:"Research Assistant | Programmer",duration:"October 2022 - Present",description:`
 * Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.
 
 * Implemented an activity tracker from scratch using <span class="yellow">PHP</span>, <span class="yellow">SQL</span>, and <span class="yellow">JavaScript</span>.
@@ -2901,10 +2901,10 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const t of t
 `},{company:"Holistics Data",url:"https://www.holistics.io/",icon:"/assets/images/experienceIcons/holistics.png",skills:"Vue.js, TypeScript, HTML/CSS",title:"Software Engineer Intern",duration:"May 2022 - September 2022",description:`
 * Implemented new features (conditional expression, string interpolation, etc.) in <span class="yellow">TypeScript</span> for a new programming language explicitly used for data analytics.
 
-* Developed an online editor for testing and demonstrating the programming language using <span class="yellow">TypeScript</span> and <span class="yellow">Vue 3</span>.
+* Developed an online editor ([https://aml-playground.surge.sh/](https://aml-playground.surge.sh/)) using <span class="yellow">TypeScript</span> and <span class="yellow">Vue 3</span>.
 
-* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase.`},{company:"Open Energy Dashboard",url:"https://openenergydashboard.github.io/",icon:"/assets/images/experienceIcons/oed.png",skills:"React, Redux, TypeScript, JavaScript, Postgres",title:"Software Engineer Intern",duration:"October 2021 - May 2022 & October 2022 - Present",description:`
-* Performed security testing by writing <span class="yellow">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improving the exporting view using <span class="yellow">React</span>, <span class="yellow">Redux</span>, and <span class="yellow">TypeScript</span>.
+* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase.`},{company:"Open Energy Dashboard",url:"https://openenergydashboard.github.io/",icon:"/assets/images/experienceIcons/oed.png",skills:"React, Redux, TypeScript, JavaScript, Postgres",title:"Software Engineer Intern",duration:"October 2021 - May 2022",description:`
+* Performed security testing by writing <span class="yellow">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class="yellow">React</span>, <span class="yellow">Redux</span>, and <span class="yellow">TypeScript</span>.
 
 * Expanded the database and created new API routes to support over 30 different resource types using <span class="yellow">PostgresQL</span> and <span class="yellow">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0).`},{company:"Chang's Kitchen",title:"Software Engineer Intern",duration:"May 2021 - August 2021",description:`
 * Developed an iOS mobile app with <span class="yellow">Swift</span> for customers to order food from the restaurant with daily rotating menus. Using Firebase database, the app allowed users to manage and re-order from order history.
