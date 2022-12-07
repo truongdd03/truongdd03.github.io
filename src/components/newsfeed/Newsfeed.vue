@@ -59,7 +59,7 @@ console.log((new Date()).getTime());
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 50%;
+        width: 60%;
 
         .post-wrapper {
             width: 100%;
@@ -69,7 +69,7 @@ console.log((new Date()).getTime());
     .filter-wrapper {
         position: fixed;
         right: 0;
-        width: 25%;
+        width: 20%;
         height: 100%;
 
         .tags-wrapper {

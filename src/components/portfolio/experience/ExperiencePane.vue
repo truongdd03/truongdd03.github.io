@@ -67,7 +67,7 @@ import experience from './experience.json';
     }
 
     .duration-wrapper {
-        padding: 20px;
+        padding-top: 20px;
         min-height: 5vw;
 
         .duration {
@@ -76,10 +76,11 @@ import experience from './experience.json';
     }
 
     .experience-wrapper {
+        border: 0.5px solid rgb(54, 53, 53);
         background-color: black;
 
         .description {
-            margin-left: -20px;
+            margin: -20px 0 0 -20px;
             text-align: left;
             color: white;
         }

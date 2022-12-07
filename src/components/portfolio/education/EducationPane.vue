@@ -45,7 +45,7 @@ import education from './education.json';
     width: 100%;
 
     .duration-wrapper {
-        padding: 25px;
+        padding-top: 20px;
         min-height: 50px;
 
         .duration {
@@ -55,12 +55,12 @@ import education from './education.json';
 
     .experience-wrapper {
         background-color: black;
-        border: calc(0.1vw + 3px) solid white;
+        border: 1px solid white;
 
         .description {
             text-align: left;
             color: white;
-            margin-bottom: 20px;
+            margin: -20px 0 0 0;
             white-space: pre-wrap;
         }
     }

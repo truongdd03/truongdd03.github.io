@@ -37,7 +37,7 @@ let isHovering = ref(false);
     text-decoration: none;
 
     .hovering {
-        opacity: 0.3;
+        opacity: 0.5;
     }
 
     .hovering-wrapper {
@@ -48,7 +48,7 @@ let isHovering = ref(false);
         z-index: 1;
 
         .redirect-icon {
-            color: gray;
+            color: black;
             top: 30%;
             -ms-transform: translateY(-30%);
             transform: translateY(-30%);
@@ -63,6 +63,8 @@ let isHovering = ref(false);
         margin: 20px 20px 20px 20px;
         cursor: pointer;
         background-color: black;
+        border-radius: 20px;
+        box-shadow: 100px;
 
         .image-wrapper {
             width: 100%;
@@ -72,6 +74,8 @@ let isHovering = ref(false);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
             }
         }
 
