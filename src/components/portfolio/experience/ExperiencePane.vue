@@ -77,7 +77,10 @@ import experience from './experience.json';
 
     .experience-wrapper {
         border: 0.5px solid rgb(54, 53, 53);
+        border-radius: 20px;
         background-color: black;
+        -webkit-box-shadow: 0 0 10px rgba(60, 60, 60, 0.66);
+        box-shadow: 0 0 10px rgba(60, 60, 60, 0.66);
 
         .description {
             margin: -20px 0 0 -20px;

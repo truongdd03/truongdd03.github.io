@@ -55,7 +55,10 @@ import education from './education.json';
 
     .experience-wrapper {
         background-color: black;
+        border-radius: 20px;
         border: 1px solid white;
+        -webkit-box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px white;
 
         .description {
             text-align: left;
