@@ -31,6 +31,10 @@
     background-color: rgba(84, 84, 84, 0.48);
     border-radius: 5px;
 
+    .song-wrapper:hover {
+        -webkit-box-shadow: 0 0 10px hsla(160, 100%, 37%, 1);
+        box-shadow: 0 0 10px hsla(160, 100%, 37%, 1);
+    }
     .song-wrapper {
         width: 100%;
         display: flex;
