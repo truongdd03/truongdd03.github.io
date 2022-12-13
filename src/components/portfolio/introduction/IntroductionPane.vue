@@ -66,6 +66,7 @@ const scroll = async () => {
     position: absolute;
     bottom: 10%;
     text-align: center;
+    background-color: purple;
 
     .scroll-icon {
         cursor: pointer;
@@ -85,6 +86,10 @@ const scroll = async () => {
             max-width: none;
             width: auto;
         }
+    }
+
+    .icon-wrapper {
+        width: 100%;
     }
 }
 </style>
