@@ -66,7 +66,6 @@ const scroll = async () => {
     position: absolute;
     bottom: 10%;
     text-align: center;
-    background-color: purple;
 
     .scroll-icon {
         cursor: pointer;
