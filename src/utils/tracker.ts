@@ -1,17 +1,25 @@
 import { child, get, getDatabase, ref, set } from '@firebase/database';
 import DeviceDetector from 'device-detector-js';
 
+interface Data {
+    count: number,
+    ip: string,
+    devices: Object[],
+    timestamps: number[],
+    urls: string[],
+};
+
 const formatIp = (ip: string): string => {
     return ip.replace(/\./g, '-');
 }
 
-const getRemote = async (ip: string): Promise<number> => {
+const getRemote = async (ip: string): Promise<Data> => {
     const dbRef = ref(getDatabase());
     return await get(child(dbRef, `users/${ip}`)).then((snapshot) => {
         if (snapshot.exists()) {
-            return snapshot.val().count;
+            return snapshot.val();
         } else {
-            return 0;
+            return { count: 0, ip: '', devices: [], timestamps: [], urls: [] };
         }
     });
 }
@@ -24,12 +32,16 @@ const getDevice = () => {
 
 const updateRemote = async (ip: string, rawIp: string) => {
     const database = getDatabase();
-    const count = (await getRemote(ip));
+    const currentData = await getRemote(ip);
     const device = getDevice();
+    const timestamp = (new Date()).getTime();
+    const url = window.location.href;
     set(ref(database, `users/${ip}`), {
-        count: count + 1,
+        count: currentData.count + 1,
         ip: rawIp,
-        device: device,
+        devices: currentData.devices.concat(device),
+        timestamps: currentData.timestamps.concat(timestamp),
+        urls: currentData.urls.concat(url),
     });
 }
 

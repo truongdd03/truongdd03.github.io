@@ -40,6 +40,8 @@ const icons = [
 
 icons.forEach((icon) => library.add(icon));
 
+initTracker();
+
 const app = createApp(App).use(router);
 
 const libraries = [
@@ -50,7 +52,6 @@ const libraries = [
 
 libraries.forEach((lib) => app.use(lib));
 
-initTracker();
 initSpotifyListener();
 
 app.component('Timeline', Timeline);
