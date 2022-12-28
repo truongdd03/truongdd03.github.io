@@ -2,7 +2,7 @@
 
 ![](https://github.com/truongdd03/truongdd03.github.io/workflows/Build/badge.svg)
 
-[https://truongdd03.github.io/](https://truongdd03.github.io/)
+[https://truongdd03.github.io/gh](https://truongdd03.github.io/gh)
 
 This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/SCSS**. Users' ips are collected and stored on Firebase to track the number of visits and where users are from. **Spotify API** is used to fetch realtime data.
 
