@@ -7,7 +7,7 @@ interface Data {
     devices: Object[],
     timestamps: number[],
     urls: string[],
-};
+}
 
 const formatIp = (ip: string): string => {
     return ip.replace(/\./g, '-');
