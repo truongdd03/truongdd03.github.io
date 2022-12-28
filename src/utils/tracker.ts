@@ -30,12 +30,11 @@ const getDevice = () => {
     return deviceDetector.parse(userAgent);
 }
 
-const updateRemote = async (ip: string, rawIp: string) => {
+const updateRemote = async (ip: string, rawIp: string, url: string) => {
     const database = getDatabase();
     const currentData = await getRemote(ip);
     const device = getDevice();
     const timestamp = (new Date()).getTime();
-    const url = window.location.href;
     set(ref(database, `users/${ip}`), {
         count: currentData.count + 1,
         ip: rawIp,
@@ -46,10 +45,11 @@ const updateRemote = async (ip: string, rawIp: string) => {
 }
 
 export const initTracker = () => {
+    const url = window.location.href;
     fetch('https://api.ipify.org/?format=json')
         .then(x => x.json())
         .then(async ({ ip }) => {
             const formattedIp = formatIp(ip);
-            updateRemote(formattedIp, ip);
+            updateRemote(formattedIp, ip, url);
         });
 }
