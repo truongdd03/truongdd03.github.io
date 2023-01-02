@@ -28,10 +28,10 @@ import ShibaHi from '/assets/images/gifs/shiba-hi.gif';
 
 const roles = [
     'Don Truong',
-    'an incoming SWE Intern @ Salesforce',
     'from Vietnam',
     'studying @ Michigan State University',
-    'a former SWE Intern @ Holistics',
+    'interested in software engineering',
+    'a dog lover :)'
 ];
 
 const scroll = async () => {

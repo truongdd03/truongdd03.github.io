@@ -5,7 +5,7 @@ interface Data {
     count: number,
     ip: string,
     devices: Object[],
-    timestamps: number[],
+    timestamps: string[],
     urls: string[],
 }
 
@@ -34,7 +34,7 @@ const updateRemote = async (ip: string, rawIp: string, url: string) => {
     const database = getDatabase();
     const currentData = await getRemote(ip);
     const device = getDevice();
-    const timestamp = (new Date()).getTime();
+    const timestamp = (new Date()).toLocaleString('en-US', { timeZone: 'America/Detroit'});
     set(ref(database, `users/${ip}`), {
         count: currentData.count + 1,
         ip: rawIp,
