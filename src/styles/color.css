@@ -22,8 +22,16 @@
     color: orange;
 }
 
+.red {
+    color: red;
+}
+
 .bgorange {
     background-color: orange;
+}
+
+.bgred {
+    background-color: red;
 }
 
 .bgbrown {
@@ -48,6 +56,10 @@
 
 .bdbrown {
     border: 1px solid brown;
+}
+
+.bdred {
+    border: 1px solid red;
 }
 
 .bdblue {

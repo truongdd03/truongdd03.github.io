@@ -8,6 +8,7 @@ export const tagColor: Record<string, string> = {
     'random': 'orange',
     'programming': 'blue',
     'pets': 'brown',
+    'C++': 'red',
 }
 
 export class Post {

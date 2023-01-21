@@ -14,5 +14,13 @@
             "/assets/images/newsfeed/new-spotify-status.png"
         ],
         "tags": ["programming"]
+    },
+    {
+        "date": 1674282061423,
+        "content": "ϞϞ(๑⚈ ․̫ ⚈๑)ϞϞ",
+        "imageUrls": [
+            "/assets/images/newsfeed/pikachu.png"
+        ],
+        "tags": ["programming", "C++"]
     }
 ]

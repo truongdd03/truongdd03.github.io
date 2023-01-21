@@ -26,7 +26,7 @@ import TagView from './post/TagView.vue';
 const formatDate = (timestamp: number): string => {
     const dateObj = new Date(timestamp);
     const date = dateObj.getDate();
-    const month = dateObj.getMonth();
+    const month = dateObj.getMonth() + 1;
     const year = dateObj.getFullYear();
     const hour = dateObj.getHours();
     let minute = `${dateObj.getMinutes()}`;

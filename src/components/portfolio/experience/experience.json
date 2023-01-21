@@ -1,17 +1,10 @@
 [
     {
         "company": "Salesforce",
+        "url": "https://www.salesforce.com/",
         "icon": "/assets/images/experienceIcons/salesforce.png",
         "title": "Incoming Software Engineer Intern",
         "duration": "",
-        "description": ""
-    },
-    {
-        "company": "Open Energy Dashboard",
-        "url": "https://openenergydashboard.github.io/",
-        "icon": "/assets/images/experienceIcons/oed.png",
-        "title": "Software Engineer Intern",
-        "duration": "October 2022 - Present",
         "description": ""
     },
     {

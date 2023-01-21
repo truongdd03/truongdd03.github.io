@@ -1,6 +1,9 @@
 <template>
     <header>
         <div class="social">
+            <a href="https://www.instagram.com/dong_trng/" target="_blank">
+                <font-awesome-icon class="l icon" icon="fa-brands fa-instagram" inverse />
+            </a>
             <a href="https://github.com/truongdd03" target="_blank">
                 <font-awesome-icon class="l icon" icon="fa-brands fa-github" inverse />
             </a>
