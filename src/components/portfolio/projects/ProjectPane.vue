@@ -5,19 +5,18 @@
                 <img class="image" :src="project.image ? project.image : Github" />
             </div>
             <div class="information-wrapper">
-                <h1 class="m green">{{project.name}}</h1>
-                <Markdown :html="true" class="s subtitle" :source="project.subtitle" />
+                <h1 class="green" style="font-size: 18px;">{{project.name}}</h1>
+                <Markdown :html="true" class="subtitle" :source="project.subtitle" />
             </div>
         </div>
     </a>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import Markdown from 'vue3-markdown-it';
 import Github from '/assets/images/projects/github.png';
 
-const props = defineProps({
+defineProps({
     project: {
         type: Object,
         default: {},
@@ -37,15 +36,13 @@ const props = defineProps({
     }
 
     .project-wrapper {
+        width: 100%;
+        height: 100%;
         opacity: 0.8;
-        width: calc(18vw + 60px);
-        height: calc(1vh + 20vw + 100px);
-        display: inline-block;
+        border-radius: 20px;
         vertical-align: top;
-        margin: 20px 20px 20px 20px;
         cursor: pointer;
         background-color: black;
-        border-radius: 20px;
         box-shadow: 100px;
 
         .image-wrapper {
