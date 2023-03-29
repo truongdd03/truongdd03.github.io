@@ -1,5 +1,16 @@
 [
     {
+        "name": "Chat Room",
+        "subtitle": "A real-time chat web application created with <span class=\"yellow\">Java</span> and <span class=\"yellow\">TypeScript</span>",
+        "skills": [
+            "TypeScript",
+            "Vue3"
+        ],
+        "image": "/assets/images/projects/chat-room.png",
+        "description": "",
+        "url": "https://github.com/truongdd03/truongdd03.github.io"
+    },
+    {
         "name": "Personal Website",
         "subtitle": "A website built with <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue3</span>",
         "skills": [

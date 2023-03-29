@@ -12,7 +12,7 @@
         "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
         "duration": "October 2022 - Present",
-        "description": "\n* Developed a website to customize survey forms for gathering statistics data from the USDA national farmers market.\n\n* Implemented an activity tracker from scratch using <span class=\"yellow\">PHP</span>, <span class=\"yellow\">SQL</span>, and <span class=\"yellow\">JavaScript</span>.\n\n* Wrote a <span class=\"yellow\">Python</span> crawler to retrieve page content.\n"
+        "description": "\n* Developed a [website](https://www.usdalocalfoodportal.com/) for the United States Department of Agriculture using <span class=\"yellow\">Vue3</span>, <span class=\"yellow\">TypeScript</span>, <span class=\"yellow\">MySQL</span>, and <span class=\"yellow\">PHP</span>.\n\n* Implemented a customizable <span class=\"yellow\">Python</span> scaper to retrieve famers market data.\n"
     },
     {
         "company": "Holistics Data",
@@ -21,7 +21,7 @@
         "skills": "Vue.js, TypeScript, HTML/CSS",
         "title": "Software Engineer Intern",
         "duration": "May 2022 - September 2022",
-        "description": "\n* Implemented new features (conditional expression, string interpolation, etc.) in <span class=\"yellow\">TypeScript</span> for a new programming language explicitly used for data analytics.\n\n* Developed an online editor ([https://aml-playground.surge.sh/](https://aml-playground.surge.sh/)) using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Collaborated in a team of 4 to develop an internal vscode extension from scratch to connect docs and codebase."
+        "description": "\n* Implemented new features for a new programming language explicitly used for data analytics.\n\n* Developed an [online editor](https://aml-playground.surge.sh/) using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Developed an internal vscode extension from scratch to connect docs and codebase."
     },
     {
         "company": "Open Energy Dashboard",
@@ -30,12 +30,12 @@
         "skills": "React, Redux, TypeScript, JavaScript, Postgres",
         "title": "Software Engineer Intern",
         "duration": "October 2021 - May 2022",
-        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support over 30 different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>. Reviewed code and migrated database for the new product version (1.0.0)."
+        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>."
     },
     {
         "company": "Chang's Kitchen",
         "title": "Software Engineer Intern",
         "duration": "May 2021 - August 2021",
-        "description": "\n* Developed an iOS mobile app with <span class=\"yellow\">Swift</span> for customers to order food from the restaurant with daily rotating menus. Using Firebase database, the app allowed users to manage and re-order from order history.\n\n* Designed a web app using <span class=\"yellow\">HTML/CSS</span> and <span class=\"yellow\">JavaScript</span> to manage orders from the mobile app, calculate profit, and analyze customers’ data."
+        "description": "\n* Developed an iOS mobile app (<span class=\"yellow\">Swift</span>) and created a website (<span class=\"yellow\">JavaScript</span>) for a restaurant to manage orders and display daily menus."
     }
 ]
