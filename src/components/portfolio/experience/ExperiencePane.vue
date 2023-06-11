@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper bgblackmute">
         <div class="title-wrapper">
             <img class="wxl title-icon" :src="AlaskaClap" />
             <h1 class="title xl">Experience</h1>

@@ -46,6 +46,10 @@
     background-color: black;
 }
 
+.bgblackmute {
+    background-color: rgb(14, 17, 22);
+}
+
 .bggrey {
     background-color: rgba(60, 60, 60, 0.66);
 }

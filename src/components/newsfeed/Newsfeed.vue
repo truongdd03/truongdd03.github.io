@@ -1,6 +1,6 @@
 <template>
     <MenuBar></MenuBar>
-    <div class="wrapper">
+    <div class="wrapper bgblackmute">
         <div class="posts-wrapper">
             <div v-for="post in posts" v-bind:key="post.date" class="post-wrapper">
                 <PostView :post="(post as Post)"></PostView>
