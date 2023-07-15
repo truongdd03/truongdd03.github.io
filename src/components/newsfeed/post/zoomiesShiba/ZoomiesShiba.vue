@@ -1,38 +1,59 @@
 <template>
-    <div class="zoomiesShibaWrapper bggrey">
-        <div class="components">
-            <img id="shiba" class="wxl" :src="`/assets/images/newsfeed/shiba_sprite/shiba_sprite${refs.sprite}.png`" />
+    <div id="gameView" class="zoomiesShibaWrapper bggrey">
+        <p class="green">{{ timeElapsed }}</p>
+        <button @click="(gameElements[0] as Shiba).jump()">Jump</button>
+        <div id="components">
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import type { GameElement } from './ts/GameElement';
+import { Ghost } from './ts/Ghost';
 import { Shiba } from './ts/Shiba';
 
-const shiba = new Shiba();
-const refs = ref({
-    sprite: 0,
+const timeElapsed = ref(0);
+let gameElements: GameElement[] = [];
+
+onMounted(() => {
+    gameElements.push(new Shiba('shiba'));
 });
 
 setInterval(() => {
-    shiba.update();
+    gameElements.forEach(element => element.update());
+    gameElements = gameElements.filter(element => !element.shouldRemove());
+    timeElapsed.value += 1;
 
-    updateView();
+    // Randomly add ghost
+    if (Math.floor(Math.random() * 20) == 0) {
+        gameElements.push(new Ghost(`ghost-${timeElapsed.value}`, 15 + timeElapsed.value / 100));
+    }
 }, 100);
-
-const updateView = () => {
-    refs.value.sprite = shiba.spriteNumber;
-}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .zoomiesShibaWrapper {
-    height: 100px;
+    position: relative;
+    height: 150px;
 
-    .components {
+    #components {
         position: absolute;
         bottom: 0;
+
+        .shiba {
+            width: 80px;
+            z-index: 1;
+            bottom: -10px;
+            left: 50px;
+        }
+
+        .ghost {
+            position: absolute;
+            width: 80px;
+            left: 100px;
+            bottom: -25px;
+        }
     }
 }
 </style>

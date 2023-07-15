@@ -1,6 +1,6 @@
 <template>
     <div :class="`tag-wrapper ${wrapperClass}`">
-        <p :class="`ss bold ${textClass}`">{{tag}}</p>
+        <p :class="`s bold ${textClass}`">{{tag}}</p>
     </div>
 </template>
 

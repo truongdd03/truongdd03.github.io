@@ -5,7 +5,7 @@
                 <img class="wxm avatar clickable" src="/assets/images/avatar/don-cool.jpeg" @click="redirectToHome()" />
                 <div class="header-text-wrapper">
                     <p class="s green clickable" @click="redirectToHome()">Don Truong</p>
-                    <p class="ss">{{ post?.date }}</p>
+                    <p class="s">{{ post?.date }}</p>
                 </div>
             </div>
             <div class="tags-wrapper">
