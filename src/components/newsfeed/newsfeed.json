@@ -1,5 +1,14 @@
 [
     {
+        "type": "code",
+        "elementId": "zoomiesShiba",
+        "date": 1689391334961,
+        "content": "89,217 mins ≈ 62 days ≈ 2 months :)",
+        "imageUrls": [],
+        "tags": ["random"]
+    },
+    {
+        "type": "post",
         "date": 1669956609844,
         "content": "89,217 mins ≈ 62 days ≈ 2 months :)",
         "imageUrls": [
@@ -8,14 +17,7 @@
         "tags": ["random"]
     },
     {
-        "date": 1670009159192,
-        "content": "New feature!! This website now shows my spotify activity!",
-        "imageUrls": [
-            "/assets/images/newsfeed/new-spotify-status.png"
-        ],
-        "tags": ["programming"]
-    },
-    {
+        "type": "post",
         "date": 1674282061423,
         "content": "ϞϞ(๑⚈ ․̫ ⚈๑)ϞϞ",
         "imageUrls": [

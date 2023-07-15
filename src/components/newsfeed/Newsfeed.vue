@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <MenuBar></MenuBar>
     <div class="wrapper bgblackmute">
@@ -7,21 +8,14 @@
             </div>
             <p class="footer s">There are no more posts to show right now.</p>
         </div>
-        <!-- <div class="filter-wrapper">
-            <p class="m green">Tags</p>
-            <div class="tags-wrapper">
-                <TagView v-for="tag in Object.keys(tagColor)" v-bind:key="tag" :tag="tag" :selected="false"></TagView>
-            </div>
-        </div> -->
     </div>
 </template>
 
 <script setup lang="ts">
 import MenuBar from '../MenuBar.vue';
 import PostView from './post/PostView.vue';
-import { Post, tagColor } from './post/Post';
+import { Post } from './post/Post';
 import postsJSON from './newsfeed.json';
-import TagView from './post/TagView.vue';
 
 const formatDate = (timestamp: number): string => {
     const dateObj = new Date(timestamp);
@@ -36,10 +30,12 @@ const formatDate = (timestamp: number): string => {
 
 const posts = postsJSON.sort((a, b) => a.date > b.date ? -1 : 1).map((post: any) => {
     return new Post(
+        post.type,
         formatDate(post.date),
         post.content,
         post.imageUrls,
-        post.tags
+        post.tags,
+        post.elementId,
     )
 });
 
