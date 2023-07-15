@@ -3,15 +3,15 @@
         "company": "Salesforce",
         "url": "https://www.salesforce.com/",
         "icon": "/assets/images/experienceIcons/salesforce.png",
-        "title": "Incoming Software Engineer Intern",
-        "duration": "",
+        "title": "Software Engineer Intern",
+        "duration": "May 2023 - August 2023",
         "description": ""
     },
     {
         "company": "Michigan State University",
         "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
-        "duration": "October 2022 - Present",
+        "duration": "October 2022 - May 2023",
         "description": "\n* Developed a [website](https://www.usdalocalfoodportal.com/) for the United States Department of Agriculture using <span class=\"yellow\">Vue3</span>, <span class=\"yellow\">TypeScript</span>, <span class=\"yellow\">MySQL</span>, and <span class=\"yellow\">PHP</span>.\n\n* Implemented a customizable <span class=\"yellow\">Python</span> scaper to retrieve famers market data.\n"
     },
     {
