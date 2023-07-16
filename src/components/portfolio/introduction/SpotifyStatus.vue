@@ -11,7 +11,7 @@
                     src="https://i.scdn.co/image/ab67616d0000b2733846fa121fe826af4364df6e" />
                 <div class="song-description">
                     <p id="spotify-song" class="s song-info white bold">Siêu phẩm tình ew</p>
-                    <p id="spotify-artist" class="ss song-info grey">MAI</p>
+                    <p id="spotify-artist" class="s song-info grey">MAI</p>
                 </div>
                 <div class="playing-icon">
                     <span />

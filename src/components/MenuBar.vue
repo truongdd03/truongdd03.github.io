@@ -68,7 +68,7 @@ const redirectToNewsfeed = () => {
     top: 0;
     width: 100%;
     background-color: rgb(23, 27, 33);
-    z-index: 1;
+    z-index: 10;
 }
 
 .logo {
