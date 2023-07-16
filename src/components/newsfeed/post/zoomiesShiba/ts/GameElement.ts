@@ -1,3 +1,6 @@
+/**
+ * Base class for any element in the game
+ */
 export class GameElement {
     /**
      * The HTML id of this element
