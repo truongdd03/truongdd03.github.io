@@ -27,6 +27,7 @@ import { Cloud } from './ts/Cloud';
 const timeElapsed = ref(0);
 let gameElements: GameElement[] = [];
 let isInGame = false;
+let timeSinceAddedGhost = 0;
 
 const startGame = () => {
     // Remove cover
@@ -35,6 +36,7 @@ const startGame = () => {
     document.getElementById('components')!.innerHTML = '';
     gameElements = [];
     timeElapsed.value = 0;
+    timeSinceAddedGhost = 0;
     
     // Start a new game
     gameElements.push(new Shiba('shiba'));
@@ -43,30 +45,83 @@ const startGame = () => {
     isInGame = true;
 }
 
+const endGame = () => {
+    // Stop game
+    isInGame = false;
+    // Display cover
+    document.getElementById('gameCover')!.style.display = 'flex';
+}
+
+/**
+ * Randomly add ghosts
+ */
+const addObstacleRandomly = () => {
+    const size = Math.max(5, 20 - timeElapsed.value / 100);
+
+    if (random(size) == 0 && timeSinceAddedGhost >= 10) {
+        // Randomly add 1 or 2 ghosts
+        for (let i = 0; i <= random(2); i += 1) {
+            gameElements.push(new Ghost(`ghost-${timeElapsed.value + i}`, 15 + timeElapsed.value / 100, 20 * i));
+        }
+
+        timeSinceAddedGhost = 0;
+    }
+}
+
 setInterval(() => {
     if (isInGame) {
         gameElements.forEach(element => element.update());
         gameElements = gameElements.filter(element => !element.shouldRemove());
         timeElapsed.value += 1;
+        timeSinceAddedGhost += 1;
 
-        // Randomly add ghost
-        if (Math.floor(Math.random() * 20) == 0) {
-            gameElements.push(new Ghost(`ghost-${timeElapsed.value}`, 15 + timeElapsed.value / 100));
-        }
+        addObstacleRandomly();
 
         // Add cloud
         if (timeElapsed.value % 50 == 0) {
             gameElements.push(new Cloud(`cloud-${timeElapsed.value}`, 5));
         }
+
+        // Check if shiba hits ghost
+        gameElements.forEach((element) => {
+            if (element instanceof Ghost) {
+                if (element.positionX >= 30 && element.positionX <= 95 && !(gameElements[0] as Shiba).isJumping) {
+                    // Lose
+                    endGame();
+                }
+            }
+        })
     }
 }, 100);
+
+window.onkeydown = (e) => {
+    if (isInGame) {
+        e.preventDefault();
+        if (e.code == 'ArrowUp') {
+            e.preventDefault();
+            (gameElements[0] as Shiba).jump();
+        }
+    }
+    if (e.key == ' ') {
+        e.preventDefault();
+        if (isInGame) {
+            (gameElements[0] as Shiba).jump();
+        } else {
+            startGame();
+        }
+    }
+}
+
+const random = (size: number) => {
+    return Math.floor(Math.random() * size);
+}
 </script>
 
 <style lang="scss">
 .zoomiesShibaWrapper {
     position: relative;
-    height: 150px;
-    border: 1px solid orange;
+    height: 180px;
+    border: 1px solid purple;
 
     #gameCover {
         position: absolute;
@@ -101,15 +156,19 @@ setInterval(() => {
         .ghost {
             position: absolute;
             width: 80px;
-            left: 100px;
             bottom: -25px;
         }
 
         .cloud {
             position: absolute;
-            bottom: 100px;
+            bottom: 130px;
             width: 80px;
             z-index: 0;
+        }
+
+        .toronto {
+            position: absolute;
+            width: 80px;
         }
     }
     }

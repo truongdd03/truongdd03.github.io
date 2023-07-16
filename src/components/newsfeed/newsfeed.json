@@ -2,10 +2,10 @@
     {
         "type": "code",
         "elementId": "zoomiesShiba",
-        "date": 1689391334961,
-        "content": "89,217 mins ≈ 62 days ≈ 2 months :)",
+        "date": 1689527964038,
+        "content": "",
         "imageUrls": [],
-        "tags": ["random"]
+        "tags": ["interactive", "typescript"]
     },
     {
         "type": "post",
@@ -23,6 +23,6 @@
         "imageUrls": [
             "/assets/images/newsfeed/pikachu.png"
         ],
-        "tags": ["programming", "C++"]
+        "tags": ["C++"]
     }
 ]
