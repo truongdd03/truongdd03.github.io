@@ -4,7 +4,12 @@
 
 [https://truongdd03.github.io/gh](https://truongdd03.github.io/gh)
 
-This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/SCSS**. **Spotify API** is used to fetch realtime data.
+This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/SCSS**. **Spotify API** is used to fetch real-time data.
+
+## Shiba-saur
+A minigame created with **Typescript**.
+
+![zoomiesShiba](https://github.com/truongdd03/truongdd03.github.io/assets/81574365/13f34433-5d01-42f3-a775-e9526acadfc1)
 
 # For Developers
 
