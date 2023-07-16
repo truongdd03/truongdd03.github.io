@@ -4,7 +4,7 @@
 
 [https://truongdd03.github.io/gh](https://truongdd03.github.io/gh)
 
-This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/SCSS**. Users' ips are collected and stored on Firebase to track the number of visits and where users are from. **Spotify API** is used to fetch realtime data.
+This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/SCSS**. **Spotify API** is used to fetch realtime data.
 
 # For Developers
 
