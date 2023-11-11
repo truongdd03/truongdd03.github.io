@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <img class="wxl" :src="icon" />
+    <div class="flex align-items-center justify-content-center">
+        <img style="height: 50px;" :src="icon" />
         <h1 class="xxl">
             {{ constantText }}
             <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
@@ -77,20 +77,15 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
 h1 {
     font-weight: normal;
+
     span.typed-text {
         // color: #d2b94b;
         color: hsla(160, 100%, 37%, 1)
     }
 }
+
 .blinking-cursor {
     color: #2c3e50;
     -webkit-animation: 1s blink step-end infinite;
@@ -99,47 +94,62 @@ h1 {
     -o-animation: 1s blink step-end infinite;
     animation: 1s blink step-end infinite;
 }
+
 @keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-moz-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-webkit-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-ms-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-o-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }

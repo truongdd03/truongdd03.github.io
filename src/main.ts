@@ -22,7 +22,6 @@ import '@/style/main.css';
 
 import router from './router';
 import { initTracker } from './utils/tracker';
-import { initSpotifyListener } from './utils/spotify';
 
 const icons = [
     faGithub,
@@ -55,8 +54,6 @@ const libraries = [
 ];
 
 libraries.forEach((lib) => app.use(lib));
-
-initSpotifyListener();
 
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

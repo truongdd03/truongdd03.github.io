@@ -32,7 +32,7 @@ const getNowPlaying = async () => {
     });
 };
 
-const getNowPlayingItem = async () => {
+export const getNowPlayingItem = async () => {
     const response = await getNowPlaying();
     if (response.status === 204 || response.status > 400) {
         return false;
@@ -55,25 +55,4 @@ const getNowPlayingItem = async () => {
     } catch (err: any) {
         return false;
     }
-}
-
-const updateSpotifyStatus = async () => {
-    if (!document.getElementById('spotify-status')) return;
-
-    const status = await getNowPlayingItem();
-    if (!status || status.isPlaying === false) {
-        document.getElementById('spotify-status')!.style.display = 'none';
-        return;
-    }
-    document.getElementById('spotify-status')!.style.display = 'block';
-    document.getElementById('spotify-artist')!.innerText = status.artist;
-    document.getElementById('spotify-song')!.innerText = status.title;
-    (document.getElementById('spotify-image')! as HTMLImageElement).src = status.albumImageUrl;
-    (document.getElementById('spotify-song-url') as HTMLLinkElement).href = status.songUrl;
-}
-
-export const initSpotifyListener = () => {
-    setInterval(() => {
-        updateSpotifyStatus();
-      }, 5000);
-}
+};

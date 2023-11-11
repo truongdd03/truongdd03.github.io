@@ -2,7 +2,7 @@
     <Menubar :model="items">
         <template #start>
             <div class="flex align-items-center">
-                <font-awesome-icon icon="fa-solid fa-paw" inverse class="mr-2 text-xl" />
+                <font-awesome-icon icon="fa-solid fa-paw" inverse class="mr-2 text-2xl" />
                 <p class="text-2xl font-bold cursor-pointer">Don Truong</p>
             </div>
         </template>
