@@ -1,13 +1,11 @@
 <template>
-    <div class="flex align-items-center justify-content-center">
-        <img style="height: 50px;" :src="icon" />
-        <h1 class="xxl">
-            {{ constantText }}
-            <span class="text-primary" id="dynamicText">{{ typeValue }}</span>
-            <span class="blinking-cursor">|</span>
-            <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-        </h1>
-    </div>
+    <h1 class="text-3xl text-center" style="min-height: 100px;">
+        <img style="height: 50px; margin-bottom: -10px;" :src="icon" />
+        {{ constantText }}
+        <span class="text-primary" id="dynamicText">{{ typeValue }}</span>
+        <span class="blinking-cursor">|</span>
+        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+    </h1>
 </template>
 
 <script setup lang="ts">
@@ -40,7 +38,7 @@ const typeText = async () => {
         typeStatus = false;
         setTimeout(eraseText, delayTime);
     }
-}
+};
 
 const eraseText = async () => {
     if (!props.dynamicTexts) return;
@@ -60,7 +58,7 @@ const eraseText = async () => {
             setTimeout(eraseText, erasingSpeed);
         }
     }
-}
+};
 
 const nextWord = () => {
     if (!props.dynamicTexts) return;
@@ -68,7 +66,7 @@ const nextWord = () => {
     currentTextId += 1;
     if (currentTextId >= props.dynamicTexts.length) currentTextId = 0;
     setTimeout(typeText, typingSpeed);
-}
+};
 
 onMounted(() => {
     typeText();

@@ -2,7 +2,7 @@
     <div class="navbar" id="navbar">
         <MenuBar></MenuBar>
     </div>
-    <div style="height: 100px;"></div>
+    <div style="height: 80px;"></div>
     <router-view />
     <Toast />
 </template>
@@ -28,7 +28,8 @@ window.onscroll = function () {
 .navbar {
     position: fixed;
     z-index: 10;
-    width: calc(100% - 55px);
+    width: calc(100% - 20px);
     transition: top 0.4s;
+    text-align: center;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <div v-if="playingSong" id="spotify-status" class="p-3 border-round" style="background-color: rgba(0, 0, 0, 0.486);">
+    <div v-if="playingSong" id="spotify-status" class="p-2 border-round" style="background-color: rgba(0, 0, 0, 0.486);">
         <div class="flex align-items-center justify-content-center mb-3">
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
-            <p>Listening to Spotify</p>
+            <p class="text-md text-center">Listening to Spotify</p>
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
         </div>
         <div id="spotify-song-url" class="grid border-primary border-1 border-round surface-ground cursor-pointer"

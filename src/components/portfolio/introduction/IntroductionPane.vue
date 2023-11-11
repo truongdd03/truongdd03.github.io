@@ -1,26 +1,29 @@
 <template>
-    <div style="height: 100vh;">
-        <div id="background" class="grid flex align-items-center" style="min-height: 50vh;">
-            <div class="col-0 md:col-4 lg:col-4"></div>
-            <div class="col-12 md:col-4 lg:col-4">
-                <div class="w-full flex justify-content-center">
-                    <div>
-                        <DynamicAvatar />
-                        <SocialInformation />
+    <div class="h-screen">
+        <div id="background" class="h-full md:h-auto lg:h-auto">
+            <div class="grid flex">
+                <div class="col-0 md:col-4 lg:col-4"></div>
+                <div class="col-12 md:col-4 lg:col-4">
+                    <div class="w-full flex justify-content-center">
+                        <div>
+                            <DynamicAvatar />
+                            <SocialInformation />
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div class="col-12 md:col-4 lg:col-4">
+                    <SpotifyStatus />
+                </div>
+                <div class="flex justify-content-center w-full">
                     <TypingText constantText="Hi, I'm " :dynamicTexts="roles" :icon="ShibaHi" />
                 </div>
             </div>
-            <div class="col-12 md:col-4 lg:col-4">
-                <SpotifyStatus />
+            <div class="icon-wrapper">
+                <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse
+                    @click="scroll()" />
             </div>
         </div>
-        <div class="icon-wrapper">
-            <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse
-                @click="scroll()" />
-        </div>
+
     </div>
 </template>
 
@@ -48,8 +51,8 @@ const scroll = async () => {
 <style lang="scss" scoped>
 .icon-wrapper {
     position: absolute;
-    width: calc(100% - 40px);
-    bottom: 10%;
+    width: 100%;
+    bottom: 5%;
     text-align: center;
 }
 
@@ -61,11 +64,5 @@ const scroll = async () => {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-@media screen and (max-width: 768px) {
-    .icon-wrapper {
-        width: 100%;
-    }
 }
 </style>
