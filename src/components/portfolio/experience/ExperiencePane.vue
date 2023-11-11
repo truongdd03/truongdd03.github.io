@@ -98,13 +98,3 @@ import experience from './experience.json';
     }
 }
 </style>
-
-<style>
-a {
-  color: hsla(160, 100%, 37%, 1);
-}
-
-a:hover {
-    color: rgb(1, 110, 74);
-}
-</style>

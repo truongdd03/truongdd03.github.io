@@ -1,23 +1,26 @@
 <template>
-    <div id="background" class="grid flex align-items-center" style="min-height: 50vh;">
-        <div class="col-0 md:col-4 lg:col-4"></div>
-        <div class="col-12 md:col-4 lg:col-4">
-            <div class="w-full flex justify-content-center">
+    <div style="height: 100vh;">
+        <div id="background" class="grid flex align-items-center" style="min-height: 50vh;">
+            <div class="col-0 md:col-4 lg:col-4"></div>
+            <div class="col-12 md:col-4 lg:col-4">
+                <div class="w-full flex justify-content-center">
+                    <div>
+                        <DynamicAvatar />
+                        <SocialInformation />
+                    </div>
+                </div>
                 <div>
-                    <DynamicAvatar />
-                    <SocialInformation />
+                    <TypingText constantText="Hi, I'm " :dynamicTexts="roles" :icon="ShibaHi" />
                 </div>
             </div>
-            <div>
-                <TypingText constantText="Hi, I'm " :dynamicTexts="roles" :icon="ShibaHi" />
+            <div class="col-12 md:col-4 lg:col-4">
+                <SpotifyStatus />
             </div>
         </div>
-        <div class="col-12 md:col-4 lg:col-4">
-            <SpotifyStatus />
+        <div class="icon-wrapper">
+            <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse
+                @click="scroll()" />
         </div>
-    </div>
-    <div class="icon-wrapper">
-        <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse @click="scroll()" />
     </div>
 </template>
 

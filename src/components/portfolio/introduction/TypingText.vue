@@ -3,7 +3,7 @@
         <img style="height: 50px;" :src="icon" />
         <h1 class="xxl">
             {{ constantText }}
-            <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
+            <span class="text-primary" id="dynamicText">{{ typeValue }}</span>
             <span class="blinking-cursor">|</span>
             <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
         </h1>
@@ -77,17 +77,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-    font-weight: normal;
-
-    span.typed-text {
-        // color: #d2b94b;
-        color: hsla(160, 100%, 37%, 1)
-    }
-}
-
 .blinking-cursor {
-    color: #2c3e50;
+    color: white;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;
     -ms-animation: 1s blink step-end infinite;

@@ -9,8 +9,8 @@
 
         <template #item="{ item, props }">
             <a v-ripple class="flex align-items-center" v-bind="props.action">
-                <span :class="item.icon" />
-                <span class="ml-2">{{ item.label }}</span>
+                <span :class="`${item.icon} text-primary`" />
+                <span class="ml-2 text-primary">{{ item.label }}</span>
             </a>
         </template>
     </Menubar>

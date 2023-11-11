@@ -4,9 +4,11 @@
     </div>
     <div style="height: 100px;"></div>
     <router-view />
+    <Toast />
 </template>
 
 <script setup lang="ts">
+import Toast from 'primevue/toast';
 import MenuBar from './components/MenuBar.vue';
 
 let prevScrollPos = window.scrollY;

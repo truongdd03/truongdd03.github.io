@@ -2,9 +2,9 @@ import App from './App.vue';
 import { createApp } from 'vue';
 
 // External components
-import Notifications from '@kyvg/vue3-notification';
 import PrimeVue from 'primevue/config';
 import Markdown from 'vue3-markdown-it';
+import ToastService from 'primevue/toastservice';
 
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -48,7 +48,7 @@ initTracker();
 const app = createApp(App).use(router);
 
 const libraries = [
-    Notifications,
+    ToastService,
     PrimeVue,
     Markdown,
 ];

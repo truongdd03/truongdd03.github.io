@@ -2,22 +2,22 @@
     <div v-if="playingSong" id="spotify-status" class="p-3 border-round" style="background-color: rgba(0, 0, 0, 0.486);">
         <div class="flex align-items-center justify-content-center mb-3">
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
-            <p class="text-primary">Listening to Spotify</p>
+            <p>Listening to Spotify</p>
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
         </div>
         <div id="spotify-song-url" class="grid border-primary border-1 border-round surface-ground cursor-pointer"
-            @click="openUrl(playingSong.songUrl)">
-            <div class="col-3">
-                <img id="spotify-image" class="w-full" style="border-radius: 5px; object-fit: cover;"
+            @click="openUrl(playingSong.songUrl)" style="height: 80px;">
+            <div class="col-3 h-full">
+                <img id="spotify-image" class="h-full" style="border-radius: 5px; object-fit: cover;"
                     :src="playingSong.imageUrl" />
             </div>
-            <div class="col-8 flex align-items-center">
+            <div class="col-8 flex align-items-center h-full">
                 <div>
                     <p id="spotify-song" class="text-lg text-white mb-1">{{ playingSong.title }}</p>
                     <p id="spotify-artist" class="text-300 text-sm">{{ playingSong.artist }}</p>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-1 h-full">
                 <div class="playing-icon">
                     <span />
                     <span />
