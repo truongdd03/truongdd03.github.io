@@ -14,7 +14,7 @@
         "url": "https://msu.edu/",
         "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
-        "duration": "October 2022 - May 2023",
+        "duration": "October 2022 - Present",
         "description": "\n* Developed a [website](https://www.usdalocalfoodportal.com/) for the United States Department of Agriculture using <span class=\"yellow\">Vue3</span>, <span class=\"yellow\">TypeScript</span>, <span class=\"yellow\">MySQL</span>, and <span class=\"yellow\">PHP</span>.\n\n* Implemented a customizable <span class=\"yellow\">Python</span> scaper to retrieve famers market data.\n",
         "overview": "The nation's premier land-grant university and one of the top research universities in the world.",
         "overviewSource": "MSU's Website"

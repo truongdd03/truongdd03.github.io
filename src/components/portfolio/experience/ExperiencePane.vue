@@ -13,39 +13,9 @@
             <CompanyDetails class="mt-5" :detail="selected"></CompanyDetails>
         </template>
     </Card>
-    <!-- <Timeline :value="experience" align="alternate" class="timeline">
-            <template #content="slotProps">
-                <Card class="experience-wrapper">
-                    <template #title>
-                        <a class="company-link" :href="slotProps.item.url" target="_blank">
-                            <h3 class="l green company-name">{{ slotProps.item.company }}</h3>
-                            <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon"
-                                icon="fa-solid fa-up-right-from-square" />
-                        </a>
-                    </template>
-                    <template #subtitle>
-                        <p class="m">{{ slotProps.item.title }}</p>
-                    </template>
-                    <template #content v-if="slotProps.item.description !== ''">
-                        <Markdown :html="true" class="s description" :source="slotProps.item.description" />
-                    </template>
-                </Card>
-            </template>
-            <template #opposite="slotProps">
-                <div class="duration-wrapper">
-                    <p class="m duration">{{ slotProps.item.duration }}</p>
-                </div>
-            </template>
-            <template #marker="slotProps">
-                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon"
-                    :alt="slotProps.item.company" />
-                <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
-            </template>
-        </Timeline> -->
 </template>
 
 <script setup lang="ts">
-import Markdown from 'vue3-markdown-it';
 import Card from 'primevue/card';
 
 import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
