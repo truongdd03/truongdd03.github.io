@@ -9,7 +9,8 @@
             </div>
         </template>
         <template #content>
-            <CompanyMenu></CompanyMenu>
+            <CompanyMenu v-model="selected"></CompanyMenu>
+            <CompanyDetails class="mt-5" :detail="selected"></CompanyDetails>
         </template>
     </Card>
     <!-- <Timeline :value="experience" align="alternate" class="timeline">
@@ -50,9 +51,13 @@ import Card from 'primevue/card';
 import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
 import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
-import experience from './experience.json';
 import CompanyMenu from './CompanyMenu.vue';
+import CompanyDetails from './CompanyDetails.vue';
 
+import experience from './experience.json';
+import { ref } from 'vue';
+
+const selected = ref(experience[0]);
 </script>
 
 <style lang="scss" scoped>

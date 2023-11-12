@@ -69,7 +69,7 @@ onMounted(() => {
     span {
         width: 4px;
         height: 13px;
-        background-color: hsla(160, 100%, 37%, 1);
+        background-color: var(--primary-color);
         border-radius: 3px;
         transform-origin: bottom;
         animation: bounce 2.2s ease infinite alternate;
