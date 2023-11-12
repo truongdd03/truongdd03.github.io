@@ -2,7 +2,7 @@
     <div class="w-full flex justify-content-center">
         <div>
             <font-awesome-icon icon="fa-solid fa-quote-left" inverse class="mr-2 text-2xl" />
-            <div>
+            <div class="mr-5 ml-5">
                 <TypingText :text="overview!"></TypingText>
                 <p class="text-md mt-2 text-right">-- {{ overviewSource }} --</p>
             </div>
