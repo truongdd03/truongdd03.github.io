@@ -19,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@types/vue-router": "^2.0.0",
     "@vueuse/core": "^9.4.0",
+    "animate.css": "^4.1.1",
     "buffer": "^6.0.3",
     "device-detector-js": "^3.0.3",
     "dotenv": "^16.0.3",

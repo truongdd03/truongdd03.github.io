@@ -1,9 +1,11 @@
 <template>
-    <div class="navbar" id="navbar">
+    <div class="navbar animate__animated animate__fadeIn" id="navbar">
         <MenuBar></MenuBar>
     </div>
     <div style="height: 80px;"></div>
-    <router-view />
+    <div style="position: relative; overflow-x: hidden;">
+        <router-view />
+    </div>
     <Toast />
 </template>
 

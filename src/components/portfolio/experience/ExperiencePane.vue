@@ -1,11 +1,18 @@
 <template>
-    <div class="wrapper bgblackmute" style="background-color: yellow;">
-        <div class="title-wrapper">
-            <img class="wxl title-icon" :src="AlaskaClap" />
-            <h1 class="title xl">Experience</h1>
-            <img class="wxl title-icon" :src="ShibaClap" />
-        </div>
-        <Timeline :value="experience" align="alternate" class="timeline">
+    <Card class="mt-2">
+        <template #title>
+            <div class="flex justify-content-center align-items-center"
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
+                <img style="height: 40px;" :src="AlaskaClap" />
+                <h1 class="text-3xl">Experience</h1>
+                <img style="height: 40px;" :src="ShibaClap" />
+            </div>
+        </template>
+        <template #content>
+            <CompanyMenu></CompanyMenu>
+        </template>
+    </Card>
+    <!-- <Timeline :value="experience" align="alternate" class="timeline">
             <template #content="slotProps">
                 <Card class="experience-wrapper">
                     <template #title>
@@ -33,8 +40,7 @@
                     :alt="slotProps.item.company" />
                 <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
             </template>
-        </Timeline>
-    </div>
+        </Timeline> -->
 </template>
 
 <script setup lang="ts">
@@ -45,6 +51,7 @@ import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
 import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
 import experience from './experience.json';
+import CompanyMenu from './CompanyMenu.vue';
 
 </script>
 

@@ -1,20 +1,19 @@
 <template>
-    <div v-if="playingSong" id="spotify-status" class="p-2 border-round" style="background-color: rgba(0, 0, 0, 0.486);">
+    <div v-if="playingSong" class="p-2 border-round" style="background-color: rgba(0, 0, 0, 0.486);">
         <div class="flex align-items-center justify-content-center mb-3">
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
             <p class="text-md text-center">Listening to Spotify</p>
             <img class="m-2" style="height: 30px;" src="/assets/images/gifs/shiba-listen-music.gif" />
         </div>
-        <div id="spotify-song-url" class="grid border-primary border-1 border-round surface-ground cursor-pointer"
+        <div class="song grid surface-border border-1 border-round surface-ground cursor-pointer ml-1 mr-1"
             @click="openUrl(playingSong.songUrl)" style="height: 80px;">
             <div class="col-3 h-full">
-                <img id="spotify-image" class="h-full" style="border-radius: 5px; object-fit: cover;"
-                    :src="playingSong.imageUrl" />
+                <img class="h-full" style="border-radius: 5px; object-fit: cover;" :src="playingSong.imageUrl" />
             </div>
             <div class="col-8 flex align-items-center h-full">
                 <div>
-                    <p id="spotify-song" class="text-lg text-white mb-1">{{ playingSong.title }}</p>
-                    <p id="spotify-artist" class="text-300 text-sm">{{ playingSong.artist }}</p>
+                    <p class="text-lg text-white mb-1">{{ playingSong.title }}</p>
+                    <p class="text-300 text-sm">{{ playingSong.artist }}</p>
                 </div>
             </div>
             <div class="col-1 h-full">
@@ -57,6 +56,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.song:hover {
+    border-color: var(--primary-color) !important;
+}
+
 .playing-icon {
     display: flex;
     align-items: center;

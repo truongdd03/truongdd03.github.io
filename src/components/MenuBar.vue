@@ -1,5 +1,5 @@
 <template>
-    <Menubar :model="items">
+    <Menubar :model="items" style="min-height: 70px;">
         <template #start>
             <div class="flex align-items-center">
                 <font-awesome-icon icon="fa-solid fa-paw" inverse class="mr-2 text-2xl" />

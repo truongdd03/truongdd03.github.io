@@ -5,6 +5,7 @@ import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
 import Markdown from 'vue3-markdown-it';
 import ToastService from 'primevue/toastservice';
+import AnimateOnScroll from 'primevue/animateonscroll';
 
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -12,12 +13,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import 'primevue/resources/themes/md-dark-indigo/theme.css';
+import 'primevue/resources/themes/mdc-dark-indigo/theme.css';
 import '/node_modules/primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import './utils/firebase.config';
 
+import 'animate.css';
 import '@/style/main.css';
 
 import router from './router';
@@ -55,5 +57,6 @@ const libraries = [
 
 libraries.forEach((lib) => app.use(lib));
 
+app.directive('animateonscroll', AnimateOnScroll);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

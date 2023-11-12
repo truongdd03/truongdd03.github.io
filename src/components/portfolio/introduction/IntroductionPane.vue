@@ -1,6 +1,6 @@
 <template>
-    <div class="h-screen">
-        <div id="background" class="h-full md:h-auto lg:h-auto">
+    <div class="animate__animated animate__fadeIn" style="height: calc(100vh - 80px); position: relative;">
+        <div id="background" class="h-full md:h-auto lg:h-auto pt-3">
             <div class="grid flex">
                 <div class="col-0 md:col-4 lg:col-4"></div>
                 <div class="col-12 md:col-4 lg:col-4">
@@ -23,7 +23,6 @@
                     @click="scroll()" />
             </div>
         </div>
-
     </div>
 </template>
 
@@ -52,7 +51,7 @@ const scroll = async () => {
 .icon-wrapper {
     position: absolute;
     width: 100%;
-    bottom: 5%;
+    bottom: 8vh;
     text-align: center;
 }
 
