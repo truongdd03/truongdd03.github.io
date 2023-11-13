@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar animate__animated animate__fadeIn" id="navbar">
+    <div class="fadein navbar" id="navbar">
         <MenuBar></MenuBar>
     </div>
     <div style="height: 80px;"></div>

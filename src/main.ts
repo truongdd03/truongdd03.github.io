@@ -19,7 +19,6 @@ import 'primeicons/primeicons.css';
 
 import './utils/firebase.config';
 
-import 'animate.css';
 import '@/style/main.css';
 
 import router from './router';
