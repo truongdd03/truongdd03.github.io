@@ -2,25 +2,27 @@ import App from './App.vue';
 import { createApp } from 'vue';
 
 // External components
-import Notifications from '@kyvg/vue3-notification'
 import PrimeVue from 'primevue/config';
-import Timeline from 'primevue/timeline'
 import Markdown from 'vue3-markdown-it';
+import ToastService from 'primevue/toastservice';
+import AnimateOnScroll from 'primevue/animateonscroll';
 
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import './styles/main.css';
-import 'primevue/resources/themes/lara-light-blue/theme.css';
+import 'primevue/resources/themes/mdc-dark-indigo/theme.css';
+import '/node_modules/primeflex/primeflex.css';
+import 'primeicons/primeicons.css';
 
 import './utils/firebase.config';
 
+import '@/style/main.css';
+
 import router from './router';
 import { initTracker } from './utils/tracker';
-import { initSpotifyListener } from './utils/spotify';
 
 const icons = [
     faGithub,
@@ -37,7 +39,9 @@ const icons = [
     faArrowAltCircleLeft,
     faArrowAltCircleRight,
     faInstagram,
-    faPlay
+    faPlay,
+    faQuoteLeft,
+    faQuoteRight
 ];
 
 icons.forEach((icon) => library.add(icon));
@@ -47,15 +51,13 @@ initTracker();
 const app = createApp(App).use(router);
 
 const libraries = [
-    Notifications,
+    ToastService,
     PrimeVue,
     Markdown,
 ];
 
 libraries.forEach((lib) => app.use(lib));
 
-initSpotifyListener();
-
-app.component('Timeline', Timeline);
+app.directive('animateonscroll', AnimateOnScroll);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

@@ -1,24 +1,39 @@
 <template>
-    <div class="wrapper bgblackmute">
-        <div class="title-wrapper">
-            <img class="wxl title-icon" :src="ShibaDepressed" />
-            <h1 class="xl title">Projects</h1>
-            <img class="wxl title-icon" :src="AlaskaDepressed" />
-        </div>
-        <div class="projects-wrapper">
-            <ProjectPane class="project" v-bind:key="project.name" v-for="project in projects" :project="project"></ProjectPane>
-        </div>
-    </div>
+    <Card class="mt-3">
+        <template #title>
+            <div class="flex justify-content-center align-items-center"
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
+                <img style="height: 40px;" :src="ShibaDepressed" />
+                <p class="text-3xl">Projects</p>
+                <img style="height: 40px;" :src="AlaskaDepressed" />
+            </div>
+        </template>
+        <template #content>
+            <ProjectsLg v-if="screenWidth > 1024"></ProjectsLg>
+            <ProjectsMd v-else-if="screenWidth > 650"></ProjectsMd>
+            <ProjectsSm v-else></ProjectsSm>
+        </template>
+    </Card>
 </template>
 
 <script setup lang="ts">
-import ProjectPane from './ProjectPane.vue';
+import Card from 'primevue/card';
+import ProjectsLg from './ProjectsLg.vue';
+import ProjectsMd from './ProjectsMd.vue';
+import ProjectsSm from './ProjectsSm.vue';
 
 import ShibaDepressed from '/assets/images/gifs/shiba-depressed.gif';
 import AlaskaDepressed from '/assets/images/gifs/alaska-depressed.gif';
 
-import projects from './projects.json';
+import { onMounted, ref } from 'vue';
 
+const screenWidth = ref(window.innerWidth);
+
+onMounted(() => {
+    window.addEventListener('resize', () => {
+        screenWidth.value = window.innerWidth;
+    });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -29,11 +44,11 @@ import projects from './projects.json';
         flex-wrap: wrap;
         gap: 25px;
         align-items: stretch;
+
         .project {
             width: 300px;
             height: 400px;
         }
     }
 }
-
 </style>

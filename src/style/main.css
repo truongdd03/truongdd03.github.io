@@ -1,0 +1,11 @@
+p,
+h3 {
+    margin: 0;
+}
+
+body {
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    overflow-x: hidden;
+}

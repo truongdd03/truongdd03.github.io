@@ -1,33 +1,15 @@
 <template>
-    <header>
-      <img
-		id="avatar"
-		class="hxxl center"
-        alt="Don Truong"
-        draggable="false"
-		@mouseover="onHover()"
-		@mouseleave="onLeave()"
-		:src="human"
-		/>
-    </header>
+    <img id="avatar" alt="Don Truong" draggable="false" :src="human" />
 </template>
 
 <script setup lang="ts">
 import human from '/assets/images/avatar/don-cool.jpeg';
-import shiba from '/assets/images/avatar/shiba-cool.png';
-
-const onHover = () => {
-    (document.getElementById('avatar') as any).src = shiba;
-}
-
-const onLeave = () => {
-    (document.getElementById('avatar') as any).src = human;
-}
 </script>
 
 <style scoped>
 #avatar {
     border-radius: 50%;
-    border: calc(0.1vw + 3px) solid white;
+    border: 3px solid white;
+    width: 180px;
 }
 </style>

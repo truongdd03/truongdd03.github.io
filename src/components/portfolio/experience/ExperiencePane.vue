@@ -1,51 +1,33 @@
 <template>
-    <div class="wrapper bgblackmute">
-        <div class="title-wrapper">
-            <img class="wxl title-icon" :src="AlaskaClap" />
-            <h1 class="title xl">Experience</h1>
-            <img class="wxl title-icon" :src="ShibaClap" />
-        </div>
-        <Timeline :value="experience" align="alternate" class="timeline">
-            <template #content="slotProps">
-                <Card class="experience-wrapper">
-                    <template #title>
-                        <a class="company-link" :href="slotProps.item.url" target="_blank">
-                            <h3 class="l green company-name">{{ slotProps.item.company }}</h3>
-                            <font-awesome-icon v-if="slotProps.item.url" class="m redirect-icon"
-                                icon="fa-solid fa-up-right-from-square" />
-                        </a>
-                    </template>
-                    <template #subtitle>
-                        <p class="m">{{ slotProps.item.title }}</p>
-                    </template>
-                    <template #content v-if="slotProps.item.description !== ''">
-                        <Markdown :html="true" class="s description" :source="slotProps.item.description" />
-                    </template>
-                </Card>
-            </template>
-            <template #opposite="slotProps">
-                <div class="duration-wrapper">
-                    <p class="m duration">{{ slotProps.item.duration }}</p>
-                </div>
-            </template>
-            <template #marker="slotProps">
-                <img v-if="slotProps.item.icon" class="wl marker-icon" :src="slotProps.item.icon"
-                    :alt="slotProps.item.company" />
-                <font-awesome-icon v-else class="l marker-icon-default" icon="fa-solid fa-briefcase" />
-            </template>
-        </Timeline>
-    </div>
+    <Card class="mt-2">
+        <template #title>
+            <div class="flex justify-content-center align-items-center"
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
+                <img style="height: 40px;" :src="AlaskaClap" />
+                <h1 class="text-3xl">Experience</h1>
+                <img style="height: 40px;" :src="ShibaClap" />
+            </div>
+        </template>
+        <template #content>
+            <CompanyMenu v-model="selected"></CompanyMenu>
+            <CompanyDetails class="mt-5" :detail="selected"></CompanyDetails>
+        </template>
+    </Card>
 </template>
 
 <script setup lang="ts">
-import Markdown from 'vue3-markdown-it';
 import Card from 'primevue/card';
 
 import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
 import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
-import experience from './experience.json';
+import CompanyMenu from './CompanyMenu.vue';
+import CompanyDetails from './CompanyDetails.vue';
 
+import experience from './experience.json';
+import { ref } from 'vue';
+
+const selected = ref(experience[0]);
 </script>
 
 <style lang="scss" scoped>
@@ -96,15 +78,5 @@ import experience from './experience.json';
     .marker-icon-default {
         margin: 10px 0px 10px 0px;
     }
-}
-</style>
-
-<style>
-a {
-  color: hsla(160, 100%, 37%, 1);
-}
-
-a:hover {
-    color: rgb(1, 110, 74);
 }
 </style>

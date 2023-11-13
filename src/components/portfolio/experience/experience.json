@@ -5,15 +5,19 @@
         "icon": "/assets/images/experienceIcons/salesforce.png",
         "title": "Software Engineer Intern",
         "duration": "May 2023 - August 2023",
-        "description": "\n* Collaborated with a scrum team to build the next-generation marketing platform and help in production rollout on the Salesforce Core app.\n\n* Implemented a QA page from scratch using <span class=\"yellow\">Java</span>, <span class=\"yellow\">JavaScript</span>, and <span class=\"yellow\">HTML</span> to provide a single click solution to integrate team’s services within the organization."
+        "description": "\n* Collaborated with a scrum team to build the next-generation marketing platform and help in production rollout on the Salesforce Core app.\n\n* Implemented a QA page from scratch using <span class=\"yellow\">Java</span>, <span class=\"yellow\">JavaScript</span>, and <span class=\"yellow\">HTML</span> to provide a single click solution to integrate team’s services within the organization.",
+        "overview": "The World's #1 CRM.",
+        "overviewSource": "Salesforce's Website"
     },
     {
         "company": "Michigan State University",
         "url": "https://msu.edu/",
         "icon": "/assets/images/educationIcons/msu.png",
         "title": "Research Assistant | Programmer",
-        "duration": "October 2022 - May 2023",
-        "description": "\n* Developed a [website](https://www.usdalocalfoodportal.com/) for the United States Department of Agriculture using <span class=\"yellow\">Vue3</span>, <span class=\"yellow\">TypeScript</span>, <span class=\"yellow\">MySQL</span>, and <span class=\"yellow\">PHP</span>.\n\n* Implemented a customizable <span class=\"yellow\">Python</span> scaper to retrieve famers market data.\n"
+        "duration": "October 2022 - Present",
+        "description": "\n* Developed a [website](https://www.usdalocalfoodportal.com/) for the United States Department of Agriculture using <span class=\"yellow\">Vue3</span>, <span class=\"yellow\">TypeScript</span>, <span class=\"yellow\">MySQL</span>, and <span class=\"yellow\">PHP</span>.\n\n* Implemented a customizable <span class=\"yellow\">Python</span> scaper to retrieve famers market data.\n",
+        "overview": "The nation's premier land-grant university and one of the top research universities in the world.",
+        "overviewSource": "MSU's Website"
     },
     {
         "company": "Holistics Data",
@@ -22,7 +26,10 @@
         "skills": "Vue.js, TypeScript, HTML/CSS",
         "title": "Software Engineer Intern",
         "duration": "May 2022 - September 2022",
-        "description": "\n* Implemented new features for a new programming language explicitly used for data analytics.\n\n* Developed an [online editor](https://aml-playground.surge.sh/) using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Developed an internal vscode extension from scratch to connect docs and codebase."
+        "description": "\n* Implemented new features for a new programming language explicitly used for data analytics.\n\n* Developed an [online editor](https://aml-playground.surge.sh/) using <span class=\"yellow\">TypeScript</span> and <span class=\"yellow\">Vue 3</span>.\n\n* Developed an internal vscode extension from scratch to connect docs and codebase.",
+        "overview": "A Self-service BI platform.",
+        "overviewSource": "Holistics Data's Website"
+
     },
     {
         "company": "Open Energy Dashboard",
@@ -31,6 +38,8 @@
         "skills": "React, Redux, TypeScript, JavaScript, Postgres",
         "title": "Software Engineer Intern",
         "duration": "October 2021 - May 2022",
-        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>."
+        "description": "\n* Performed security testing by writing <span class=\"yellow\">Bash</span> scripts and applied a rate limit to prevent DDoS attacks. Improved the exporting view using <span class=\"yellow\">React</span>, <span class=\"yellow\">Redux</span>, and <span class=\"yellow\">TypeScript</span>.\n\n* Expanded the database and created new API routes to support different resource types using <span class=\"yellow\">PostgresQL</span> and <span class=\"yellow\">JavaScript</span>.",
+        "overview": "A free, open source project that provides a web-based application to display energy information in a web browser.",
+        "overviewSource": "OED's Website"
     }
 ]

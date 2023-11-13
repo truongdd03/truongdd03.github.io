@@ -1,72 +1,41 @@
 <template>
-    <a class="project-link" :href="project.url" target="_blank">
-        <div class="project-wrapper">
-            <div class="image-wrapper">
-                <img class="image" :src="project.image ? project.image : Github" />
-            </div>
-            <div class="information-wrapper">
-                <h1 class="green" style="font-size: 18px;">{{project.name}}</h1>
-                <Markdown :html="true" class="subtitle" :source="project.subtitle" />
-            </div>
-        </div>
-    </a>
+    <div
+        @click="openUrl(project!.url)" 
+        v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+        class="wrapper border-3 surface-border border-round h-full flex align-items-center justify-content-center cursor-pointer">
+        <img class="bg" :src="project?.image" />
+        <p class="text-2xl font-bold text-center">{{ project?.name }}</p>
+    </div>
 </template>
 
 <script setup lang="ts">
-import Markdown from 'vue3-markdown-it';
-import Github from '/assets/images/projects/github.png';
+import type { PropType } from 'vue';
+import type { Project } from './Project';
+import { openUrl } from '@/utils/navigate';
 
 defineProps({
-    project: {
-        type: Object,
-        default: {},
-    }
+    project: Object as PropType<Project>,
 });
 
 </script>
 
 <style lang="scss" scoped>
-.project-link {
-    text-decoration: none;
+.wrapper {
+    position: relative;
+    z-index: 1;
 
-    .project-wrapper:hover {
-        opacity: 1;
-        -webkit-box-shadow: 0 0 20px hsla(160, 100%, 37%, 1);
-        box-shadow: 0 0 20px hsla(160, 100%, 37%, 1);
-    }
-
-    .project-wrapper {
+    .bg {
+        opacity: 0.3;
+        z-index: -1;
+        position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.8;
-        border-radius: 20px;
-        vertical-align: top;
-        cursor: pointer;
-        background-color: black;
-        box-shadow: 100px;
-
-        .image-wrapper {
-            width: 100%;
-            height: 60%;
-
-            .image {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-            }
-        }
-
-        .information-wrapper {
-            width: 100%;
-            height: 40%;
-
-            .subtitle {
-                color: white;
-                padding: 5px;
-            }
-        }
+        object-fit: cover;
     }
+}
+
+.wrapper:hover {
+    border-color: var(--primary-color) !important;
 }
 </style>

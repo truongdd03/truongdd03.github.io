@@ -1,13 +1,11 @@
 <template>
-    <div class="container">
-        <img class="wxl" :src="icon" />
-        <h1 class="xxl">
-            {{ constantText }}
-            <span class="typed-text" id="dynamicText">{{ typeValue }}</span>
-            <span class="blinking-cursor">|</span>
-            <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-        </h1>
-    </div>
+    <h1 class="text-3xl text-center" style="min-height: 100px;">
+        <img style="height: 50px; margin-bottom: -10px;" :src="icon" />
+        {{ constantText }}
+        <span class="text-primary" id="dynamicText">{{ typeValue }}</span>
+        <span class="blinking-cursor">|</span>
+        <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+    </h1>
 </template>
 
 <script setup lang="ts">
@@ -40,7 +38,7 @@ const typeText = async () => {
         typeStatus = false;
         setTimeout(eraseText, delayTime);
     }
-}
+};
 
 const eraseText = async () => {
     if (!props.dynamicTexts) return;
@@ -60,7 +58,7 @@ const eraseText = async () => {
             setTimeout(eraseText, erasingSpeed);
         }
     }
-}
+};
 
 const nextWord = () => {
     if (!props.dynamicTexts) return;
@@ -68,7 +66,7 @@ const nextWord = () => {
     currentTextId += 1;
     if (currentTextId >= props.dynamicTexts.length) currentTextId = 0;
     setTimeout(typeText, typingSpeed);
-}
+};
 
 onMounted(() => {
     typeText();
@@ -77,69 +75,70 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-h1 {
-    font-weight: normal;
-    span.typed-text {
-        // color: #d2b94b;
-        color: hsla(160, 100%, 37%, 1)
-    }
-}
 .blinking-cursor {
-    color: #2c3e50;
+    color: white;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;
     -ms-animation: 1s blink step-end infinite;
     -o-animation: 1s blink step-end infinite;
     animation: 1s blink step-end infinite;
 }
+
 @keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-moz-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-webkit-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-ms-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }
 }
+
 @-o-keyframes blink {
+
     from,
     to {
         color: transparent;
     }
+
     50% {
         color: #2c3e50;
     }

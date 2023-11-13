@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import PortfolioPageVue from '@/components/portfolio/PortfolioPage.vue';
-import BlogPageVue from '@/components/blog/BlogPage.vue';
+import PortfolioPageVue from '@/views/PortfolioView.vue';
 import NewsfeedVue from '@/components/newsfeed/Newsfeed.vue';
 
 const routes = [
@@ -9,16 +8,11 @@ const routes = [
         name: 'Portfolio',
         component: PortfolioPageVue,
     },
-    {
-        path: '/blog',
-        name: 'Blog',
-        component: BlogPageVue,
-    },
-    {
-        path: '/newsfeed',
-        name: 'Newsfeed',
-        component: NewsfeedVue,
-    },
+    // {
+    //     path: '/newsfeed',
+    //     name: 'Newsfeed',
+    //     component: NewsfeedVue,
+    // },
     {
         path: '/:catchAll(.*)',
         redirect: '/'
