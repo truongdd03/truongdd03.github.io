@@ -20,7 +20,7 @@
             </div>
             <div class="icon-wrapper">
                 <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse
-                    @click="scroll()" />
+                    @click="scrollTo('experience')" />
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@ import DynamicAvatar from './DynamicAvatar.vue';
 import SpotifyStatus from './SpotifyStatus.vue';
 import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
-import { scrollIntoView } from '@/utils/utils';
+import { scrollTo } from '@/utils/navigate';
 
 import ShibaHi from '/assets/images/gifs/shiba-hi.gif';
 
@@ -41,10 +41,6 @@ const roles = [
     'studying @ MSU',
     'a dog lover :)'
 ];
-
-const scroll = async () => {
-    await scrollIntoView('experience', '/');
-};
 </script>
 
 <style lang="scss" scoped>

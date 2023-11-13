@@ -8,11 +8,11 @@ const routes = [
         name: 'Portfolio',
         component: PortfolioPageVue,
     },
-    {
-        path: '/newsfeed',
-        name: 'Newsfeed',
-        component: NewsfeedVue,
-    },
+    // {
+    //     path: '/newsfeed',
+    //     name: 'Newsfeed',
+    //     component: NewsfeedVue,
+    // },
     {
         path: '/:catchAll(.*)',
         redirect: '/'

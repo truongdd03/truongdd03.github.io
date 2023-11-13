@@ -1,17 +1,17 @@
 <template>
     <Menubar :model="items" style="min-height: 70px;">
         <template #start>
-            <div class="flex align-items-center">
+            <div class="flex align-items-center" @click="scrollTo('home')">
                 <font-awesome-icon icon="fa-solid fa-paw" inverse class="mr-2 text-2xl" />
                 <p class="text-2xl font-bold cursor-pointer">Don Truong</p>
             </div>
         </template>
 
         <template #item="{ item, props }">
-            <a v-ripple class="flex align-items-center" v-bind="props.action">
+            <div v-ripple class="flex align-items-center" v-bind="props.action" @click="scrollTo(item.label as string)">
                 <span :class="`${item.icon} text-primary`" />
                 <span class="ml-2 text-primary">{{ item.label }}</span>
-            </a>
+            </div>
         </template>
     </Menubar>
 </template>
@@ -20,6 +20,7 @@
 import Menubar from 'primevue/menubar';
 
 import { ref } from 'vue';
+import { scrollTo } from '@/utils/navigate';
 
 const items = ref([
     {
@@ -35,7 +36,7 @@ const items = ref([
         icon: 'pi pi-book'
     },
     {
-        label: 'Project',
+        label: 'Projects',
         icon: 'pi pi-desktop'
     }
 ]);
