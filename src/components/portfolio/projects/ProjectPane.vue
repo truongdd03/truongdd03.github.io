@@ -4,7 +4,7 @@
         v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
         class="wrapper border-3 surface-border border-round h-full flex align-items-center justify-content-center cursor-pointer">
         <img class="bg" :src="project?.image" />
-        <p class="text-2xl font-bold">{{ project?.name }}</p>
+        <p class="text-2xl font-bold text-center">{{ project?.name }}</p>
     </div>
 </template>
 

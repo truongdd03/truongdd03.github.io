@@ -1,9 +1,9 @@
 <template>
     <div class="fadein" style="height: calc(100vh - 80px); position: relative;">
-        <div id="background" class="h-full md:h-auto lg:h-auto pt-3">
+        <div id="background" class="h-full lg:h-auto pt-3">
             <div class="grid flex">
-                <div class="col-0 md:col-4 lg:col-4"></div>
-                <div class="col-12 md:col-4 lg:col-4">
+                <div class="col-0 lg:col-4"></div>
+                <div class="col-12 lg:col-4">
                     <div class="w-full flex justify-content-center">
                         <div>
                             <DynamicAvatar />
@@ -11,7 +11,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 lg:col-4">
+                <div class="col-12 lg:col-4">
                     <SpotifyStatus />
                 </div>
                 <div class="flex justify-content-center w-full">

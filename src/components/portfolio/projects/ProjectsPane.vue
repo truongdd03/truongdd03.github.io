@@ -9,51 +9,31 @@
             </div>
         </template>
         <template #content>
-            <div class="grid nested-grid w-full">
-                <div class="col-4" style="height: 80vh;">
-                    <ProjectPane :project="projects[0]"></ProjectPane>
-                </div>
-                <div class="col-8">
-                    <div class="grid">
-                        <div class="col-6" style="height: 30vh;">
-                            <ProjectPane :project="projects[1]"></ProjectPane>
-                        </div>
-                        <div class="col-6">
-                            <ProjectPane :project="projects[2]"></ProjectPane>
-                        </div>
-                        <div class="col-12" style="height: 50vh;">
-                            <ProjectPane :project="projects[3]"></ProjectPane>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6" style="height: 40vh;">
-                    <ProjectPane :project="projects[4]"></ProjectPane>
-                </div>
-                <div class="col-6" style="height: 40vh;">
-                    <ProjectPane :project="projects[5]"></ProjectPane>
-                </div>
-                <div class="col-4" style="height: 20vh;">
-                    <ProjectPane :project="projects[6]"></ProjectPane>
-                </div>
-                <div class="col-4" style="height: 20vh;">
-                    <ProjectPane :project="projects[7]"></ProjectPane>
-                </div>
-                <div class="col-4" style="height: 20vh;">
-                    <ProjectPane :project="projects[8]"></ProjectPane>
-                </div>
-            </div>
+            <ProjectsLg v-if="screenWidth > 1024"></ProjectsLg>
+            <ProjectsMd v-else-if="screenWidth > 650"></ProjectsMd>
+            <ProjectsSm v-else></ProjectsSm>
         </template>
     </Card>
 </template>
 
 <script setup lang="ts">
 import Card from 'primevue/card';
-import ProjectPane from './ProjectPane.vue';
+import ProjectsLg from './ProjectsLg.vue';
+import ProjectsMd from './ProjectsMd.vue';
+import ProjectsSm from './ProjectsSm.vue';
 
 import ShibaDepressed from '/assets/images/gifs/shiba-depressed.gif';
 import AlaskaDepressed from '/assets/images/gifs/alaska-depressed.gif';
 
-import projects from './projects.json';
+import { onMounted, ref } from 'vue';
+
+const screenWidth = ref(window.innerWidth);
+
+onMounted(() => {
+    window.addEventListener('resize', () => {
+        screenWidth.value = window.innerWidth;
+    });
+});
 </script>
 
 <style lang="scss" scoped>

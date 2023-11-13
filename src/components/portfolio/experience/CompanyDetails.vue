@@ -1,5 +1,5 @@
 <template>
-    <div class="p-3 border-3 surface-border border-round" v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
+    <div class="p-3 border-3 surface-border border-round">
         <div class="lg:flex mb-3 lg:align-items-center">
             <Button :label="detail?.company" link @click="openUrl(detail!.url)" size="large" icon="pi pi-external-link" style="margin-left: -15px;"/>
             <div class="lg:text-right text-color-secondary lg:ml-auto">
