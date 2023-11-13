@@ -6,12 +6,16 @@
     <div style="position: relative; overflow-x: hidden;">
         <router-view />
     </div>
-    <Toast />
+    <Toast position="top-center" style="z-index: 100;"/>
 </template>
 
 <script setup lang="ts">
 import Toast from 'primevue/toast';
 import MenuBar from './components/MenuBar.vue';
+import { onMounted } from 'vue';
+import { useToast } from 'primevue/usetoast';
+
+const toast = useToast();
 
 let prevScrollPos = window.scrollY;
 
@@ -24,6 +28,15 @@ window.onscroll = function () {
     }
     prevScrollPos = currentScrollPos;
 };
+
+onMounted(() => {
+    toast.add({
+        severity: 'info',
+        summary: 'Welcome to my new website!',
+        detail: 'Things are still moving behind the scenes, but hope that you like it so far!',
+        life: 5000
+    });
+});
 </script>
 
 <style scoped>
