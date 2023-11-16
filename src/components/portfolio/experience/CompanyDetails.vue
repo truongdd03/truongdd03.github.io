@@ -9,10 +9,7 @@
         </div>
         <CompanyOverview :overview="detail?.overview" :overview-source="detail?.overviewSource"></CompanyOverview>
         
-        <div>
-            <p class="text-lg">Achivements</p>
-            <Markdown :html="true" class="s description" :source="detail?.description" />
-        </div>
+        <span v-html="detail?.description"></span>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import PortfolioPageVue from '@/views/PortfolioView.vue';
-import NewsfeedVue from '@/components/newsfeed/Newsfeed.vue';
+import AdminViewVue from '@/views/AdminView.vue';
 
 const routes = [
     {
@@ -13,6 +13,11 @@ const routes = [
     //     name: 'Newsfeed',
     //     component: NewsfeedVue,
     // },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: AdminViewVue,
+    },
     {
         path: '/:catchAll(.*)',
         redirect: '/'

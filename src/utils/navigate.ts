@@ -1,8 +1,11 @@
+import router from '@/router';
+
 export const openUrl = (url: string) => {
     window.open(url, '__blank');
 };
 
-export const scrollTo = (id?: string) => {
+export const scrollTo = async (id?: string, path = '/') => {
+    await router.push(path);
     if (!id) return;
 
     if (id.toLocaleLowerCase() == 'home') {
