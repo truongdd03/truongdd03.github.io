@@ -18,7 +18,6 @@ import type { PropType } from 'vue';
 import type { Experience } from './Experience';
 
 import Button from 'primevue/button';
-import Markdown from 'vue3-markdown-it';
 import CompanyOverview from './CompanyOverview.vue';
 import { openUrl } from '@/utils/navigate';
 

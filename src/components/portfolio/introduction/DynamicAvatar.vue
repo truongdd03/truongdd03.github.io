@@ -9,7 +9,7 @@ import human from '/assets/images/avatar/don-cool.jpeg';
 <style scoped>
 #avatar {
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid var(--primary-color);
     width: 180px;
 }
 </style>

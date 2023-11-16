@@ -6,7 +6,10 @@
     <div style="position: relative; overflow-x: hidden;">
         <router-view />
     </div>
-    <Toast position="top-center" style="z-index: 100;"/>
+
+
+    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed;"></ThemeSelect>
+    <Toast position="top-center" style="z-index: 100;" />
 </template>
 
 <script setup lang="ts">
@@ -14,6 +17,7 @@ import Toast from 'primevue/toast';
 import MenuBar from './components/MenuBar.vue';
 import { onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
+import ThemeSelect from './components/ThemeSelect.vue';
 
 const toast = useToast();
 

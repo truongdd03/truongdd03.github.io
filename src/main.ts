@@ -13,7 +13,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faDiscord, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import 'primevue/resources/themes/mdc-dark-indigo/theme.css';
 import '/node_modules/primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
