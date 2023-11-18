@@ -1,10 +1,17 @@
 <template>
-    <div
-        @click="openUrl(project!.url)" 
-        v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+    <div @click="openUrl(project!.url)" v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
         class="wrapper border-3 surface-border border-round h-full flex align-items-center justify-content-center cursor-pointer">
         <img class="bg" :src="project?.image" />
+
+        <div style="position: absolute; top: 5px; right: 0; height: 30%;">
+            <TagsList :tags="project?.skills"></TagsList>
+        </div>
+
         <p class="text-2xl font-bold text-center">{{ project?.name }}</p>
+
+        <!-- <div style="position: absolute; bottom: 0; right: 0; height: 40%;">
+            {{ project?.description }}
+        </div> -->
     </div>
 </template>
 
@@ -12,6 +19,7 @@
 import type { PropType } from 'vue';
 import type { Project } from './Project';
 import { openUrl } from '@/utils/navigate';
+import TagsList from './TagsList.vue';
 
 defineProps({
     project: Object as PropType<Project>,

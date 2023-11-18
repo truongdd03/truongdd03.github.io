@@ -8,7 +8,7 @@
     </div>
 
 
-    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed;"></ThemeSelect>
+    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed; opacity: 0.8;"></ThemeSelect>
     <Toast position="top-center" style="z-index: 100;" />
 </template>
 
