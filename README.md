@@ -8,15 +8,10 @@ This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/S
 
 ## Features
 
-### Shiba-saur
-A minigame created with **Typescript**.
-
-![zoomiesShiba](https://github.com/truongdd03/truongdd03.github.io/assets/81574365/13f34433-5d01-42f3-a775-e9526acadfc1)
-
 ### Spotify status
 **Spotify API** is used to fetch real-time data.
 
-<img width="1402" alt="Screenshot 2023-07-23 at 5 09 41 PM" src="https://github.com/truongdd03/truongdd03.github.io/assets/81574365/24f310ed-f2dc-4d01-9ca3-b5e882014a50">
+<img width="1439" alt="Screenshot 2023-12-01 at 10 58 58 PM" src="https://github.com/truongdd03/truongdd03.github.io/assets/81574365/01119bd8-5f00-414f-ade2-eb4d3231c15a">
 
 # For Developers
 
