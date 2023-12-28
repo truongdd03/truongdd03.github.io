@@ -11,7 +11,7 @@ interface Data {
 
 const formatIp = (ip: string): string => {
     return ip.replace(/\./g, '-');
-}
+};
 
 const getRemote = async (ip: string): Promise<Data> => {
     const dbRef = ref(getDatabase());
@@ -22,13 +22,13 @@ const getRemote = async (ip: string): Promise<Data> => {
             return { count: 0, ip: '', devices: [], timestamps: [], urls: [] };
         }
     });
-}
+};
 
 const getDevice = () => {
     const deviceDetector = new DeviceDetector();
     const userAgent = navigator.userAgent;
     return deviceDetector.parse(userAgent);
-}
+};
 
 const updateRemote = async (ip: string, rawIp: string, url: string) => {
     const database = getDatabase();
@@ -42,7 +42,7 @@ const updateRemote = async (ip: string, rawIp: string, url: string) => {
         timestamps: currentData.timestamps.concat(timestamp),
         urls: currentData.urls.concat(url),
     });
-}
+};
 
 export const initTracker = () => {
     const url = window.location.href;
@@ -52,4 +52,4 @@ export const initTracker = () => {
             const formattedIp = formatIp(ip);
             updateRemote(formattedIp, ip, url);
         });
-}
+};

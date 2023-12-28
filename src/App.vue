@@ -18,6 +18,7 @@ import MenuBar from './components/MenuBar.vue';
 import { onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import ThemeSelect from './components/ThemeSelect.vue';
+import { fetchRemote } from './utils/firebase';
 
 const toast = useToast();
 
@@ -33,13 +34,12 @@ window.onscroll = function () {
     prevScrollPos = currentScrollPos;
 };
 
-onMounted(() => {
-    toast.add({
-        severity: 'info',
-        summary: 'Welcome to my new website!',
-        detail: 'Things are still moving behind the scenes, but hope that you like it so far!',
-        life: 5000
-    });
+onMounted(async () => {
+    const notification = await fetchRemote('notification');
+
+    if (notification) {
+        toast.add(notification);
+    }
 });
 </script>
 

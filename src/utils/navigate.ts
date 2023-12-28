@@ -4,8 +4,8 @@ export const openUrl = (url: string) => {
     window.open(url, '__blank');
 };
 
-export const scrollTo = async (id?: string, path = '/') => {
-    await router.push(path);
+export const scrollTo = (id?: string, path = '/') => {
+    router.push(path);
     if (!id) return;
 
     if (id.toLocaleLowerCase() == 'home') {
