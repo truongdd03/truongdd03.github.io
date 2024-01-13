@@ -1,19 +1,25 @@
 <template>
     <Card class="mt-3">
         <template #title>
-            <div class="flex align-items-center justify-content-center"
-                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
-                <img style="height: 40px;" :src="AlaskaBike" />
-                <h1 class="text-3xl">Education</h1>
-                <img style="height: 50px;" :src="AlaskaEat" />
+            <div
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+                class="flex align-items-center justify-content-center">
+                <img style="height: 40px;" :src="AlaskaBike" alt="Dog Riding Bike" />
+                <h1 class="text-3xl">
+                    Education
+                </h1>
+                <img style="height: 50px;" :src="AlaskaEat" alt="Dog Eating" />
             </div>
         </template>
 
         <template #content>
             <div class="grid">
-                <div class="col" v-for="item in education" v-bind:key="item.school"
-                    v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
-                    <EducationDetail :education="item"></EducationDetail>
+                <div
+                    v-for="item in education"
+                    :key="item.school"
+                    v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+                    class="col">
+                    <EducationDetail :education="item" />
                 </div>
             </div>
         </template>

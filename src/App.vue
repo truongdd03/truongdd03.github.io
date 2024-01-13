@@ -1,22 +1,21 @@
 <template>
     <div class="fadein navbar" id="navbar">
-        <MenuBar></MenuBar>
+        <MenuBar />
     </div>
-    <div style="height: 80px;"></div>
+    <div style="height: 80px;" />
     <div style="position: relative; overflow-x: hidden;">
         <router-view />
     </div>
 
-
-    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed; opacity: 0.8;"></ThemeSelect>
+    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed; opacity: 0.8;" />
     <Toast position="top-center" style="z-index: 100;" />
 </template>
 
 <script setup lang="ts">
 import Toast from 'primevue/toast';
-import MenuBar from './components/MenuBar.vue';
 import { onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
+import MenuBar from './components/MenuBar.vue';
 import ThemeSelect from './components/ThemeSelect.vue';
 import { fetchRemote } from './utils/firebase';
 
@@ -24,8 +23,8 @@ const toast = useToast();
 
 let prevScrollPos = window.scrollY;
 
-window.onscroll = function () {
-    var currentScrollPos = window.scrollY;
+window.onscroll = () => {
+    const currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos || window.scrollY == 0) {
         document.getElementById('navbar')!.style.top = '10px';
     } else {

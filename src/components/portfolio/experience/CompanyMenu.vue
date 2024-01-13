@@ -1,9 +1,12 @@
 <template>
-    <div class="grid" v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
-        <div v-for="item in experience" v-bind:key="item.company"
+    <div v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="grid">
+        <div
+            v-for="item in experience"
+            :key="item.company"
             class="company col flex justify-content-center w-5 border-3 border-round cursor-pointer m-2 p-5"
-            :class="modelValue?.company == item.company ? 'company-primary-border' : 'surface-border'" @click="onSelect(item)">
-            <img :src="item.icon" style="object-fit: cover; height: 60px;" />
+            :class="modelValue?.company == item.company ? 'company-primary-border' : 'surface-border'"
+            @click="onSelect(item)">
+            <img :src="item.icon" style="object-fit: cover; height: 60px;" alt="icon" />
         </div>
     </div>
 </template>

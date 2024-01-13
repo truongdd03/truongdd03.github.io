@@ -9,7 +9,7 @@ export const scrollTo = (id?: string, path = '/') => {
     if (!id) return;
 
     if (id.toLocaleLowerCase() == 'home') {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
 
     const el = document.getElementById(id.toLocaleLowerCase());

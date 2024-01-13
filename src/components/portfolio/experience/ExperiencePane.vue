@@ -1,16 +1,19 @@
 <template>
     <Card class="mt-2">
         <template #title>
-            <div class="flex justify-content-center align-items-center"
-                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
-                <img style="height: 40px;" :src="AlaskaClap" />
-                <h1 class="text-3xl">Experience</h1>
-                <img style="height: 40px;" :src="ShibaClap" />
+            <div
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+                class="flex justify-content-center align-items-center">
+                <img style="height: 40px;" :src="AlaskaClap" alt="Alaska Clapping" />
+                <h1 class="text-3xl">
+                    Experience
+                </h1>
+                <img style="height: 40px;" :src="ShibaClap" alt="Shiba Clapping" />
             </div>
         </template>
         <template #content>
-            <CompanyMenu v-model="selected"></CompanyMenu>
-            <CompanyDetails class="mt-5" :detail="selected"></CompanyDetails>
+            <CompanyMenu v-model="selected" />
+            <CompanyDetails class="mt-5" :detail="selected" />
         </template>
     </Card>
 </template>
@@ -21,11 +24,11 @@ import Card from 'primevue/card';
 import AlaskaClap from '/assets/images/gifs/alaska-clap.gif';
 import ShibaClap from '/assets/images/gifs/shiba-clap.gif';
 
+import { ref } from 'vue';
 import CompanyMenu from './CompanyMenu.vue';
 import CompanyDetails from './CompanyDetails.vue';
 
 import experience from './experience.json';
-import { ref } from 'vue';
 
 const selected = ref(experience[0]);
 </script>

@@ -1,4 +1,6 @@
-import { child, get, getDatabase, ref, set } from '@firebase/database';
+import {
+    child, get, getDatabase, ref, set,
+} from '@firebase/database';
 import DeviceDetector from 'device-detector-js';
 
 interface Data {
@@ -9,24 +11,23 @@ interface Data {
     urls: string[],
 }
 
-const formatIp = (ip: string): string => {
-    return ip.replace(/\./g, '-');
-};
+const formatIp = (ip: string): string => ip.replace(/\./g, '-');
 
 const getRemote = async (ip: string): Promise<Data> => {
     const dbRef = ref(getDatabase());
     return await get(child(dbRef, `users/${ip}`)).then((snapshot) => {
         if (snapshot.exists()) {
             return snapshot.val();
-        } else {
-            return { count: 0, ip: '', devices: [], timestamps: [], urls: [] };
         }
+        return {
+            count: 0, ip: '', devices: [], timestamps: [], urls: [],
+        };
     });
 };
 
 const getDevice = () => {
     const deviceDetector = new DeviceDetector();
-    const userAgent = navigator.userAgent;
+    const { userAgent } = navigator;
     return deviceDetector.parse(userAgent);
 };
 
@@ -34,7 +35,7 @@ const updateRemote = async (ip: string, rawIp: string, url: string) => {
     const database = getDatabase();
     const currentData = await getRemote(ip);
     const device = getDevice();
-    const timestamp = (new Date()).toLocaleString('en-US', { timeZone: 'America/Detroit'});
+    const timestamp = (new Date()).toLocaleString('en-US', { timeZone: 'America/Detroit' });
     set(ref(database, `users/${ip}`), {
         count: currentData.count + 1,
         ip: rawIp,
@@ -47,7 +48,7 @@ const updateRemote = async (ip: string, rawIp: string, url: string) => {
 export const initTracker = () => {
     const url = window.location.href;
     fetch('https://api.ipify.org/?format=json')
-        .then(x => x.json())
+        .then((x) => x.json())
         .then(async ({ ip }) => {
             const formattedIp = formatIp(ip);
             updateRemote(formattedIp, ip, url);

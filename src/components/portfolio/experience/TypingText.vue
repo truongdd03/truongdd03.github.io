@@ -9,13 +9,12 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
 
-
 const props = defineProps({
     text: String,
 });
 
 const typingSpeed = 20;
-let typeValue = ref('');
+const typeValue = ref('');
 let typeStatus = false;
 let charId = 0;
 

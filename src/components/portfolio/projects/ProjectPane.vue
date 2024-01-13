@@ -1,10 +1,12 @@
 <template>
-    <div @click="openUrl(project!.url)" v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
-        class="wrapper border-3 surface-border border-round h-full flex align-items-center justify-content-center cursor-pointer">
-        <img class="bg" :src="project?.image" />
+    <div
+        v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+        class="wrapper border-3 surface-border border-round h-full flex align-items-center justify-content-center cursor-pointer"
+        @click="openUrl(project!.url)">
+        <img class="bg" :src="project?.image" alt="Project Image" />
 
         <div style="position: absolute; top: 5px; right: 0; height: 30%;">
-            <TagsList :tags="project?.skills"></TagsList>
+            <TagsList :tags="project?.skills" />
         </div>
 
         <p class="text-2xl font-bold text-center">{{ project?.name }}</p>

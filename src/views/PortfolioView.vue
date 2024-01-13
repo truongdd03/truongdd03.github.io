@@ -1,8 +1,8 @@
 <template>
-    <IntroductionPane></IntroductionPane>
-    <ExperiencePane id="experience"></ExperiencePane>
-    <EducationPane id="education"></EducationPane>
-    <ProjectsPane id="projects"></ProjectsPane>
+    <IntroductionPane />
+    <ExperiencePane id="experience" />
+    <EducationPane id="education" />
+    <ProjectsPane id="projects" />
 </template>
 
 <script setup lang="ts">

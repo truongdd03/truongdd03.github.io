@@ -1,5 +1,5 @@
 <template>
-    <MenuBar :displaying-section="target"></MenuBar>
+    <MenuBar :displaying-section="target" />
     <IntroductionPane id="introduction" ref="introduction" />
     <ExperiencePane id="experience" ref="experience" />
     <EducationPane id="education" ref="education" />
@@ -8,13 +8,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
+import { useElementVisibility } from '@vueuse/core';
 import MenuBar from '../MenuBar.vue';
 import IntroductionPane from './introduction/IntroductionPane.vue';
 import ExperiencePane from './experience/ExperiencePane.vue';
 import EducationPane from './education/EducationPane.vue';
 import ProjectsPane from './projects/ProjectsPane.vue';
-import { useElementVisibility } from '@vueuse/core'
 
 // Get the target section to highlight the correct navBar button
 const introduction = ref(null);
@@ -27,7 +27,8 @@ const isEducationVisible = useElementVisibility(education);
 const isProjectVisible = useElementVisibility(project);
 const target = computed(() => {
     const section = ['introduction', 'experience', 'education', 'project'];
-    const isVisible: Boolean[] = [isIntroductionVisible, isExperienceVisible, isEducationVisible, isProjectVisible].map((r) => r.value);
+    // eslint-disable-next-line vue/max-len
+    const isVisible: boolean[] = [isIntroductionVisible, isExperienceVisible, isEducationVisible, isProjectVisible].map((r) => r.value);
     return section[isVisible.lastIndexOf(true)];
 });
 

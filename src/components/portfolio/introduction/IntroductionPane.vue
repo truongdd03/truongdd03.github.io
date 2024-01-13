@@ -2,7 +2,7 @@
     <div class="fadein" style="height: calc(100vh - 80px); position: relative;">
         <div id="background" class="h-full lg:h-auto pt-3">
             <div class="grid flex">
-                <div class="col-0 lg:col-4"></div>
+                <div class="col-0 lg:col-4" />
                 <div class="col-12 lg:col-4">
                     <div class="w-full flex justify-content-center">
                         <div>
@@ -19,7 +19,10 @@
                 </div>
             </div>
             <div class="icon-wrapper">
-                <font-awesome-icon class="text-3xl cursor-pointer" icon="fa-solid fa-circle-arrow-down" inverse
+                <font-awesome-icon
+                    class="text-3xl cursor-pointer"
+                    icon="fa-solid fa-circle-arrow-down"
+                    inverse
                     @click="scrollTo('experience')" />
             </div>
         </div>
@@ -39,7 +42,7 @@ const roles = [
     'Don Truong',
     'from Vietnam',
     'studying @ MSU',
-    'a dog lover :)'
+    'a dog lover :)',
 ];
 </script>
 

@@ -1,8 +1,8 @@
 <template>
     <h1 class="text-3xl text-center" style="min-height: 100px;">
-        <img style="height: 50px; margin-bottom: -10px;" :src="icon" />
+        <img style="height: 50px; margin-bottom: -10px;" :src="icon" alt="Dog Playing" />
         {{ constantText }}
-        <span class="text-primary" id="dynamicText">{{ typeValue }}</span>
+        <span id="dynamicText" class="text-primary">{{ typeValue }}</span>
         <span class="blinking-cursor">|</span>
         <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
     </h1>
@@ -11,17 +11,16 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
-
 const props = defineProps({
     constantText: String,
-    dynamicTexts: Array<String>,
+    dynamicTexts: Array<string>,
     icon: String,
 });
 
 const typingSpeed = 60;
 const erasingSpeed = 10; // Larger is slower
 const delayTime = 1500;
-let typeValue = ref('');
+const typeValue = ref('');
 let typeStatus = false;
 let currentTextId = 0;
 let charId = 0;

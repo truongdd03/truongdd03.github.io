@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Tag v-for="tag in tags" v-bind:key="(tag as string)" :value="tag" class="mr-1" rounded></Tag>
+        <Tag v-for="tag in tags" :key="(tag as string)" :value="tag" class="mr-1" rounded />
     </div>
 </template>
 
@@ -8,6 +8,6 @@
 import Tag from 'primevue/tag';
 
 defineProps({
-    tags: Array<String>
+    tags: Array<string>,
 });
 </script>

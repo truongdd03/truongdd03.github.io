@@ -9,8 +9,8 @@ const routes = [
     },
     {
         path: '/:catchAll(.*)',
-        redirect: '/'
-    }
+        redirect: '/',
+    },
 ];
 
 const router = createRouter({

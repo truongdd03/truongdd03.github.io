@@ -1,4 +1,3 @@
-import App from './App.vue';
 import { createApp } from 'vue';
 
 // External components
@@ -10,8 +9,14 @@ import AnimateOnScroll from 'primevue/animateonscroll';
 // icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faDiscord, faSpotify, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+    // eslint-disable-next-line vue/max-len
+    faEnvelope, faCircleArrowDown, faBriefcase, faUpRightFromSquare, faFilePdf, faBars, faPaw, faArrowAltCircleLeft, faArrowAltCircleRight, faPlay, faQuoteLeft, faQuoteRight,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+    faGithub, faLinkedin, faDiscord, faSpotify, faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
+import App from './App.vue';
 
 import '/node_modules/primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -40,7 +45,7 @@ const icons = [
     faInstagram,
     faPlay,
     faQuoteLeft,
-    faQuoteRight
+    faQuoteRight,
 ];
 
 icons.forEach((icon) => library.add(icon));
@@ -58,5 +63,6 @@ const libraries = [
 libraries.forEach((lib) => app.use(lib));
 
 app.directive('animateonscroll', AnimateOnScroll);
+// eslint-disable-next-line vue/component-definition-name-casing
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

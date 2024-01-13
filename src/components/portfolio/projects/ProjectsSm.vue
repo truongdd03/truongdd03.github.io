@@ -1,7 +1,7 @@
 <template>
     <div class="grid nested-grid w-full">
-        <div class="col-12" style="height: 20vh;" v-for="project in projects" v-bind:key="project.name">
-            <ProjectPane :project="project"></ProjectPane>
+        <div v-for="project in projects" :key="project.name" class="col-12" style="height: 20vh;">
+            <ProjectPane :project="project" />
         </div>
     </div>
 </template>

@@ -6,7 +6,10 @@
         <a href="https://www.linkedin.com/in/dong-truong/" target="_blank">
             <font-awesome-icon class="mr-5 text-2xl cursor-pointer" icon="fa-brands fa-linkedin" inverse />
         </a>
-        <font-awesome-icon class="mr-5 text-2xl cursor-pointer" icon="fa-solid fa-envelope" inverse
+        <font-awesome-icon
+            class="mr-5 text-2xl cursor-pointer"
+            icon="fa-solid fa-envelope"
+            inverse
             @click="copyMailAddress()" />
         <font-awesome-icon class="text-2xl cursor-pointer" icon="fa-solid fa-file-pdf" inverse @click="downloadResume()" />
     </div>
@@ -24,7 +27,7 @@ const copyMailAddress = async () => {
     toast.add({
         severity: 'success',
         detail: 'Copied email address!',
-        life: 3000
+        life: 3000,
     });
 };
 

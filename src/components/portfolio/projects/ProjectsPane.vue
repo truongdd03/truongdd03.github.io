@@ -1,31 +1,33 @@
 <template>
     <Card class="mt-3">
         <template #title>
-            <div class="flex justify-content-center align-items-center"
-                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }">
-                <img style="height: 40px;" :src="ShibaDepressed" />
-                <p class="text-3xl">Projects</p>
-                <img style="height: 40px;" :src="AlaskaDepressed" />
+            <div
+                v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+                class="flex justify-content-center align-items-center">
+                <img style="height: 40px;" :src="ShibaDepressed" alt="Shiba Depressed" />
+                <p class="text-3xl">
+                    Projects
+                </p>
+                <img style="height: 40px;" :src="AlaskaDepressed" alt="Alaska Depressed" />
             </div>
         </template>
         <template #content>
-            <ProjectsLg v-if="screenWidth > 1024"></ProjectsLg>
-            <ProjectsMd v-else-if="screenWidth > 650"></ProjectsMd>
-            <ProjectsSm v-else></ProjectsSm>
+            <ProjectsLg v-if="screenWidth > 1024" />
+            <ProjectsMd v-else-if="screenWidth > 650" />
+            <ProjectsSm v-else />
         </template>
     </Card>
 </template>
 
 <script setup lang="ts">
 import Card from 'primevue/card';
+import { onMounted, ref } from 'vue';
 import ProjectsLg from './ProjectsLg.vue';
 import ProjectsMd from './ProjectsMd.vue';
 import ProjectsSm from './ProjectsSm.vue';
 
 import ShibaDepressed from '/assets/images/gifs/shiba-depressed.gif';
 import AlaskaDepressed from '/assets/images/gifs/alaska-depressed.gif';
-
-import { onMounted, ref } from 'vue';
 
 const screenWidth = ref(window.innerWidth);
 

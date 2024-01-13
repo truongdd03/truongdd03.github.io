@@ -1,8 +1,13 @@
 <template>
     <SpeedDial ref="speedDial" :model="items" direction="up" showIcon="pi pi-palette" style="z-index: 2;">
         <template #item="{ item }">
-            <Avatar size="large" :style="`background-color: ${item.color}`" shape="circle" class="cursor-pointer border-2"
-                :class="currentTheme == item.theme ? 'border-0' : ''" @click="switchTheme(item.theme)" />
+            <Avatar
+                size="large"
+                :style="`background-color: ${item.color}`"
+                shape="circle"
+                class="cursor-pointer border-2"
+                :class="currentTheme == item.theme ? 'border-0' : ''"
+                @click="switchTheme(item.theme)" />
         </template>
     </SpeedDial>
 </template>
@@ -55,6 +60,7 @@ const items = ref([
 const switchTheme = (theme: string) => {
     PrimeVue.changeTheme(currentTheme.value, theme, 'theme-link', () => { });
     currentTheme.value = theme;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (speedDial.value as any).hide();
 };
 </script>
