@@ -1,19 +1,58 @@
 {
     "root": true,
     "extends": [
+        "plugin:vue/base",
         "plugin:vue/vue3-essential",
-        "eslint:recommended",
-        "@vue/eslint-config-typescript"
+        "plugin:vue/vue3-recommended",
+        "plugin:vue/vue3-strongly-recommended",
+        "@vue/typescript/recommended",
+        "@vue/airbnb"
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
     "rules": {
-        "indent": ["warn", 4],
-        "vue/multi-word-component-names": ["warn"],
-        "quotes": [2, "single", "avoid-escape"],
-        "vue/require-valid-default-prop": ["warn"],
-        "vue/valid-v-for": ["warn"],
-        "semi": [1, "always"]
+        // Airbnb with a couple of minor tweaks
+        "object-shorthand": ["error", "always"],
+        "indent": ["error", 4],
+        "linebreak-style": "off",
+        "eol-last": ["error", "never"],
+        "max-len": ["error", { "code": 450 }],
+        "space-before-function-paren": ["error", "always"],
+
+        "vue/html-indent": [
+            "error",
+            4,
+            {
+                "attribute": 1,
+                "closeBracket": 0,
+                "alignAttributesVertically": true,
+                "ignores": []
+            }
+        ],
+
+        "vue/html-closing-bracket-newline": [
+            "error",
+            {
+                "singleline": "never",
+                "multiline": "never"
+            }
+        ],
+
+        "vue/multi-word-component-names": "off",
+        "eqeqeq": "off",
+        "vue/eqeqeq": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "vuejs-accessibility/click-events-have-key-events": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "vue/attribute-hyphenation": "off",
+        "import/no-absolute-path": "off",
+
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "import/extensions": "off",
+        "import/no-unresolved": "off"
     }
 }
