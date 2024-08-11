@@ -8,7 +8,7 @@ This website is built from scratch using **Vue 3**, **TypeScript**, and **HTML/S
 
 ## Features
 
-### Spotify status
+### Spotify status (Deprecated)
 **Spotify API** is used to fetch real-time data.
 
 <img width="1439" alt="Screenshot 2023-12-01 at 10 58 58 PM" src="https://github.com/truongdd03/truongdd03.github.io/assets/81574365/01119bd8-5f00-414f-ade2-eb4d3231c15a">

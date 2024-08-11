@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-12 lg:col-4">
-                    <SpotifyStatus />
+                    <!-- <SpotifyStatus /> -->
                 </div>
                 <div class="flex justify-content-center w-full">
                     <TypingText constantText="Hi, I'm " :dynamicTexts="roles" :icon="ShibaHi" />
@@ -31,7 +31,6 @@
 
 <script setup lang="ts">
 import DynamicAvatar from './DynamicAvatar.vue';
-import SpotifyStatus from './SpotifyStatus.vue';
 import TypingText from './TypingText.vue';
 import SocialInformation from './SocialInformation.vue';
 import { scrollTo } from '@/utils/navigate';
