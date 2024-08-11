@@ -18,6 +18,7 @@ import { useToast } from 'primevue/usetoast';
 import MenuBar from './components/MenuBar.vue';
 import ThemeSelect from './components/ThemeSelect.vue';
 import { fetchRemote } from './utils/firebase';
+import { useMenubarStore } from './stores/menubarStore';
 
 const toast = useToast();
 
@@ -25,7 +26,7 @@ let prevScrollPos = window.scrollY;
 
 window.onscroll = () => {
     const currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos || window.scrollY == 0) {
+    if ((prevScrollPos > currentScrollPos || window.scrollY == 0) && !useMenubarStore().forceHide) {
         document.getElementById('navbar')!.style.top = '10px';
     } else {
         document.getElementById('navbar')!.style.top = '-70px';

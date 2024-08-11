@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
 // External components
 import PrimeVue from 'primevue/config';
@@ -52,6 +53,7 @@ icons.forEach((icon) => library.add(icon));
 
 initTracker();
 
+const pinia = createPinia();
 const app = createApp(App).use(router);
 
 const libraries = [
@@ -65,4 +67,5 @@ libraries.forEach((lib) => app.use(lib));
 app.directive('animateonscroll', AnimateOnScroll);
 // eslint-disable-next-line vue/component-definition-name-casing
 app.component('font-awesome-icon', FontAwesomeIcon);
+app.use(pinia);
 app.mount('#app');

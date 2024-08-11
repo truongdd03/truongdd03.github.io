@@ -12,9 +12,9 @@
             </div>
         </template>
         <template #content>
-            <div v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="flex gap-3">
+            <div class="flex gap-3 flex-column md:flex-row h-full md:h-auto" style="height: 700px">
                 <CompanyMenu v-model="selected" class="w-auto md:w-5 lg:w-3 h-full" />
-                <CompanyDetails :detail="selected" class="flex-grow-1" />
+                <CompanyDetails :detail="selected" />
             </div>
         </template>
     </Card>
