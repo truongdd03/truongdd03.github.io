@@ -16,6 +16,10 @@
             :overview-source="detail?.overviewSource" />
 
         <span style="line-height: 1.5em" v-html="detail?.description" />
+
+        <div class="w-full flex justify-content-end">
+            <Button class="float-left" label="Back to top" icon="pi pi-arrow-up" link size="small" @click="scrollIntoView('experience', '/')" />
+        </div>
     </div>
 </template>
 
@@ -26,6 +30,7 @@ import type { Experience } from './Experience';
 
 import CompanyOverview from './CompanyOverview.vue';
 import { openUrl } from '@/utils/navigate';
+import { scrollIntoView } from '@/utils/utils';
 
 defineProps({
     detail: Object as PropType<Experience>,
