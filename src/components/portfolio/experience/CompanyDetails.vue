@@ -1,5 +1,5 @@
 <template>
-    <div class="p-3 border-3 surface-border border-round">
+    <div class="p-3 border-3 surface-border border-round w-full">
         <div class="lg:flex mb-3 lg:align-items-center">
             <Button :label="detail?.company" link size="large" icon="pi pi-external-link" style="margin-left: -15px;" @click="openUrl(detail!.url)" />
             <div class="lg:text-right text-color-secondary lg:ml-auto">
@@ -13,7 +13,7 @@
         </div>
         <CompanyOverview :overview="detail?.overview" :overview-source="detail?.overviewSource" />
 
-        <span v-html="detail?.description" />
+        <span style="line-height: 1.5em;" v-html="detail?.description" />
     </div>
 </template>
 

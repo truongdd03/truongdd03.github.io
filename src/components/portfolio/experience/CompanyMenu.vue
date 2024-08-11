@@ -1,9 +1,9 @@
 <template>
-    <div v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="grid">
+    <div class="grid flex-column">
         <div
             v-for="item in experience"
             :key="item.company"
-            class="company col flex justify-content-center w-5 border-3 border-round cursor-pointer m-2 p-5"
+            class="company col flex justify-content-center border-3 border-round cursor-pointer mt-2 p-5"
             :class="modelValue?.company == item.company ? 'company-primary-border' : 'surface-border'"
             @click="onSelect(item)">
             <img :src="item.icon" style="object-fit: cover; height: 60px;" alt="icon" />

@@ -12,8 +12,10 @@
             </div>
         </template>
         <template #content>
-            <CompanyMenu v-model="selected" />
-            <CompanyDetails class="mt-5" :detail="selected" />
+            <div v-animateonscroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="flex gap-3">
+                <CompanyMenu v-model="selected" class="w-auto md:w-5 lg:w-3 h-full" />
+                <CompanyDetails :detail="selected" class="flex-grow-1" />
+            </div>
         </template>
     </Card>
 </template>
