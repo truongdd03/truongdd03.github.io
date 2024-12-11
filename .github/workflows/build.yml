@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: node:14
+    container: node:20
 
     steps:
       # Checkout actions just downloads code, does not git init
