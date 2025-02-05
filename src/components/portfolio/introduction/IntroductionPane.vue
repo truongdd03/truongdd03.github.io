@@ -40,7 +40,7 @@ import ShibaHi from '/assets/images/gifs/shiba-hi.gif';
 const roles = [
     'Don Truong',
     'from Vietnam',
-    'studying @ MSU',
+    'a swe @ Salesforce',
     'a dog lover :)',
 ];
 </script>
