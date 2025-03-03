@@ -1,13 +1,20 @@
 <template>
-    <div id="navbar" class="fadein navbar">
-        <MenuBar />
+    <div v-if="route.path.startsWith('/bunboa')">
+        <div style="height: 100vh;">
+            <router-view />
+        </div>
     </div>
-    <div style="height: 80px;" />
-    <div style="position: relative; overflow-x: hidden;">
-        <router-view />
-    </div>
+    <div v-else style="margin: 10px; margin-bottom: 100px;">
+        <div id="navbar" class="fadein navbar">
+            <MenuBar />
+        </div>
+        <div style="height: 80px;" />
+        <div style="position: relative; overflow-x: hidden;">
+            <router-view />
+        </div>
 
-    <ThemeSelect style="bottom: 10px; right: 15px; position: fixed; opacity: 0.8;" />
+        <ThemeSelect style="bottom: 10px; right: 15px; position: fixed; opacity: 0.8;" />
+    </div>
     <Toast position="top-center" style="z-index: 100;" />
 </template>
 
@@ -15,12 +22,14 @@
 import Toast from 'primevue/toast';
 import { onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
+import { useRoute } from 'vue-router';
 import MenuBar from './components/MenuBar.vue';
 import ThemeSelect from './components/ThemeSelect.vue';
 import { fetchRemote } from './utils/firebase';
 import { useMenubarStore } from './stores/menubarStore';
 
 const toast = useToast();
+const route = useRoute();
 
 let prevScrollPos = window.scrollY;
 
