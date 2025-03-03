@@ -8,3 +8,8 @@ export interface Data {
     his: Person,
     her: Person,
 }
+
+export interface FormattedFile {
+    objectURL: string;
+    name: string;
+}

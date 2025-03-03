@@ -54,7 +54,7 @@ icons.forEach((icon) => library.add(icon));
 initTracker();
 
 const pinia = createPinia();
-const app = createApp(App).use(router);
+export const app = createApp(App).use(router);
 
 const libraries = [
     ToastService,

@@ -1,26 +1,43 @@
 import { defineStore } from 'pinia';
-import { type Ref, ref } from 'vue';
+import { type Ref, ref, watch } from 'vue';
 import type { Data } from '@/utils/bunboa';
-import { fetchRemote } from '@/utils/firebase';
-import { getFromStorage } from '@/utils/storage';
+import { fetchRemote, writeRemote } from '@/utils/firebase';
+import { showToast } from '@/utils/utils';
 
 export const useBunBoa = defineStore('bunboa', () => {
     const data: Ref<Data | null> = ref(null);
+    const hasUnsavedChanges = ref(false);
+    const loaded = ref(false);
 
     const update = async () => {
         const remoteData = await fetchRemote('/bunboa');
         data.value = {
             date: new Date(remoteData.date),
             his: {
-                image: await getFromStorage(remoteData.his.image),
-                name: remoteData.his.name,
+                ...remoteData.his,
             },
             her: {
-                image: await getFromStorage(remoteData.her.image),
-                name: remoteData.her.name,
+                ...remoteData.her,
             },
         };
     };
 
-    return { data, update };
+    const saveChanges = async () => {
+        hasUnsavedChanges.value = false;
+        await writeRemote('bunboa/her', data.value?.her);
+        await writeRemote('bunboa/his', data.value?.his);
+        showToast('success', 'Successfully saved changes!');
+    };
+
+    watch(() => data.value, () => {
+        if (!loaded.value) {
+            loaded.value = true;
+        } else {
+            hasUnsavedChanges.value = true;
+        }
+    }, { deep: true });
+
+    return {
+        data, hasUnsavedChanges, update, saveChanges,
+    };
 });

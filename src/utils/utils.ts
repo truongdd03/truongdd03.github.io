@@ -1,6 +1,8 @@
 import { useMenubarStore } from '@/stores/menubarStore';
 import router from '../router';
 
+import { app } from '@/main';
+
 export const scrollIntoView = async (id: string, route: string) => {
     try {
         useMenubarStore().setForceHide(true);
@@ -25,4 +27,21 @@ export const scrollIntoView = async (id: string, route: string) => {
     } catch (e: any) {
         throw new Error(e);
     }
+};
+
+/**
+ * Display a toast/notification
+ *
+ * @param severity
+ * @param summary
+ * @param detail
+ * @param life
+ */
+export const showToast = (severity: 'success' | 'info' | 'error' | 'warn', summary?: string, detail?: string, life = 5000) => {
+    app.config.globalProperties.$toast.add({
+        severity,
+        summary,
+        detail,
+        life,
+    });
 };

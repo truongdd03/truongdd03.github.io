@@ -37,6 +37,7 @@
     "util": "^0.12.5",
     "vue": "^3.4.37",
     "vue-3d-charts": "^0.0.1",
+    "vue-advanced-cropper": "^2.8.9",
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
